@@ -26,6 +26,7 @@ $$
 ## Problem 2 – Projectile motion
 
 A body moves in the Earth's gravitational field without air resistance. Consider projectile motion with an initial velocity $v_0$ and an angle $\alpha$ relative to the horizontal. 
+
 * Derive the equations of motion in the horizontal and vertical directions.
 * Determine the time of flight.
 * Determine the maximum height.
