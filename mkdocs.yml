@@ -1,5 +1,5 @@
 site_name: Physics Problems
-site_url: https://dchorazkiewicz.github.io/Physics_Problems_Repo
+site_url: https://alona-h.github.io/Physics_Problems_Repo
 
 theme:
   name: material
@@ -44,7 +44,7 @@ plugins:
               # (usunąć znaki #) po zrobieniu forka, jeśli chce publikować rozwiązania.
               - Lista 01:
                 - Zadania: 'problem_set_01_mathematical_foundations.md'
-                # - Rozwiązania: 'problem_set_01_mathematical_foundations_solution/index.md'
+                - Rozwiązania: 'problem_set_01_mathematical_foundations_solution/index.md'
               - Lista 02:
                 - Zadania: 'problem_set_02_mechanics_and_kinematics.md'
                 # - Rozwiązania: 'problem_set_02_mechanics_and_kinematics_solution/index.md'
@@ -99,7 +99,7 @@ plugins:
               # the lines (remove the leading #) after forking if they want to publish them.
               - Problem Set 01:
                 - Problems: 'problem_set_01_mathematical_foundations.md'
-                # - Solutions: 'problem_set_01_mathematical_foundations_solution/index.md'
+                - Solutions: 'problem_set_01_mathematical_foundations_solution/index.md'
               - Problem Set 02:
                 - Problems: 'problem_set_02_mechanics_and_kinematics.md'
                 # - Solutions: 'problem_set_02_mechanics_and_kinematics_solution/index.md'
