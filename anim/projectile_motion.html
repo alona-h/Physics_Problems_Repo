@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rzut ukośny — animacja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input[type=range] { -webkit-appearance: none; background: transparent; }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 16px; width: 16px; border-radius: 50%;
+            background: #22d3ee; margin-top: -6px; cursor: pointer;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 4px; cursor: pointer; background: #4b5563; border-radius: 2px;
+        }
+        input[type=range]:focus { outline: none; }
+        aside::-webkit-scrollbar { width: 6px; }
+        aside::-webkit-scrollbar-track { background: #1f2937; }
+        aside::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 3px; }
+        .tab-btn.active { border-bottom: 2px solid #22d3ee; color: #22d3ee; }
+        .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans h-screen flex flex-col overflow-hidden">
+
+    <header class="flex items-center justify-between px-6 py-4 bg-gray-800 border-b border-gray-700 shadow-md shrink-0 z-20">
+        <div class="flex items-center space-x-3">
+            <div class="bg-cyan-600 p-2 rounded-lg">
+                <!-- Icon: trajectory -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                    <path d="M3 19c6-10 12-10 18 0" />
+                    <path d="M7 16l-3 3" />
+                    <path d="M20 19h-4" />
+                    <path d="M16 8a2 2 0 1 0 0.01 0" />
+                </svg>
+            </div>
+            <div class="flex flex-col leading-tight">
+                <h1 id="app-title" class="text-xl font-bold tracking-wide">Laboratorium rzutu ukośnego</h1>
+                <div id="app-subtitle" class="text-xs text-gray-400">bez oporu powietrza (opcjonalnie: opór liniowy)</div>
+            </div>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4 text-xs text-gray-400">
+            <div><span class="kbd bg-gray-700 border border-gray-600 px-2 py-1 rounded">Space</span> <span id="hint-space">Start/Stop</span></div>
+            <div><span class="kbd bg-gray-700 border border-gray-600 px-2 py-1 rounded">R</span> <span id="hint-r">Reset</span></div>
+        </div>
+
+        <button id="btn-lang" class="flex items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm font-bold transition-colors border border-gray-600" onclick="toggleLang()">
+            <span id="lang-label">EN</span>
+        </button>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden relative">
+
+        <aside class="w-80 bg-gray-800 p-6 flex flex-col gap-5 overflow-y-auto border-r border-gray-700 shadow-xl z-10 shrink-0">
+            <div class="space-y-4 border-b border-gray-700 pb-4">
+                <div class="flex items-center space-x-2">
+                    <button id="btn-play" class="flex-1 flex items-center justify-center py-2 rounded font-semibold transition-all shadow-lg bg-green-500 text-white hover:bg-green-600" onclick="togglePlay()">
+                        <span id="txt-play">Start</span>
+                    </button>
+                    <button class="p-2 bg-gray-700 hover:bg-gray-600 rounded text-gray-300 border border-gray-600" onclick="resetSim(true)" title="Reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                    </button>
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="text-xs text-gray-400 uppercase font-bold" id="lbl-speed">Szybkość symulacji</label>
+                        <span class="text-xs font-mono text-cyan-400" id="val-speed">1.0x</span>
+                    </div>
+                    <input type="range" min="0.1" max="3.0" step="0.1" value="1.0" class="w-full accent-cyan-500" id="inp-speed" oninput="updateSpeed(this.value)">
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="text-xs text-gray-400 uppercase font-bold" id="lbl-time">Czas</label>
+                        <span class="text-xs font-mono text-cyan-400" id="val-time">0.00 s</span>
+                    </div>
+                    <input type="range" min="0" max="1" step="0.001" value="0" class="w-full accent-cyan-500" id="inp-time" oninput="scrubTime(this.value)">
+                    <div class="flex justify-between mt-2 text-[11px] text-gray-400">
+                        <button class="px-2 py-1 rounded bg-gray-700 hover:bg-gray-600 border border-gray-600" onclick="stepTime(-1)" id="btn-step-back">- Δt</button>
+                        <button class="px-2 py-1 rounded bg-gray-700 hover:bg-gray-600 border border-gray-600" onclick="stepTime(1)" id="btn-step-fwd">+ Δt</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4 border-b border-gray-700 pb-4">
+                <h2 id="hdr-params" class="text-xs uppercase text-gray-500 font-bold tracking-wider">Parametry</h2>
+
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="text-xs text-gray-400 font-bold" id="lbl-v0">Prędkość początkowa</label>
+                        <span class="text-xs font-mono text-cyan-400" id="val-v0">25.0 m/s</span>
+                    </div>
+                    <input type="range" min="0" max="80" step="0.1" value="25" class="w-full accent-cyan-500" id="inp-v0" oninput="updateParam('v0', this.value)">
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="text-xs text-gray-400 font-bold" id="lbl-theta">Kąt wyrzutu</label>
+                        <span class="text-xs font-mono text-cyan-400" id="val-theta">45.0°</span>
+                    </div>
+                    <input type="range" min="0" max="90" step="0.1" value="45" class="w-full accent-cyan-500" id="inp-theta" oninput="updateParam('thetaDeg', this.value)">
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="text-xs text-gray-400 font-bold" id="lbl-g">Grawitacja</label>
+                        <span class="text-xs font-mono text-cyan-400" id="val-g">9.81 m/s²</span>
+                    </div>
+                    <input type="range" min="1" max="20" step="0.01" value="9.81" class="w-full accent-cyan-500" id="inp-g" oninput="updateParam('g', this.value)">
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="text-xs text-gray-400 font-bold" id="lbl-h0">Wysokość startu</label>
+                        <span class="text-xs font-mono text-cyan-400" id="val-h0">0.0 m</span>
+                    </div>
+                    <input type="range" min="0" max="50" step="0.1" value="0" class="w-full accent-cyan-500" id="inp-h0" oninput="updateParam('h0', this.value)">
+                </div>
+
+                <div class="bg-gray-900/40 border border-gray-700 rounded-lg p-3 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs text-gray-300 font-semibold" id="lbl-drag">Opór liniowy</label>
+                        <input id="inp-drag" type="checkbox" class="accent-cyan-500" onchange="toggleDrag(this.checked)">
+                    </div>
+                    <div id="drag-controls" class="space-y-2 opacity-50 pointer-events-none">
+                        <div class="flex justify-between">
+                            <label class="text-xs text-gray-400 font-bold" id="lbl-k">Współczynnik k</label>
+                            <span class="text-xs font-mono text-cyan-400" id="val-k">0.20 1/s</span>
+                        </div>
+                        <input type="range" min="0.01" max="2.0" step="0.01" value="0.2" class="w-full accent-cyan-500" id="inp-k" oninput="updateParam('k', this.value)">
+                        <div class="text-[11px] text-gray-400" id="txt-drag-note">Model: a = -g ŷ - k v</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h2 id="hdr-view" class="text-xs uppercase text-gray-500 font-bold tracking-wider">Widok</h2>
+
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <label class="flex items-center gap-2 bg-gray-700/50 border border-gray-600 rounded px-2 py-2 cursor-pointer select-none">
+                        <input id="inp-trace" type="checkbox" class="accent-cyan-500" checked onchange="toggleOption('showTrace', this.checked)">
+                        <span id="lbl-trace">Ślad</span>
+                    </label>
+                    <label class="flex items-center gap-2 bg-gray-700/50 border border-gray-600 rounded px-2 py-2 cursor-pointer select-none">
+                        <input id="inp-grid" type="checkbox" class="accent-cyan-500" checked onchange="toggleOption('showGrid', this.checked)">
+                        <span id="lbl-grid">Siatka</span>
+                    </label>
+                    <label class="flex items-center gap-2 bg-gray-700/50 border border-gray-600 rounded px-2 py-2 cursor-pointer select-none">
+                        <input id="inp-vec" type="checkbox" class="accent-cyan-500" checked onchange="toggleOption('showVectors', this.checked)">
+                        <span id="lbl-vec">Wektory</span>
+                    </label>
+                    <button class="bg-gray-700 hover:bg-gray-600 border border-gray-600 rounded px-2 py-2 text-xs font-semibold" onclick="fitView()" id="btn-fit">Dopasuj</button>
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <label class="text-xs text-gray-400 font-bold" id="lbl-zoom">Zoom</label>
+                        <span class="text-xs font-mono text-cyan-400" id="val-zoom">1.00x</span>
+                    </div>
+                    <input type="range" min="0.5" max="2.0" step="0.01" value="1.0" class="w-full accent-cyan-500" id="inp-zoom" oninput="updateZoom(this.value)">
+                </div>
+            </div>
+
+            <div class="bg-gray-900/50 p-4 rounded-lg border border-gray-700 space-y-2 mt-auto text-xs font-mono">
+                <div class="font-bold text-gray-400 mb-1 border-b border-gray-700 pb-1" id="hdr-stats">Wyniki</div>
+                <div id="stats-output" class="space-y-1 text-gray-300"></div>
+                <hr class="border-gray-700 my-2">
+                <div class="text-[11px] text-gray-400" id="txt-tip">
+                    Wskazówka: dla h₀ = 0 zasięg maksymalny jest przy 45° (bez oporu).
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 relative bg-gray-950 flex flex-col items-center justify-center overflow-hidden">
+            <canvas id="main-canvas" class="w-full h-full block"></canvas>
+            <div class="absolute top-4 right-4 bg-gray-800/70 backdrop-blur border border-gray-600 p-3 rounded text-xs font-mono text-gray-200 pointer-events-none">
+                <div class="text-cyan-300 font-bold mb-1" id="ovr-title">Status</div>
+                <div id="overlay-output"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const state = {
+            lang: 'pl',
+            playing: false,
+            speedMult: 1.0,
+            zoom: 1.0,
+            showTrace: true,
+            showGrid: true,
+            showVectors: true,
+            dragEnabled: false,
+            params: {
+                v0: 25.0,
+                thetaDeg: 45.0,
+                g: 9.81,
+                h0: 0.0,
+                k: 0.20 // 1/s, linear drag
+            },
+            t: 0,
+            tf: 1,
+            dtStep: 0.05,
+            trace: [],
+            lastTs: null,
+            fit: { scale: 30, padL: 50, padR: 30, padT: 30, padB: 50 }
+        };
+
+        const T = {
+            pl: {
+                title: 'Laboratorium rzutu ukośnego',
+                subtitle: 'bez oporu powietrza (opcjonalnie: opór liniowy)',
+                start: 'Start',
+                stop: 'Stop',
+                speed: 'Szybkość symulacji',
+                time: 'Czas',
+                params: 'Parametry',
+                v0: 'Prędkość początkowa',
+                theta: 'Kąt wyrzutu',
+                g: 'Grawitacja',
+                h0: 'Wysokość startu',
+                drag: 'Opór liniowy',
+                k: 'Współczynnik k',
+                dragNote: 'Model: a = -g ŷ - k v',
+                view: 'Widok',
+                trace: 'Ślad',
+                grid: 'Siatka',
+                vec: 'Wektory',
+                fit: 'Dopasuj',
+                zoom: 'Zoom',
+                results: 'Wyniki',
+                tip: 'Wskazówka: dla h₀ = 0 zasięg maksymalny jest przy 45° (bez oporu).',
+                overlayTitle: 'Status',
+                hintSpace: 'Start/Stop',
+                hintR: 'Reset',
+                stepBack: '- Δt',
+                stepFwd: '+ Δt',
+                overlayReady: 'Gotowe',
+                overlayFlight: 'Lot…',
+                overlayDone: 'Koniec lotu',
+                overlayScrub: 'Tryb podglądu (suwak czasu)',
+                stats: {
+                    tf: 'Czas lotu',
+                    R: 'Zasięg',
+                    H: 'Maks. wysokość',
+                    x: 'x',
+                    y: 'y',
+                    vx: 'vₓ',
+                    vy: 'vᵧ',
+                    v: '|v|'
+                }
+            },
+            en: {
+                title: 'Projectile Motion Lab',
+                subtitle: 'no air resistance (optional: linear drag)',
+                start: 'Start',
+                stop: 'Stop',
+                speed: 'Simulation speed',
+                time: 'Time',
+                params: 'Parameters',
+                v0: 'Initial speed',
+                theta: 'Launch angle',
+                g: 'Gravity',
+                h0: 'Launch height',
+                drag: 'Linear drag',
+                k: 'Coefficient k',
+                dragNote: 'Model: a = -g ŷ - k v',
+                view: 'View',
+                trace: 'Trace',
+                grid: 'Grid',
+                vec: 'Vectors',
+                fit: 'Fit',
+                zoom: 'Zoom',
+                results: 'Results',
+                tip: 'Tip: for h₀ = 0 the maximum range is at 45° (no drag).',
+                overlayTitle: 'Status',
+                hintSpace: 'Start/Stop',
+                hintR: 'Reset',
+                stepBack: '- Δt',
+                stepFwd: '+ Δt',
+                overlayReady: 'Ready',
+                overlayFlight: 'Flying…',
+                overlayDone: 'Flight complete',
+                overlayScrub: 'Preview mode (time slider)',
+                stats: {
+                    tf: 'Flight time',
+                    R: 'Range',
+                    H: 'Max height',
+                    x: 'x',
+                    y: 'y',
+                    vx: 'vₓ',
+                    vy: 'vᵧ',
+                    v: '|v|'
+                }
+            }
+        };
+
+        const canvas = document.getElementById('main-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function rad(deg) { return deg * Math.PI / 180; }
+        function clamp(x, a, b) { return Math.max(a, Math.min(b, x)); }
+
+        function resizeCanvas() {
+            const dpr = Math.max(1, Math.floor(window.devicePixelRatio || 1));
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+            canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            fitView();
+        }
+
+        function solveBallistic() {
+            const { v0, thetaDeg, g, h0 } = state.params;
+            const th = rad(thetaDeg);
+            const vx0 = v0 * Math.cos(th);
+            const vy0 = v0 * Math.sin(th);
+            const disc = vy0 * vy0 + 2 * g * h0;
+            const tf = (vy0 + Math.sqrt(Math.max(0, disc))) / g;
+            state.tf = Math.max(0.001, tf);
+
+            const tPeak = vy0 / g;
+            const yMax = h0 + (vy0 * vy0) / (2 * g);
+            const range = vx0 * state.tf;
+
+            const scaleHint = Math.max(1e-6, Math.max(range, yMax));
+            state.dtStep = clamp(scaleHint / 800, 0.01, 0.2);
+
+            return { vx0, vy0, tf: state.tf, tPeak, yMax, range };
+        }
+
+        function fitView() {
+            const rect = canvas.getBoundingClientRect();
+            const w = rect.width, h = rect.height;
+            const padL = 60, padR = 30, padT = 30, padB = 60;
+
+            let xMax = 30, yMax = 15;
+            if (!state.dragEnabled) {
+                const s = solveBallistic();
+                xMax = Math.max(5, s.range);
+                yMax = Math.max(3, s.yMax);
+            } else {
+                // For drag, estimate extents by sampling quickly with the current params
+                const samples = simulateDragPreview(0.02, 8.0);
+                for (const p of samples) {
+                    xMax = Math.max(xMax, p.x);
+                    yMax = Math.max(yMax, p.y);
+                }
+            }
+
+            xMax *= 1.10;
+            yMax *= 1.10;
+
+            const scaleX = (w - padL - padR) / Math.max(1e-6, xMax);
+            const scaleY = (h - padT - padB) / Math.max(1e-6, yMax);
+            const scale = Math.max(5, Math.min(scaleX, scaleY)) * state.zoom;
+
+            state.fit = { scale, padL, padR, padT, padB };
+            draw();
+        }
+
+        function worldToScreen(x, y) {
+            const rect = canvas.getBoundingClientRect();
+            const h = rect.height;
+            const { scale, padL, padB } = state.fit;
+            return {
+                sx: padL + x * scale,
+                sy: h - padB - y * scale
+            };
+        }
+
+        function drawGrid() {
+            if (!state.showGrid) return;
+            const rect = canvas.getBoundingClientRect();
+            const w = rect.width, h = rect.height;
+            const { scale, padL, padB, padT, padR } = state.fit;
+            const xMax = (w - padL - padR) / scale;
+            const yMax = (h - padT - padB) / scale;
+
+            const targetPx = 90;
+            const meters = targetPx / scale;
+            const pow10 = Math.pow(10, Math.floor(Math.log10(meters)));
+            const candidates = [1, 2, 5, 10].map(m => m * pow10);
+            let step = candidates[0];
+            for (const c of candidates) {
+                if (Math.abs(c - meters) < Math.abs(step - meters)) step = c;
+            }
+
+            ctx.save();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(148,163,184,0.15)';
+            ctx.fillStyle = 'rgba(148,163,184,0.55)';
+            ctx.font = '11px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace';
+
+            // vertical lines
+            for (let x = 0; x <= xMax + 1e-6; x += step) {
+                const p0 = worldToScreen(x, 0);
+                const p1 = worldToScreen(x, yMax);
+                ctx.beginPath();
+                ctx.moveTo(p0.sx, p0.sy);
+                ctx.lineTo(p1.sx, p1.sy);
+                ctx.stroke();
+                if (x > 0) ctx.fillText(`${x.toFixed(x < 10 ? 1 : 0)} m`, p0.sx + 4, p0.sy + 14);
+            }
+
+            // horizontal lines
+            for (let y = 0; y <= yMax + 1e-6; y += step) {
+                const p0 = worldToScreen(0, y);
+                const p1 = worldToScreen(xMax, y);
+                ctx.beginPath();
+                ctx.moveTo(p0.sx, p0.sy);
+                ctx.lineTo(p1.sx, p1.sy);
+                ctx.stroke();
+                if (y > 0) ctx.fillText(`${y.toFixed(y < 10 ? 1 : 0)} m`, p0.sx + 4, p0.sy - 4);
+            }
+            ctx.restore();
+        }
+
+        function drawAxes() {
+            const rect = canvas.getBoundingClientRect();
+            const w = rect.width, h = rect.height;
+            const { padL, padB } = state.fit;
+            ctx.save();
+            ctx.strokeStyle = 'rgba(148,163,184,0.35)';
+            ctx.lineWidth = 2;
+            // x-axis (ground)
+            ctx.beginPath();
+            ctx.moveTo(padL, h - padB);
+            ctx.lineTo(w - 20, h - padB);
+            ctx.stroke();
+            // y-axis
+            ctx.beginPath();
+            ctx.moveTo(padL, h - padB);
+            ctx.lineTo(padL, 20);
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        function arrow(sx0, sy0, sx1, sy1, color) {
+            const dx = sx1 - sx0, dy = sy1 - sy0;
+            const L = Math.hypot(dx, dy);
+            if (L < 1e-6) return;
+            const ux = dx / L, uy = dy / L;
+            const head = 10;
+            const wing = 6;
+
+            ctx.save();
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(sx0, sy0);
+            ctx.lineTo(sx1, sy1);
+            ctx.stroke();
+
+            const hx = sx1 - ux * head;
+            const hy = sy1 - uy * head;
+            const px = -uy, py = ux;
+            ctx.beginPath();
+            ctx.moveTo(sx1, sy1);
+            ctx.lineTo(hx + px * wing, hy + py * wing);
+            ctx.lineTo(hx - px * wing, hy - py * wing);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+        }
+
+        function ballisticAt(t) {
+            const { v0, thetaDeg, g, h0 } = state.params;
+            const th = rad(thetaDeg);
+            const vx0 = v0 * Math.cos(th);
+            const vy0 = v0 * Math.sin(th);
+            const x = vx0 * t;
+            const y = h0 + vy0 * t - 0.5 * g * t * t;
+            const vx = vx0;
+            const vy = vy0 - g * t;
+            return { x, y: Math.max(0, y), vx, vy, ax: 0, ay: -g };
+        }
+
+        function simulateDragPreview(dt, tMax) {
+            const { v0, thetaDeg, g, h0, k } = state.params;
+            const th = rad(thetaDeg);
+            let x = 0, y = h0;
+            let vx = v0 * Math.cos(th);
+            let vy = v0 * Math.sin(th);
+            const out = [];
+            for (let t = 0; t <= tMax + 1e-6; t += dt) {
+                out.push({ x, y: Math.max(0, y), vx, vy });
+                if (y <= 0 && t > 0) break;
+                const ax = -k * vx;
+                const ay = -g - k * vy;
+                // Semi-implicit Euler (stable enough for teaching UI)
+                vx += ax * dt;
+                vy += ay * dt;
+                x += vx * dt;
+                y += vy * dt;
+            }
+            return out;
+        }
+
+        function dragTrajectory() {
+            const dt = 0.005;
+            const points = simulateDragPreview(dt, 30.0);
+            const last = points[points.length - 1];
+            const tf = Math.max(0.001, dt * (points.length - 1));
+            state.tf = tf;
+            return { points, tf, range: last.x, yMax: points.reduce((m,p)=>Math.max(m,p.y), 0) };
+        }
+
+        function computeAt(t) {
+            if (!state.dragEnabled) return ballisticAt(t);
+            const { points, tf } = dragTrajectoryCached();
+            const u = clamp(t / tf, 0, 1);
+            const idx = u * (points.length - 1);
+            const i0 = Math.floor(idx);
+            const i1 = Math.min(points.length - 1, i0 + 1);
+            const a = idx - i0;
+            const p0 = points[i0], p1 = points[i1];
+            const x = p0.x + (p1.x - p0.x) * a;
+            const y = p0.y + (p1.y - p0.y) * a;
+            const vx = p0.vx + (p1.vx - p0.vx) * a;
+            const vy = p0.vy + (p1.vy - p0.vy) * a;
+            const ax = -state.params.k * vx;
+            const ay = -state.params.g - state.params.k * vy;
+            return { x, y, vx, vy, ax, ay };
+        }
+
+        let cachedDrag = null;
+        function dragTrajectoryCached() {
+            const key = `${state.params.v0}|${state.params.thetaDeg}|${state.params.g}|${state.params.h0}|${state.params.k}`;
+            if (cachedDrag && cachedDrag.key === key) return cachedDrag.value;
+            cachedDrag = { key, value: dragTrajectory() };
+            return cachedDrag.value;
+        }
+
+        function rebuildTrace() {
+            state.trace = [];
+            const tf = state.tf;
+            const dt = Math.max(0.01, Math.min(0.05, tf / 300));
+            for (let t = 0; t <= tf + 1e-9; t += dt) {
+                const p = computeAt(t);
+                state.trace.push({ x: p.x, y: p.y });
+            }
+        }
+
+        function drawTrace() {
+            if (!state.showTrace || state.trace.length < 2) return;
+            ctx.save();
+            ctx.strokeStyle = 'rgba(34,211,238,0.9)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            const p0 = worldToScreen(state.trace[0].x, state.trace[0].y);
+            ctx.moveTo(p0.sx, p0.sy);
+            for (let i = 1; i < state.trace.length; i++) {
+                const p = worldToScreen(state.trace[i].x, state.trace[i].y);
+                ctx.lineTo(p.sx, p.sy);
+            }
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        function drawProjectile(p) {
+            const { sx, sy } = worldToScreen(p.x, p.y);
+            ctx.save();
+            // glow
+            ctx.fillStyle = 'rgba(34,211,238,0.15)';
+            ctx.beginPath();
+            ctx.arc(sx, sy, 14, 0, Math.PI * 2);
+            ctx.fill();
+            // core
+            ctx.fillStyle = 'rgba(34,211,238,0.95)';
+            ctx.beginPath();
+            ctx.arc(sx, sy, 6, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+
+            if (!state.showVectors) return;
+            const scaleV = 0.6; // meters per (m/s) visual scaling (world units)
+            const scaleA = 0.10; // meters per (m/s^2)
+            const vEnd = worldToScreen(p.x + p.vx * scaleV, p.y + p.vy * scaleV);
+            arrow(sx, sy, vEnd.sx, vEnd.sy, 'rgba(34,197,94,0.95)'); // green
+            const aEnd = worldToScreen(p.x + p.ax * scaleA, p.y + p.ay * scaleA);
+            arrow(sx, sy, aEnd.sx, aEnd.sy, 'rgba(248,113,113,0.95)'); // red
+        }
+
+        function clearCanvas() {
+            const rect = canvas.getBoundingClientRect();
+            ctx.clearRect(0, 0, rect.width, rect.height);
+            // subtle background gradient
+            const g = ctx.createLinearGradient(0, 0, 0, rect.height);
+            g.addColorStop(0, 'rgba(2,6,23,1)');
+            g.addColorStop(1, 'rgba(3,7,18,1)');
+            ctx.fillStyle = g;
+            ctx.fillRect(0, 0, rect.width, rect.height);
+        }
+
+        function draw() {
+            clearCanvas();
+            drawGrid();
+            drawAxes();
+
+            if (state.trace.length === 0) rebuildTrace();
+            drawTrace();
+
+            const p = computeAt(state.t);
+            drawProjectile(p);
+            updateHUD(p);
+        }
+
+        function fmt(x, d=2) { return Number.isFinite(x) ? x.toFixed(d) : '—'; }
+
+        function updateHUD(p) {
+            const tr = T[state.lang];
+            const v = Math.hypot(p.vx, p.vy);
+            const stats = document.getElementById('stats-output');
+
+            let range = 0, yMax = 0;
+            if (!state.dragEnabled) {
+                const s = solveBallistic();
+                range = s.range;
+                yMax = s.yMax;
+            } else {
+                const s = dragTrajectoryCached();
+                range = s.range;
+                yMax = s.yMax;
+            }
+
+            stats.innerHTML = `
+                <div class="flex justify-between"><span>${tr.stats.tf}:</span><span class="text-cyan-300">${fmt(state.tf,2)} s</span></div>
+                <div class="flex justify-between"><span>${tr.stats.R}:</span><span class="text-cyan-300">${fmt(range,2)} m</span></div>
+                <div class="flex justify-between"><span>${tr.stats.H}:</span><span class="text-cyan-300">${fmt(yMax,2)} m</span></div>
+                <hr class="border-gray-700 my-2">
+                <div class="flex justify-between"><span>${tr.stats.x}:</span><span>${fmt(p.x,2)} m</span></div>
+                <div class="flex justify-between"><span>${tr.stats.y}:</span><span>${fmt(p.y,2)} m</span></div>
+                <div class="flex justify-between"><span>${tr.stats.vx}:</span><span>${fmt(p.vx,2)} m/s</span></div>
+                <div class="flex justify-between"><span>${tr.stats.vy}:</span><span>${fmt(p.vy,2)} m/s</span></div>
+                <div class="flex justify-between"><span>${tr.stats.v}:</span><span>${fmt(v,2)} m/s</span></div>
+            `;
+
+            const overlay = document.getElementById('overlay-output');
+            const u = clamp(state.t / state.tf, 0, 1);
+            const status =
+                (state.t <= 1e-6) ? tr.overlayReady :
+                (state.t >= state.tf - 1e-6) ? tr.overlayDone :
+                (state.playing) ? tr.overlayFlight :
+                tr.overlayScrub;
+            overlay.innerHTML = `
+                <div class="flex justify-between gap-4"><span>${status}</span><span class="text-cyan-300">${(u*100).toFixed(1)}%</span></div>
+                <div class="text-gray-300 mt-1">t = <span class="text-cyan-300">${fmt(state.t,2)} s</span></div>
+            `;
+
+            document.getElementById('val-time').textContent = `${fmt(state.t,2)} s`;
+        }
+
+        function updateParam(key, value) {
+            state.params[key] = Number(value);
+            cachedDrag = null;
+            resetSim(false);
+            syncUI();
+            fitView();
+        }
+
+        function updateSpeed(value) {
+            state.speedMult = Number(value);
+            document.getElementById('val-speed').textContent = `${state.speedMult.toFixed(1)}x`;
+        }
+
+        function updateZoom(value) {
+            state.zoom = Number(value);
+            document.getElementById('val-zoom').textContent = `${state.zoom.toFixed(2)}x`;
+            fitView();
+        }
+
+        function toggleOption(key, checked) {
+            state[key] = checked;
+            draw();
+        }
+
+        function toggleDrag(checked) {
+            state.dragEnabled = checked;
+            const box = document.getElementById('drag-controls');
+            box.classList.toggle('opacity-50', !checked);
+            box.classList.toggle('pointer-events-none', !checked);
+            cachedDrag = null;
+            resetSim(false);
+            syncUI();
+            fitView();
+        }
+
+        function scrubTime(u) {
+            state.playing = false;
+            setPlayUI();
+            state.t = clamp(Number(u), 0, 1) * state.tf;
+            draw();
+        }
+
+        function stepTime(dir) {
+            state.playing = false;
+            setPlayUI();
+            state.t = clamp(state.t + dir * state.dtStep, 0, state.tf);
+            document.getElementById('inp-time').value = (state.t / state.tf).toString();
+            draw();
+        }
+
+        function togglePlay() {
+            state.playing = !state.playing;
+            setPlayUI();
+            state.lastTs = null;
+            requestAnimationFrame(tick);
+        }
+
+        function setPlayUI() {
+            const tr = T[state.lang];
+            const btn = document.getElementById('btn-play');
+            const txt = document.getElementById('txt-play');
+            if (state.playing) {
+                txt.textContent = tr.stop;
+                btn.classList.remove('bg-green-500', 'hover:bg-green-600');
+                btn.classList.add('bg-yellow-500', 'hover:bg-yellow-600');
+            } else {
+                txt.textContent = tr.start;
+                btn.classList.remove('bg-yellow-500', 'hover:bg-yellow-600');
+                btn.classList.add('bg-green-500', 'hover:bg-green-600');
+            }
+        }
+
+        function resetSim(hard) {
+            if (hard) state.playing = false;
+            setPlayUI();
+            state.t = 0;
+            if (!state.dragEnabled) solveBallistic(); else dragTrajectoryCached();
+            rebuildTrace();
+            document.getElementById('inp-time').value = "0";
+            draw();
+        }
+
+        function tick(ts) {
+            if (!state.playing) return;
+            if (state.lastTs == null) state.lastTs = ts;
+            const dt = clamp((ts - state.lastTs) / 1000, 0, 0.05);
+            state.lastTs = ts;
+
+            state.t += dt * state.speedMult;
+            if (state.t >= state.tf) {
+                state.t = state.tf;
+                state.playing = false;
+                setPlayUI();
+            }
+            document.getElementById('inp-time').value = (state.t / state.tf).toString();
+            draw();
+            if (state.playing) requestAnimationFrame(tick);
+        }
+
+        function syncUI() {
+            document.getElementById('val-v0').textContent = `${state.params.v0.toFixed(1)} m/s`;
+            document.getElementById('val-theta').textContent = `${state.params.thetaDeg.toFixed(1)}°`;
+            document.getElementById('val-g').textContent = `${state.params.g.toFixed(2)} m/s²`;
+            document.getElementById('val-h0').textContent = `${state.params.h0.toFixed(1)} m`;
+            document.getElementById('val-k').textContent = `${state.params.k.toFixed(2)} 1/s`;
+            document.getElementById('val-speed').textContent = `${state.speedMult.toFixed(1)}x`;
+            document.getElementById('val-zoom').textContent = `${state.zoom.toFixed(2)}x`;
+        }
+
+        function applyLang() {
+            const tr = T[state.lang];
+            document.getElementById('app-title').textContent = tr.title;
+            document.getElementById('app-subtitle').textContent = tr.subtitle;
+            document.getElementById('lbl-speed').textContent = tr.speed;
+            document.getElementById('lbl-time').textContent = tr.time;
+            document.getElementById('hdr-params').textContent = tr.params;
+            document.getElementById('lbl-v0').textContent = tr.v0;
+            document.getElementById('lbl-theta').textContent = tr.theta;
+            document.getElementById('lbl-g').textContent = tr.g;
+            document.getElementById('lbl-h0').textContent = tr.h0;
+            document.getElementById('lbl-drag').textContent = tr.drag;
+            document.getElementById('lbl-k').textContent = tr.k;
+            document.getElementById('txt-drag-note').textContent = tr.dragNote;
+            document.getElementById('hdr-view').textContent = tr.view;
+            document.getElementById('lbl-trace').textContent = tr.trace;
+            document.getElementById('lbl-grid').textContent = tr.grid;
+            document.getElementById('lbl-vec').textContent = tr.vec;
+            document.getElementById('btn-fit').textContent = tr.fit;
+            document.getElementById('lbl-zoom').textContent = tr.zoom;
+            document.getElementById('hdr-stats').textContent = tr.results;
+            document.getElementById('txt-tip').textContent = tr.tip;
+            document.getElementById('ovr-title').textContent = tr.overlayTitle;
+            document.getElementById('hint-space').textContent = tr.hintSpace;
+            document.getElementById('hint-r').textContent = tr.hintR;
+            document.getElementById('btn-step-back').textContent = tr.stepBack;
+            document.getElementById('btn-step-fwd').textContent = tr.stepFwd;
+            setPlayUI();
+            draw();
+        }
+
+        function toggleLang() {
+            state.lang = (state.lang === 'pl') ? 'en' : 'pl';
+            document.getElementById('lang-label').textContent = (state.lang === 'pl') ? 'EN' : 'PL';
+            document.documentElement.lang = state.lang;
+            applyLang();
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') { e.preventDefault(); togglePlay(); }
+            if (e.key === 'r' || e.key === 'R') { e.preventDefault(); resetSim(true); }
+        });
+
+        function init() {
+            resizeCanvas();
+            syncUI();
+            solveBallistic();
+            rebuildTrace();
+            applyLang();
+            resetSim(true);
+        }
+
+        init();
+    </script>
+</body>
+</html>
+

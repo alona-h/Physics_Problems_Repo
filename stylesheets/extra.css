@@ -1,0 +1,19 @@
+/* docs/stylesheets/extra.css - ciąg dalszy */
+
+/* Wymuszenie pełnej szerokości (Full Width) */
+.md-grid {
+    max-width: 86% !important; /* Użyj 86% szerokości ekranu zamiast sztywnej wartości */
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ujednolicone rozmiary rysunków dla listy 07 (docs/pl/problem_set_07_...) */
+.md-content img[src*="fig/07_circ/"] {
+    display: block;
+    margin: 0 auto;
+    width: 650px;
+    max-width: 100%;
+    height: auto;
+    
+}

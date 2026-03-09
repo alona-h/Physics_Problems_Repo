@@ -1,0 +1,2819 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://alona-h.github.io/Physics_Problems_Repo/problem_set_01_mathematical_foundations_solution/task_07/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../pl/problem_set_01_mathematical_foundations_solution/task_07/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Problem Set 1 – Problem 7: Work of a Force Along a Trajectory - Physics Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-set-1-problem-7-work-of-a-force-along-a-trajectory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Physics Problems" class="md-header__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physics Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Problem Set 1 – Problem 7: Work of a Force Along a Trajectory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../pl/problem_set_01_mathematical_foundations_solution/task_07/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Physics Problems" class="md-nav__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Physics Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Sets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Sets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 01
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 01
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_01_mathematical_foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 02
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 02
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_02_mechanics_and_kinematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 03
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 03
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_03_mechanics_ii_dynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 04
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 04
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_04_oscillations_and_waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_05_electromagnetism_i/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 06
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 06
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_06_electromagnetism_ii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 07
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 07
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_07_circuits_resistors_and_kirchhoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 08
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 08
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_08_statistics_and_measurements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 09
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 09
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_09_model_cosmology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 10
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 10
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_10_relativity_spacetime_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_11_modern_physics_quantum_and_nuclear_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/projectile_motion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projectile Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/conics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/kepler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kepler's Laws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/chaos_pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaotic Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/work_integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/flux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/electric_field_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electric Field Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/wave_atoms.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom waves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/grav_acc_measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gravitational Acceleration Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/numeric_integrator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numeric Integrator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_1_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_2_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_3_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_4_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-velocity-vector-vecvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 – Velocity vector \(\vec{v}(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-work-done-by-the-force-analytical-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 – Work done by the force: analytical calculation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 – Work done by the force: analytical calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-express-vecf-along-the-trajectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Express \(\vec{F}\) along the trajectory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-set-up-the-line-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Set up the line integral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-evaluate-the-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Evaluate the integral
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-riemann-sum-interpretation-and-numerical-calculation-in-htmljs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 – Riemann sum interpretation and numerical calculation in HTML/JS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 – Riemann sum interpretation and numerical calculation in HTML/JS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#riemann-sum-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riemann sum interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#htmljs-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML/JS Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-possible-questions-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Possible Questions &amp; Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-set-1-problem-7-work-of-a-force-along-a-trajectory">Problem Set 1 – Problem 7: Work of a Force Along a Trajectory</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This problem introduces the <strong>line integral</strong> — one of the most important concepts in physics and engineering. A line integral computes the cumulative effect of a force acting on an object as it moves along a curved path. The result is the <strong>work</strong> done by the force.</p>
+<blockquote>
+<p><strong>Key idea:</strong> Work is not just force times distance. When the force changes direction and magnitude along a curved path, we must integrate:
+$<span class="arithmatex">\(W = \int_C \vec{F} \cdot d\vec{r} = \int_a^b \vec{F}(\vec{r}(t)) \cdot \vec{v}(t)\, dt\)</span>$
+At each instant, only the component of force <strong>parallel to the motion</strong> does work. The dot product <span class="arithmatex">\(\vec{F} \cdot \vec{v}\)</span> extracts exactly that component, and integrating it over time gives the total work.</p>
+</blockquote>
+<p><strong>Given:</strong>
+$<span class="arithmatex">\(\vec{F}(x, y) = (y,\ 2x), \qquad x = t,\quad y = t^2, \qquad t \in [0, 1]\)</span>$</p>
+<hr />
+<h2 id="71-velocity-vector-vecvt">7.1 – Velocity vector <span class="arithmatex">\(\vec{v}(t)\)</span></h2>
+<p>Differentiating the parametric trajectory <span class="arithmatex">\((x(t), y(t)) = (t, t^2)\)</span>:</p>
+<div class="arithmatex">\[\vec{v}(t) = \frac{d}{dt}(t,\ t^2) = (1,\ 2t)\]</div>
+<div class="arithmatex">\[\boxed{\vec{v}(t) = (1,\ 2t)}\]</div>
+<p>This is identical to Problem 6 — the same parabolic trajectory.</p>
+<blockquote>
+<p><strong>Explanation:</strong> The velocity vector tells us the direction and speed of motion at each point along the path. We need it because the work integral requires us to know how the object is moving at every instant — specifically, how the force aligns with that motion.</p>
+</blockquote>
+<hr />
+<h2 id="72-work-done-by-the-force-analytical-calculation">7.2 – Work done by the force: analytical calculation</h2>
+<h3 id="step-1-express-vecf-along-the-trajectory">Step 1 — Express <span class="arithmatex">\(\vec{F}\)</span> along the trajectory</h3>
+<p>The force <span class="arithmatex">\(\vec{F}(x, y) = (y, 2x)\)</span> is given in terms of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>. We substitute the parametric equations <span class="arithmatex">\(x = t\)</span>, <span class="arithmatex">\(y = t^2\)</span> to express the force as a function of <span class="arithmatex">\(t\)</span>:</p>
+<div class="arithmatex">\[\vec{F}(t) = \vec{F}(x(t),\ y(t)) = (y(t),\ 2x(t)) = (t^2,\ 2t)\]</div>
+<h3 id="step-2-set-up-the-line-integral">Step 2 — Set up the line integral</h3>
+<div class="arithmatex">\[W = \int_C \vec{F} \cdot d\vec{r} = \int_0^1 \vec{F}(t) \cdot \vec{v}(t)\, dt\]</div>
+<p>Compute the dot product <span class="arithmatex">\(\vec{F}(t) \cdot \vec{v}(t)\)</span>:</p>
+<div class="arithmatex">\[\vec{F}(t) \cdot \vec{v}(t) = (t^2,\ 2t) \cdot (1,\ 2t)\]</div>
+<div class="arithmatex">\[= t^2 \cdot 1 + 2t \cdot 2t\]</div>
+<div class="arithmatex">\[= t^2 + 4t^2\]</div>
+<div class="arithmatex">\[= 5t^2\]</div>
+<h3 id="step-3-evaluate-the-integral">Step 3 — Evaluate the integral</h3>
+<div class="arithmatex">\[W = \int_0^1 5t^2\, dt\]</div>
+<div class="arithmatex">\[= 5 \int_0^1 t^2\, dt\]</div>
+<div class="arithmatex">\[= 5 \left[\frac{t^3}{3}\right]_0^1\]</div>
+<div class="arithmatex">\[= 5 \cdot \left(\frac{1^3}{3} - \frac{0^3}{3}\right)\]</div>
+<div class="arithmatex">\[= 5 \cdot \frac{1}{3}\]</div>
+<div class="arithmatex">\[\boxed{W = \frac{5}{3} \approx 1.6\overline{6}}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> The dot product <span class="arithmatex">\(\vec{F} \cdot \vec{v}\)</span> gives the instantaneous power — the rate at which the force does work at each moment. Integrating this over time gives the total work. The result <span class="arithmatex">\(W = 5/3\)</span> is positive, meaning the force overall acts in the same general direction as the motion — it adds energy to the object. If <span class="arithmatex">\(W\)</span> were negative, the force would be opposing the motion (like friction), and if <span class="arithmatex">\(W = 0\)</span>, the force would be everywhere perpendicular to the path (like the normal force on a surface).</p>
+</blockquote>
+<hr />
+<h2 id="73-riemann-sum-interpretation-and-numerical-calculation-in-htmljs">7.3 – Riemann sum interpretation and numerical calculation in HTML/JS</h2>
+<h3 id="riemann-sum-interpretation">Riemann sum interpretation</h3>
+<p>The work integral can be written as the limit of a Riemann sum. Dividing <span class="arithmatex">\([0, 1]\)</span> into <span class="arithmatex">\(N\)</span> equal subintervals of width <span class="arithmatex">\(h = 1/N\)</span>, with sample points <span class="arithmatex">\(t_i = i \cdot h\)</span>:</p>
+<div class="arithmatex">\[W = \int_0^1 \vec{F}(t) \cdot \vec{v}(t)\, dt = \lim_{N \to \infty} \sum_{i=0}^{N-1} \left[\vec{F}(t_i) \cdot \vec{v}(t_i)\right] \cdot h\]</div>
+<div class="arithmatex">\[= \lim_{N \to \infty} \sum_{i=0}^{N-1} 5t_i^2 \cdot h\]</div>
+<p>Each term <span class="arithmatex">\([\vec{F}(t_i) \cdot \vec{v}(t_i)] \cdot h\)</span> represents the approximate work done over the small time interval <span class="arithmatex">\([t_i, t_{i+1}]\)</span>: the force is treated as constant over that tiny segment, and <span class="arithmatex">\(h\)</span> is the duration. As <span class="arithmatex">\(N \to \infty\)</span> and <span class="arithmatex">\(h \to 0\)</span>, this sum converges to the exact integral <span class="arithmatex">\(5/3\)</span>.</p>
+<blockquote>
+<p><strong>Explanation:</strong> The Riemann sum is the finite, computable approximation to the integral. Think of it as: at each of the <span class="arithmatex">\(N\)</span> sample times, you measure the force on the object and the direction it's moving, compute how much work is done in that tiny time slice, and add them all up. As you use more and more time slices (larger <span class="arithmatex">\(N\)</span>), the approximation gets closer and closer to the true value. This is exactly what numerical integration does in a computer.</p>
+</blockquote>
+<hr />
+<h3 id="htmljs-implementation">HTML/JS Implementation</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;/&gt;
+  &lt;title&gt;Problem 7 – Work of a Force&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 920px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f8f9fa;
+      color: #222;
+    }
+    h2 { color: #2c3e50; }
+    .panel {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    canvas { display: block; margin: 0 auto; }
+    input[type=range] { width: 320px; vertical-align: middle; }
+    .result {
+      font-size: 1.05em;
+      margin-top: 14px;
+      background: #eaf4fb;
+      padding: 10px 16px;
+      border-radius: 6px;
+      line-height: 1.8;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 0.91em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      text-align: right;
+    }
+    th { background: #2c3e50; color: white; }
+    tr:nth-child(even) { background: #f2f2f2; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Problem 7 – Work of F = (y, 2x) Along y = x²&lt;/h2&gt;
+
+&lt;!-- TRAJECTORY + FORCE FIELD CANVAS --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Trajectory and Force Field&lt;/h3&gt;
+  &lt;canvas id=&quot;trajCanvas&quot; width=&quot;560&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+  &lt;p style=&quot;text-align:center; color:#666; font-size:0.9em&quot;&gt;
+    Blue curve: trajectory &amp;nbsp;|&amp;nbsp;
+    Red arrows: force &lt;b&gt;F&lt;/b&gt;(x,y) = (y, 2x) at sample points
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- RIEMANN SUM CONTROL --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Riemann Sum Approximation of Work&lt;/h3&gt;
+  &lt;label&gt;&lt;b&gt;Number of subintervals N = &lt;span id=&quot;nVal&quot;&gt;10&lt;/span&gt;&lt;/b&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;range&quot; id=&quot;nSlider&quot; min=&quot;1&quot; max=&quot;500&quot; value=&quot;10&quot;
+         oninput=&quot;document.getElementById('nVal').textContent=this.value; update()&quot;&gt;
+  &lt;div class=&quot;result&quot; id=&quot;resultBox&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- CONVERGENCE TABLE --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Convergence Table&lt;/h3&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;N&lt;/th&gt;
+        &lt;th&gt;Riemann sum W&lt;/th&gt;
+        &lt;th&gt;Error |W − 5/3|&lt;/th&gt;
+        &lt;th&gt;Error × N&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody id=&quot;convBody&quot;&gt;&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;!-- ERROR PLOT --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Error vs N (log-log scale)&lt;/h3&gt;
+  &lt;canvas id=&quot;errCanvas&quot; width=&quot;600&quot; height=&quot;320&quot;&gt;&lt;/canvas&gt;
+  &lt;p style=&quot;text-align:center; color:#555; font-size:0.9em&quot;&gt;
+    Slope ≈ −1 confirms O(1/N) convergence for the left-endpoint Riemann sum
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  const EXACT = 5 / 3;
+
+  // Integrand: F(t)·v(t) = 5t²
+  function integrand(t) {
+    const Fx = t * t;   // y(t) = t²
+    const Fy = 2 * t;   // 2x(t) = 2t
+    const vx = 1;
+    const vy = 2 * t;
+    return Fx * vx + Fy * vy; // = t² + 4t² = 5t²
+  }
+
+  // Left-endpoint Riemann sum
+  function riemannSum(N) {
+    const h = 1 / N;
+    let sum = 0;
+    for (let i = 0; i &lt; N; i++) sum += integrand(i * h) * h;
+    return sum;
+  }
+
+  // ── Draw trajectory and force vectors ──────────────────────────
+  function drawTrajectory() {
+    const canvas = document.getElementById('trajCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const pad = 65;
+
+    ctx.clearRect(0, 0, W, H);
+
+    function px(x) { return pad + x * (W - 2 * pad); }
+    function py(y) { return H - pad - y * (H - 2 * pad); }
+
+    // Grid
+    ctx.strokeStyle = '#e8e8e8'; ctx.lineWidth = 1;
+    for (let v = 0; v &lt;= 1; v += 0.25) {
+      ctx.beginPath(); ctx.moveTo(px(v), py(0)); ctx.lineTo(px(v), py(1)); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(px(0), py(v)); ctx.lineTo(px(1), py(v)); ctx.stroke();
+    }
+
+    // Axes
+    ctx.strokeStyle = '#999'; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(pad, pad); ctx.lineTo(pad, H - pad);
+    ctx.lineTo(W - pad, H - pad); ctx.stroke();
+
+    // Axis labels
+    ctx.fillStyle = '#555'; ctx.font = '12px Arial';
+    for (let v = 0; v &lt;= 1; v += 0.25) {
+      ctx.fillText(v.toFixed(2), px(v) - 10, H - pad + 18);
+      ctx.fillText(v.toFixed(2), pad - 44, py(v) + 4);
+    }
+    ctx.fillStyle = '#2c3e50'; ctx.font = '13px Arial';
+    ctx.fillText('x', W - pad + 10, H - pad + 4);
+    ctx.fillText('y', pad - 20, pad - 10);
+
+    // Parabola trajectory
+    ctx.strokeStyle = '#2980b9'; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    for (let i = 0; i &lt;= 300; i++) {
+      const t = i / 300;
+      i === 0 ? ctx.moveTo(px(t), py(t * t)) : ctx.lineTo(px(t), py(t * t));
+    }
+    ctx.stroke();
+
+    // Direction arrow along trajectory at t=0.7
+    const ta = 0.7, sc = 0.07;
+    ctx.strokeStyle = '#2980b9'; ctx.lineWidth = 1.5;
+    const vxA = 1, vyA = 2 * ta;
+    const len = Math.sqrt(vxA * vxA + vyA * vyA);
+    drawArrow(ctx, px(ta), py(ta * ta),
+      px(ta + vxA / len * sc), py(ta * ta + vyA / len * sc),
+      '#2980b9', 2);
+
+    // Force vectors at sample points
+    const samples = [0.1, 0.3, 0.5, 0.7, 0.9];
+    const fsc = 0.13;
+    for (const t of samples) {
+      const Fx = t * t, Fy = 2 * t;
+      const flen = Math.sqrt(Fx * Fx + Fy * Fy);
+      const x0 = px(t), y0 = py(t * t);
+      const x1 = px(t + (Fx / flen) * fsc);
+      const y1 = py(t * t + (Fy / flen) * fsc);
+      drawArrow(ctx, x0, y0, x1, y1, '#e74c3c', 1.8);
+    }
+
+    // Start/end points
+    ctx.fillStyle = '#27ae60';
+    ctx.beginPath(); ctx.arc(px(0), py(0), 5, 0, 2 * Math.PI); ctx.fill();
+    ctx.fillStyle = '#333'; ctx.font = '12px Arial';
+    ctx.fillText('(0,0) t=0', px(0) + 8, py(0) + 14);
+
+    ctx.fillStyle = '#8e44ad';
+    ctx.beginPath(); ctx.arc(px(1), py(1), 5, 0, 2 * Math.PI); ctx.fill();
+    ctx.fillText('(1,1) t=1', px(1) - 55, py(1) - 8);
+
+    // Legend
+    ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 13px Arial';
+    ctx.fillText('Trajectory: y = x²', pad + 10, pad - 20);
+  }
+
+  function drawArrow(ctx, x1, y1, x2, y2, color, lw) {
+    const dx = x2 - x1, dy = y2 - y1;
+    const angle = Math.atan2(dy, dx);
+    const hs = 8;
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = lw;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 - hs * Math.cos(angle - Math.PI / 7),
+               y2 - hs * Math.sin(angle - Math.PI / 7));
+    ctx.lineTo(x2 - hs * Math.cos(angle + Math.PI / 7),
+               y2 - hs * Math.sin(angle + Math.PI / 7));
+    ctx.closePath(); ctx.fill();
+  }
+
+  // ── Update result box ──────────────────────────────────────────
+  function update() {
+    const N = parseInt(document.getElementById('nSlider').value);
+    const W = riemannSum(N);
+    const err = Math.abs(W - EXACT);
+    document.getElementById('resultBox').innerHTML =
+      `&lt;b&gt;N = ${N}&lt;/b&gt;&lt;br&gt;` +
+      `Riemann sum (left-endpoint): &lt;b&gt;W ≈ ${W.toFixed(8)}&lt;/b&gt;&lt;br&gt;` +
+      `Exact value (analytical): W = 5/3 = ${EXACT.toFixed(8)}&lt;br&gt;` +
+      `Absolute error: ${err.toExponential(4)}&lt;br&gt;` +
+      `Relative error: ${(err / EXACT * 100).toFixed(4)}%`;
+    drawErrorPlot();
+  }
+
+  // ── Convergence table ──────────────────────────────────────────
+  function buildTable() {
+    const Nvals = [1, 2, 5, 10, 20, 50, 100, 200, 500];
+    const tbody = document.getElementById('convBody');
+    tbody.innerHTML = '';
+    for (const N of Nvals) {
+      const W = riemannSum(N);
+      const err = Math.abs(W - EXACT);
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        `&lt;td&gt;${N}&lt;/td&gt;` +
+        `&lt;td&gt;${W.toFixed(8)}&lt;/td&gt;` +
+        `&lt;td&gt;${err.toExponential(4)}&lt;/td&gt;` +
+        `&lt;td&gt;${(err * N).toFixed(5)}&lt;/td&gt;`;
+      tbody.appendChild(tr);
+    }
+  }
+
+  // ── Error vs N log-log plot ────────────────────────────────────
+  function drawErrorPlot() {
+    const canvas = document.getElementById('errCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const pad = 60;
+    ctx.clearRect(0, 0, W, H);
+
+    const Nvals = [];
+    for (let n = 1; n &lt;= 500; n++) Nvals.push(n);
+    const errors = Nvals.map(n =&gt; Math.abs(riemannSum(n) - EXACT));
+
+    const logN = Nvals.map(n =&gt; Math.log10(n));
+    const logE = errors.map(e =&gt; e &gt; 1e-14 ? Math.log10(e) : -14);
+
+    const minLN = 0, maxLN = Math.log10(500);
+    const finiteE = logE.filter(v =&gt; isFinite(v) &amp;&amp; v &gt; -13);
+    const minLE = Math.min(...finiteE) - 0.3;
+    const maxLE = Math.max(...finiteE) + 0.3;
+
+    function pxF(lx) { return pad + (lx - minLN) / (maxLN - minLN) * (W - 2 * pad); }
+    function pyF(ly) { return H - pad - (ly - minLE) / (maxLE - minLE) * (H - 2 * pad); }
+
+    // Axes
+    ctx.strokeStyle = '#aaa'; ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad, pad); ctx.lineTo(pad, H - pad);
+    ctx.lineTo(W - pad, H - pad); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = '#555'; ctx.font = '12px Arial';
+    ctx.fillText('log\u2081\u2080(N)', W / 2 - 20, H - 10);
+    ctx.save(); ctx.translate(16, H / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('log\u2081\u2080(error)', -40, 0); ctx.restore();
+
+    for (let lx = 0; lx &lt;= Math.log10(500); lx += 0.5) {
+      ctx.fillText(lx.toFixed(1), pxF(lx) - 8, H - pad + 16);
+    }
+    for (let ly = Math.ceil(minLE); ly &lt;= Math.floor(maxLE); ly++) {
+      ctx.fillText(ly, pad - 32, pyF(ly) + 4);
+    }
+
+    // Reference slope -1
+    ctx.strokeStyle = '#e74c3c'; ctx.lineWidth = 1.5; ctx.setLineDash([6, 4]);
+    const rx1 = 0.3, rx2 = 2.5;
+    const ry1 = maxLE - 0.4;
+    const ry2 = ry1 - 1 * (rx2 - rx1);
+    ctx.beginPath(); ctx.moveTo(pxF(rx1), pyF(ry1)); ctx.lineTo(pxF(rx2), pyF(ry2));
+    ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = '#e74c3c'; ctx.font = '12px Arial';
+    ctx.fillText('slope = \u22121', pxF(rx2) + 6, pyF(ry2) + 4);
+
+    // Error curve
+    ctx.strokeStyle = '#2980b9'; ctx.lineWidth = 2;
+    ctx.beginPath();
+    let started = false;
+    for (let i = 0; i &lt; Nvals.length; i++) {
+      if (!isFinite(logE[i]) || logE[i] &lt; -13) continue;
+      if (!started) { ctx.moveTo(pxF(logN[i]), pyF(logE[i])); started = true; }
+      else ctx.lineTo(pxF(logN[i]), pyF(logE[i]));
+    }
+    ctx.stroke();
+
+    // Current N marker
+    const N = parseInt(document.getElementById('nSlider').value);
+    const curErr = Math.abs(riemannSum(N) - EXACT);
+    if (curErr &gt; 1e-14) {
+      const cx = pxF(Math.log10(N)), cy = pyF(Math.log10(curErr));
+      ctx.fillStyle = '#e67e22';
+      ctx.beginPath(); ctx.arc(cx, cy, 6, 0, 2 * Math.PI); ctx.fill();
+      ctx.fillStyle = '#e67e22'; ctx.font = 'bold 12px Arial';
+      ctx.fillText(`N=${N}`, cx + 8, cy - 6);
+    }
+
+    ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 13px Arial';
+    ctx.fillText('Error convergence (log-log)', pad, pad - 18);
+  }
+
+  drawTrajectory();
+  buildTable();
+  update();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<blockquote>
+<p><strong>How to use the application:</strong>
+- The top canvas shows the parabolic trajectory (blue) with the force field arrows (red) at five sample points along the path.
+- The slider controls <span class="arithmatex">\(N\)</span> — the number of subintervals in the Riemann sum.
+- The result box shows the numerical approximation, the exact value <span class="arithmatex">\(5/3\)</span>, and the current error.
+- The convergence table lists errors for <span class="arithmatex">\(N = 1, 2, 5, \ldots, 500\)</span>.
+- The log-log error plot shows slope <span class="arithmatex">\(\approx -1\)</span>, confirming <span class="arithmatex">\(O(1/N)\)</span> convergence for the left-endpoint Riemann sum (first-order method).</p>
+</blockquote>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Velocity vector</td>
+<td><span class="arithmatex">\(\vec{v}(t) = (1,\ 2t)\)</span></td>
+</tr>
+<tr>
+<td>Force along trajectory</td>
+<td><span class="arithmatex">\(\vec{F}(t) = (t^2,\ 2t)\)</span></td>
+</tr>
+<tr>
+<td>Dot product <span class="arithmatex">\(\vec{F} \cdot \vec{v}\)</span></td>
+<td><span class="arithmatex">\(t^2 \cdot 1 + 2t \cdot 2t = 5t^2\)</span></td>
+</tr>
+<tr>
+<td>Work integral</td>
+<td><span class="arithmatex">\(W = \int_0^1 5t^2\, dt\)</span></td>
+</tr>
+<tr>
+<td>Analytical result</td>
+<td><span class="arithmatex">\(W = 5/3 \approx 1.6\overline{6}\)</span></td>
+</tr>
+<tr>
+<td>Riemann sum convergence</td>
+<td><span class="arithmatex">\(O(1/N)\)</span> — first order (left-endpoint rule)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-possible-questions-answers">5 Possible Questions &amp; Answers</h2>
+<hr />
+<p><strong>Q1: What is the physical meaning of the dot product <span class="arithmatex">\(\vec{F} \cdot \vec{v}\)</span> inside the integral?</strong></p>
+<p><strong>A:</strong> The dot product <span class="arithmatex">\(\vec{F} \cdot \vec{v}\)</span> gives the instantaneous <strong>power</strong> — the rate of work being done by the force at that moment (in units of energy per time). Only the component of force parallel to the velocity does work; the perpendicular component merely steers the object without adding energy. For example, at <span class="arithmatex">\(t = 0.5\)</span>: <span class="arithmatex">\(\vec{F} = (0.25, 1)\)</span> and <span class="arithmatex">\(\vec{v} = (1, 1)\)</span>, giving power <span class="arithmatex">\(= 0.25 \cdot 1 + 1 \cdot 1 = 1.25\)</span> — both components contribute positively, meaning the force is helping accelerate the object along the path. Integrating this power over time gives total work: energy transferred.</p>
+<hr />
+<p><strong>Q2: Is the work done by this force path-independent? How would you check?</strong></p>
+<p><strong>A:</strong> A force is <strong>conservative</strong> (path-independent) if and only if its curl is zero: <span class="arithmatex">\(\frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} = 0\)</span>. For <span class="arithmatex">\(\vec{F} = (y, 2x)\)</span>: <span class="arithmatex">\(\frac{\partial (2x)}{\partial x} = 2\)</span> and <span class="arithmatex">\(\frac{\partial y}{\partial y} = 1\)</span>. Since <span class="arithmatex">\(2 \neq 1\)</span>, the curl is <span class="arithmatex">\(2 - 1 = 1 \neq 0\)</span>, so the force is <strong>non-conservative</strong>. This means the work done depends on which path is taken from start to finish — if you moved along a straight line from <span class="arithmatex">\((0,0)\)</span> to <span class="arithmatex">\((1,1)\)</span> instead of the parabola, you would get a different value of work. Non-conservative forces include friction, magnetic forces, and many physically realistic field configurations.</p>
+<hr />
+<p><strong>Q3: How does the left-endpoint Riemann sum differ from the trapezoidal rule used in Problem 6, and why does it converge more slowly?</strong></p>
+<p><strong>A:</strong> The <strong>left-endpoint Riemann sum</strong> approximates the integrand as constant over each subinterval, using the value at the left endpoint. This is a first-order method with error <span class="arithmatex">\(O(h) = O(1/N)\)</span> — halving <span class="arithmatex">\(h\)</span> halves the error. The <strong>trapezoidal rule</strong> uses the average of the left and right endpoint values in each subinterval, making it second-order: error <span class="arithmatex">\(O(h^2) = O(1/N^2)\)</span>. The trapezoidal rule is more accurate because it accounts for the slope of the integrand across each subinterval, not just its value at one end. On the log-log error plot, this is visible as a slope of <span class="arithmatex">\(-1\)</span> (Riemann) versus <span class="arithmatex">\(-2\)</span> (trapezoidal).</p>
+<hr />
+<p><strong>Q4: What would the work be if the force were <span class="arithmatex">\(\vec{F} = (-y, x)\)</span> instead? Would it be positive or negative?</strong></p>
+<p><strong>A:</strong> For <span class="arithmatex">\(\vec{F} = (-y, x)\)</span>, substituting <span class="arithmatex">\(x = t\)</span>, <span class="arithmatex">\(y = t^2\)</span>: <span class="arithmatex">\(\vec{F}(t) = (-t^2, t)\)</span>. The dot product with <span class="arithmatex">\(\vec{v} = (1, 2t)\)</span>: <span class="arithmatex">\((-t^2)(1) + (t)(2t) = -t^2 + 2t^2 = t^2\)</span>. The work would be <span class="arithmatex">\(W = \int_0^1 t^2\,dt = 1/3 &gt; 0\)</span> — still positive. A useful check: the sign of work depends on whether the force and velocity are more aligned (positive) or opposed (negative) on average. For <span class="arithmatex">\(\vec{F} = (-y, x)\)</span> this is a rotation field (like a whirlpool), and the net work along this parabola happens to be positive because the <span class="arithmatex">\(y\)</span>-component of the force (<span class="arithmatex">\(x = t &gt; 0\)</span>) aligns with the upward motion (<span class="arithmatex">\(v_y = 2t &gt; 0\)</span>) more than the <span class="arithmatex">\(x\)</span>-component opposes it.</p>
+<hr />
+<p><strong>Q5: How would the calculation change if the trajectory were a straight line from <span class="arithmatex">\((0,0)\)</span> to <span class="arithmatex">\((1,1)\)</span> instead of the parabola?</strong></p>
+<p><strong>A:</strong> A straight line from <span class="arithmatex">\((0,0)\)</span> to <span class="arithmatex">\((1,1)\)</span> can be parameterised as <span class="arithmatex">\(x = t\)</span>, <span class="arithmatex">\(y = t\)</span>, <span class="arithmatex">\(t \in [0,1]\)</span>. Then <span class="arithmatex">\(\vec{v} = (1, 1)\)</span> and <span class="arithmatex">\(\vec{F}(t) = (t, 2t)\)</span>. The dot product: <span class="arithmatex">\((t)(1) + (2t)(1) = 3t\)</span>. The work: <span class="arithmatex">\(W = \int_0^1 3t\,dt = [3t^2/2]_0^1 = 3/2 = 1.5\)</span>. This differs from the parabolic result of <span class="arithmatex">\(5/3 \approx 1.667\)</span>, confirming that the force is non-conservative — different paths give different amounts of work. The parabola does more work than the straight line because the object spends more time in regions where the force better aligns with the direction of motion.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

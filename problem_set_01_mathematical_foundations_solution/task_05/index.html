@@ -1,0 +1,2636 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://alona-h.github.io/Physics_Problems_Repo/problem_set_01_mathematical_foundations_solution/task_05/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../pl/problem_set_01_mathematical_foundations_solution/task_05/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Problem Set 1 – Problem 5: Trajectory Curvature and Normal Acceleration - Physics Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-set-1-problem-5-trajectory-curvature-and-normal-acceleration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Physics Problems" class="md-header__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physics Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Problem Set 1 – Problem 5: Trajectory Curvature and Normal Acceleration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../pl/problem_set_01_mathematical_foundations_solution/task_05/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Physics Problems" class="md-nav__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Physics Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Sets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Sets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 01
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 01
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_01_mathematical_foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 02
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 02
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_02_mechanics_and_kinematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 03
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 03
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_03_mechanics_ii_dynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 04
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 04
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_04_oscillations_and_waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_05_electromagnetism_i/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 06
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 06
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_06_electromagnetism_ii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 07
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 07
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_07_circuits_resistors_and_kirchhoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 08
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 08
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_08_statistics_and_measurements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 09
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 09
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_09_model_cosmology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 10
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 10
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_10_relativity_spacetime_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_11_modern_physics_quantum_and_nuclear_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/projectile_motion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projectile Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/conics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/kepler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kepler's Laws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/chaos_pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaotic Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/work_integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/flux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/electric_field_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electric Field Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/wave_atoms.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom waves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/grav_acc_measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gravitational Acceleration Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/numeric_integrator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numeric Integrator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_1_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_2_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_3_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_4_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-velocity-vector-vecvt-and-acceleration-vector-vecat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 – Velocity vector \(\vec{v}(t)\) and acceleration vector \(\vec{a}(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-unit-tangent-vector-hattt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 – Unit tangent vector \(\hat{T}(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-decomposition-of-acceleration-into-tangential-and-normal-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 – Decomposition of acceleration into tangential and normal components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 – Decomposition of acceleration into tangential and normal components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-tangential-acceleration-veca_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Tangential acceleration \(\vec{a}_t\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-normal-acceleration-veca_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Normal acceleration \(\vec{a}_n\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-radius-of-curvature-at-t-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 – Radius of curvature at \(t = 0\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-comparison-with-a-circle-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 – Comparison with a circle (\(a = b\))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Interpretation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Physical Interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#does-greater-curvature-imply-greater-normal-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does greater curvature imply greater normal acceleration?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-on-the-ellipse-is-the-trajectory-more-curved-at-the-end-of-the-major-or-minor-semi-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where on the ellipse is the trajectory more curved: at the end of the major or minor semi-axis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-normal-acceleration-the-cause-of-change-in-direction-of-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why is normal acceleration the cause of change in direction of motion?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-possible-questions-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Possible Questions &amp; Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-set-1-problem-5-trajectory-curvature-and-normal-acceleration">Problem Set 1 – Problem 5: Trajectory Curvature and Normal Acceleration</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This problem investigates how an ellipse curves at different points, and how that curvature relates to acceleration. The central idea is that acceleration can be split into two parts:</p>
+<ul>
+<li><strong>Tangential acceleration</strong> <span class="arithmatex">\(\vec{a}_t\)</span> — changes the object's <em>speed</em> (how fast it moves)</li>
+<li><strong>Normal acceleration</strong> <span class="arithmatex">\(\vec{a}_n\)</span> — changes the object's <em>direction</em> (how sharply it turns)</li>
+</ul>
+<p>The normal acceleration is directly linked to the curvature of the path: the sharper the turn, the larger the normal acceleration required.</p>
+<blockquote>
+<p><strong>Key formula connecting curvature and normal acceleration:</strong>
+$<span class="arithmatex">\(a_n = \frac{v^2}{R_c}\)</span>$
+where <span class="arithmatex">\(v = |\vec{v}|\)</span> is the speed and <span class="arithmatex">\(R_c\)</span> is the <strong>radius of curvature</strong> — the radius of the circle that best approximates the curve at that point. A small <span class="arithmatex">\(R_c\)</span> means a sharp bend; a large <span class="arithmatex">\(R_c\)</span> means a gentle curve.</p>
+</blockquote>
+<p><strong>Given ellipse:</strong>
+$<span class="arithmatex">\(x = a\cos t, \qquad y = b\sin t\)</span>$</p>
+<hr />
+<h2 id="51-velocity-vector-vecvt-and-acceleration-vector-vecat">5.1 – Velocity vector <span class="arithmatex">\(\vec{v}(t)\)</span> and acceleration vector <span class="arithmatex">\(\vec{a}(t)\)</span></h2>
+<p>Differentiating each component of <span class="arithmatex">\(\vec{r}(t) = (a\cos t,\ b\sin t)\)</span>:</p>
+<p><strong>Velocity</strong> — first derivative:
+$<span class="arithmatex">\(\vec{v}(t) = \frac{d\vec{r}}{dt} = \left(\frac{d}{dt}(a\cos t),\ \frac{d}{dt}(b\sin t)\right)\)</span>$</p>
+<div class="arithmatex">\[= (-a\sin t,\ b\cos t)\]</div>
+<div class="arithmatex">\[\boxed{\vec{v}(t) = (-a\sin t,\ b\cos t)}\]</div>
+<p><strong>Acceleration</strong> — second derivative (differentiate <span class="arithmatex">\(\vec{v}\)</span>):
+$<span class="arithmatex">\(\vec{a}(t) = \frac{d\vec{v}}{dt} = \left(\frac{d}{dt}(-a\sin t),\ \frac{d}{dt}(b\cos t)\right)\)</span>$</p>
+<div class="arithmatex">\[= (-a\cos t,\ -b\sin t)\]</div>
+<div class="arithmatex">\[\boxed{\vec{a}(t) = (-a\cos t,\ -b\sin t)}\]</div>
+<p>Note that <span class="arithmatex">\(\vec{a}(t) = -\vec{r}(t)\)</span> — the acceleration always points toward the origin (centre of the ellipse).</p>
+<blockquote>
+<p><strong>Explanation:</strong> The velocity is always tangent to the path — it tells you the direction of motion at each instant. The acceleration here always points back toward the centre of the ellipse. However, unlike a circle where this centripetal acceleration is purely responsible for changing direction, on an ellipse the acceleration is generally <em>not</em> perpendicular to the velocity — it has both a tangential component (changing speed) and a normal component (changing direction). We will separate these in the next steps.</p>
+</blockquote>
+<hr />
+<h2 id="52-unit-tangent-vector-hattt">5.2 – Unit tangent vector <span class="arithmatex">\(\hat{T}(t)\)</span></h2>
+<p>The <strong>unit tangent vector</strong> points in the direction of motion (same direction as <span class="arithmatex">\(\vec{v}\)</span>) but has magnitude exactly 1:</p>
+<div class="arithmatex">\[\hat{T}(t) = \frac{\vec{v}(t)}{|\vec{v}(t)|}\]</div>
+<p><strong>Step 1 — Compute <span class="arithmatex">\(|\vec{v}(t)|\)</span>:</strong>
+$<span class="arithmatex">\(|\vec{v}(t)| = \sqrt{(-a\sin t)^2 + (b\cos t)^2} = \sqrt{a^2\sin^2 t + b^2\cos^2 t}\)</span>$</p>
+<p>Define <span class="arithmatex">\(v(t) = |\vec{v}(t)| = \sqrt{a^2\sin^2 t + b^2\cos^2 t}\)</span> for convenience.</p>
+<p><strong>Step 2 — Write <span class="arithmatex">\(\hat{T}(t)\)</span>:</strong></p>
+<div class="arithmatex">\[\boxed{\hat{T}(t) = \frac{(-a\sin t,\ b\cos t)}{\sqrt{a^2\sin^2 t + b^2\cos^2 t}}}\]</div>
+<p><strong>Values at key points:</strong></p>
+<ul>
+<li>At <span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(\vec{v}(0) = (0, b)\)</span>, so <span class="arithmatex">\(\hat{T}(0) = (0, 1)\)</span> — pointing straight up</li>
+<li>At <span class="arithmatex">\(t = \pi/2\)</span>: <span class="arithmatex">\(\vec{v}(\pi/2) = (-a, 0)\)</span>, so <span class="arithmatex">\(\hat{T}(\pi/2) = (-1, 0)\)</span> — pointing left</li>
+</ul>
+<blockquote>
+<p><strong>Explanation:</strong> The unit tangent vector is the "compass direction" of motion at each point. Dividing by the speed strips away information about how fast the object is moving, leaving only the direction. It is always tangent (touching) to the curve — never pointing into or away from it. We need it to decompose the acceleration into its two components in the next step.</p>
+</blockquote>
+<hr />
+<h2 id="53-decomposition-of-acceleration-into-tangential-and-normal-components">5.3 – Decomposition of acceleration into tangential and normal components</h2>
+<p>Any acceleration vector can be split as:
+$<span class="arithmatex">\(\vec{a}(t) = \vec{a}_t(t) + \vec{a}_n(t)\)</span>$</p>
+<p>where:
+- <span class="arithmatex">\(\vec{a}_t\)</span> is <strong>parallel</strong> to <span class="arithmatex">\(\hat{T}\)</span> (along the direction of motion — changes speed)
+- <span class="arithmatex">\(\vec{a}_n\)</span> is <strong>perpendicular</strong> to <span class="arithmatex">\(\hat{T}\)</span> (across the direction of motion — changes direction)</p>
+<hr />
+<h3 id="step-1-tangential-acceleration-veca_t">Step 1 — Tangential acceleration <span class="arithmatex">\(\vec{a}_t\)</span></h3>
+<p>The tangential component is found by projecting <span class="arithmatex">\(\vec{a}\)</span> onto <span class="arithmatex">\(\hat{T}\)</span>:</p>
+<div class="arithmatex">\[a_t = \vec{a} \cdot \hat{T} = \frac{\vec{a} \cdot \vec{v}}{|\vec{v}|}\]</div>
+<p><strong>Compute <span class="arithmatex">\(\vec{a} \cdot \vec{v}\)</span>:</strong>
+$<span class="arithmatex">\(\vec{a} \cdot \vec{v} = (-a\cos t)(-a\sin t) + (-b\sin t)(b\cos t)\)</span>$</p>
+<div class="arithmatex">\[= a^2\sin t\cos t - b^2\sin t\cos t\]</div>
+<div class="arithmatex">\[= (a^2 - b^2)\sin t\cos t\]</div>
+<p>Using the double-angle identity <span class="arithmatex">\(\sin t \cos t = \frac{1}{2}\sin(2t)\)</span>:</p>
+<div class="arithmatex">\[\vec{a} \cdot \vec{v} = \frac{(a^2 - b^2)}{2}\sin(2t)\]</div>
+<p><strong>Therefore the scalar tangential acceleration is:</strong>
+$<span class="arithmatex">\(a_t = \frac{\vec{a} \cdot \vec{v}}{|\vec{v}|} = \frac{(a^2 - b^2)\sin t\cos t}{\sqrt{a^2\sin^2 t + b^2\cos^2 t}}\)</span>$</p>
+<p><strong>And the tangential acceleration vector is:</strong>
+$<span class="arithmatex">\(\vec{a}_t = a_t\,\hat{T} = \frac{(a^2 - b^2)\sin t\cos t}{a^2\sin^2 t + b^2\cos^2 t}\,(-a\sin t,\ b\cos t)\)</span>$</p>
+<div class="arithmatex">\[\boxed{\vec{a}_t(t) = \frac{(a^2-b^2)\sin t\cos t}{a^2\sin^2 t + b^2\cos^2 t}\,(-a\sin t,\ b\cos t)}\]</div>
+<hr />
+<h3 id="step-2-normal-acceleration-veca_n">Step 2 — Normal acceleration <span class="arithmatex">\(\vec{a}_n\)</span></h3>
+<p>The normal acceleration vector is whatever is left after subtracting the tangential part:
+$<span class="arithmatex">\(\vec{a}_n = \vec{a} - \vec{a}_t\)</span>$</p>
+<p><strong>Scalar magnitude of normal acceleration:</strong></p>
+<p>Using the identity <span class="arithmatex">\(|\vec{a}|^2 = a_t^2 + a_n^2\)</span> (Pythagoras — the two components are perpendicular), we get:</p>
+<div class="arithmatex">\[a_n = \sqrt{|\vec{a}|^2 - a_t^2}\]</div>
+<p><strong>Compute <span class="arithmatex">\(|\vec{a}|^2\)</span>:</strong>
+$<span class="arithmatex">\(|\vec{a}|^2 = (-a\cos t)^2 + (-b\sin t)^2 = a^2\cos^2 t + b^2\sin^2 t\)</span>$</p>
+<p><strong>Compute <span class="arithmatex">\(a_t^2\)</span>:</strong>
+$<span class="arithmatex">\(a_t^2 = \frac{(a^2-b^2)^2\sin^2 t\cos^2 t}{a^2\sin^2 t + b^2\cos^2 t}\)</span>$</p>
+<p><strong>Therefore:</strong>
+$<span class="arithmatex">\(a_n^2 = |\vec{a}|^2 - a_t^2 = (a^2\cos^2 t + b^2\sin^2 t) - \frac{(a^2-b^2)^2\sin^2 t\cos^2 t}{a^2\sin^2 t + b^2\cos^2 t}\)</span>$</p>
+<p>Combining over a common denominator <span class="arithmatex">\(v^2 = a^2\sin^2 t + b^2\cos^2 t\)</span>:</p>
+<div class="arithmatex">\[a_n^2 = \frac{(a^2\cos^2 t + b^2\sin^2 t)(a^2\sin^2 t + b^2\cos^2 t) - (a^2-b^2)^2\sin^2 t\cos^2 t}{a^2\sin^2 t + b^2\cos^2 t}\]</div>
+<p><strong>Expanding the numerator:</strong></p>
+<p>Let <span class="arithmatex">\(A = a^2\cos^2 t + b^2\sin^2 t\)</span> and <span class="arithmatex">\(B = a^2\sin^2 t + b^2\cos^2 t\)</span>. Then:</p>
+<div class="arithmatex">\[AB = a^4\sin^2 t\cos^2 t + a^2 b^2\cos^4 t + a^2 b^2\sin^4 t + b^4\sin^2 t\cos^2 t\]</div>
+<div class="arithmatex">\[= (a^4 + b^4)\sin^2 t\cos^2 t + a^2 b^2(\sin^4 t + \cos^4 t)\]</div>
+<p>Using <span class="arithmatex">\(\sin^4 t + \cos^4 t = 1 - 2\sin^2 t\cos^2 t\)</span>:</p>
+<div class="arithmatex">\[AB = (a^4 + b^4)\sin^2 t\cos^2 t + a^2 b^2(1 - 2\sin^2 t\cos^2 t)\]</div>
+<div class="arithmatex">\[= a^2 b^2 + (a^4 + b^4 - 2a^2b^2)\sin^2 t\cos^2 t\]</div>
+<div class="arithmatex">\[= a^2 b^2 + (a^2 - b^2)^2\sin^2 t\cos^2 t\]</div>
+<p>Subtracting <span class="arithmatex">\((a^2 - b^2)^2\sin^2 t\cos^2 t\)</span>:</p>
+<div class="arithmatex">\[AB - (a^2-b^2)^2\sin^2 t\cos^2 t = a^2 b^2\]</div>
+<p><strong>Therefore:</strong></p>
+<div class="arithmatex">\[a_n^2 = \frac{a^2 b^2}{a^2\sin^2 t + b^2\cos^2 t}\]</div>
+<div class="arithmatex">\[\boxed{a_n(t) = \frac{ab}{\sqrt{a^2\sin^2 t + b^2\cos^2 t}} = \frac{ab}{|\vec{v}(t)|}}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> The normal acceleration is the part of acceleration responsible for <em>bending</em> the path. It is always perpendicular to the direction of motion. The beautiful result <span class="arithmatex">\(a_n = ab/|\vec{v}|\)</span> tells us that the normal acceleration is large when the speed <span class="arithmatex">\(|\vec{v}|\)</span> is small — and small when the speed is large. This has an important geometric meaning: the object slows down in the parts of the ellipse where the path curves sharply (small <span class="arithmatex">\(R_c\)</span>), and these are precisely the places where <span class="arithmatex">\(|\vec{v}|\)</span> is smaller.</p>
+</blockquote>
+<hr />
+<h2 id="54-radius-of-curvature-at-t-0">5.4 – Radius of curvature at <span class="arithmatex">\(t = 0\)</span></h2>
+<p>Using the relation <span class="arithmatex">\(a_n = v^2 / R_c\)</span>, solving for <span class="arithmatex">\(R_c\)</span>:</p>
+<div class="arithmatex">\[R_c = \frac{v^2}{a_n} = \frac{|\vec{v}|^2}{a_n}\]</div>
+<p><strong>At <span class="arithmatex">\(t = 0\)</span>:</strong></p>
+<p>Compute <span class="arithmatex">\(|\vec{v}(0)|\)</span>:
+$<span class="arithmatex">\(\vec{v}(0) = (-a\sin 0,\ b\cos 0) = (0,\ b)\)</span>$
+$<span class="arithmatex">\(|\vec{v}(0)| = b\)</span>$</p>
+<p>Compute <span class="arithmatex">\(a_n(0)\)</span>:
+$<span class="arithmatex">\(a_n(0) = \frac{ab}{|\vec{v}(0)|} = \frac{ab}{b} = a\)</span>$</p>
+<p><strong>Radius of curvature:</strong>
+$<span class="arithmatex">\(R_c(t=0) = \frac{|\vec{v}(0)|^2}{a_n(0)} = \frac{b^2}{a}\)</span>$</p>
+<div class="arithmatex">\[\boxed{R_c(t=0) = \frac{b^2}{a}}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> At <span class="arithmatex">\(t = 0\)</span> the object is at position <span class="arithmatex">\((a, 0)\)</span> — the rightmost point of the ellipse, at the end of the <strong>major semi-axis</strong> <span class="arithmatex">\(a\)</span>. The radius of curvature there is <span class="arithmatex">\(b^2/a\)</span>. Since <span class="arithmatex">\(b &lt; a\)</span> (assuming <span class="arithmatex">\(a\)</span> is the larger semi-axis), this gives <span class="arithmatex">\(b^2/a &lt; b &lt; a\)</span> — the curvature is <em>tightest</em> (smallest <span class="arithmatex">\(R_c\)</span>) at the ends of the major axis. The ellipse bends most sharply at its widest points. This is the result we will compare with the circle case below.</p>
+</blockquote>
+<hr />
+<h2 id="55-comparison-with-a-circle-a-b">5.5 – Comparison with a circle (<span class="arithmatex">\(a = b\)</span>)</h2>
+<p>If <span class="arithmatex">\(a = b = R\)</span> (a circle), then:</p>
+<p><strong>Radius of curvature everywhere:</strong>
+$<span class="arithmatex">\(R_c = \frac{b^2}{a}\bigg|_{a=b=R} = \frac{R^2}{R} = R\)</span>$</p>
+<p>This is constant — confirming that a circle has the <strong>same curvature everywhere</strong>, equal to its own radius. This is perfectly consistent: every point of a circle is the best approximated by a circle of the same radius <span class="arithmatex">\(R\)</span>.</p>
+<p><strong>Normal acceleration for a circle:</strong>
+$<span class="arithmatex">\(a_n = \frac{ab}{|\vec{v}|}\bigg|_{a=b=R} = \frac{R^2}{\sqrt{R^2\sin^2 t + R^2\cos^2 t}} = \frac{R^2}{R} = R\)</span>$</p>
+<p>This is also constant — consistent with uniform circular motion where the centripetal acceleration <span class="arithmatex">\(a_n = \omega^2 R = R\)</span> (for <span class="arithmatex">\(\omega = 1\)</span>).</p>
+<div class="arithmatex">\[\boxed{\text{Circle: } R_c = R = \text{const}, \quad a_n = R = \text{const}}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> The circle is the unique curve with <em>constant curvature</em>. Every other closed curve (like an ellipse with <span class="arithmatex">\(a \neq b\)</span>) has varying curvature. The comparison shows that the ellipse "degenerates" smoothly into a circle as <span class="arithmatex">\(a \to b\)</span>, and all the position-dependent variation in <span class="arithmatex">\(R_c\)</span> and <span class="arithmatex">\(a_n\)</span> disappears in that limit.</p>
+</blockquote>
+<hr />
+<h2 id="physical-interpretation">Physical Interpretation</h2>
+<h3 id="does-greater-curvature-imply-greater-normal-acceleration">Does greater curvature imply greater normal acceleration?</h3>
+<p><strong>Yes.</strong> From <span class="arithmatex">\(a_n = v^2/R_c\)</span>: if <span class="arithmatex">\(R_c\)</span> is small (sharp curvature), then <span class="arithmatex">\(a_n\)</span> is large (for the same speed). The tighter the bend, the more acceleration is needed to keep the object on the path. This is why racing cars need to slow down before sharp corners — at lower speed, the required centripetal force is smaller and the tyres can provide it without skidding.</p>
+<hr />
+<h3 id="where-on-the-ellipse-is-the-trajectory-more-curved-at-the-end-of-the-major-or-minor-semi-axis">Where on the ellipse is the trajectory more curved: at the end of the major or minor semi-axis?</h3>
+<p><strong>At the end of the major semi-axis.</strong> Let's compare:</p>
+<ul>
+<li><strong>End of major semi-axis</strong> (<span class="arithmatex">\(t = 0\)</span>, point <span class="arithmatex">\((a, 0)\)</span>): <span class="arithmatex">\(R_c = b^2/a\)</span></li>
+<li><strong>End of minor semi-axis</strong> (<span class="arithmatex">\(t = \pi/2\)</span>, point <span class="arithmatex">\((0, b)\)</span>):</li>
+</ul>
+<p>At <span class="arithmatex">\(t = \pi/2\)</span>:
+$<span class="arithmatex">\(|\vec{v}(\pi/2)| = \sqrt{a^2\sin^2(\pi/2) + b^2\cos^2(\pi/2)} = \sqrt{a^2} = a\)</span>$
+$<span class="arithmatex">\(a_n(\pi/2) = \frac{ab}{a} = b\)</span>$
+$<span class="arithmatex">\(R_c(t = \pi/2) = \frac{|\vec{v}|^2}{a_n} = \frac{a^2}{b}\)</span>$</p>
+<p>Since <span class="arithmatex">\(a &gt; b\)</span>, we have <span class="arithmatex">\(\frac{b^2}{a} &lt; \frac{a^2}{b}\)</span>, i.e. <span class="arithmatex">\(R_c\)</span> is <strong>smaller</strong> at the end of the major axis — the curve is more tightly bent there.</p>
+<div class="arithmatex">\[\boxed{R_c\text{ at major axis end} = \frac{b^2}{a} &lt; \frac{a^2}{b} = R_c\text{ at minor axis end}}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> Imagine stretching a circle horizontally to make an ellipse. The ends that were pulled outward (the major axis ends) become the most sharply curved points — like the pointed ends of a football. The top and bottom (minor axis ends) become the flattest parts. So despite being the "widest" parts of the ellipse, the major axis ends are where the bending is most extreme.</p>
+</blockquote>
+<hr />
+<h3 id="why-is-normal-acceleration-the-cause-of-change-in-direction-of-motion">Why is normal acceleration the cause of change in direction of motion?</h3>
+<p>Normal acceleration acts <strong>perpendicular</strong> to the velocity vector. A force perpendicular to motion cannot change the magnitude of velocity (it does no work, since <span class="arithmatex">\(\vec{F} \perp \vec{v}\)</span> gives <span class="arithmatex">\(\vec{F} \cdot \vec{v} = 0\)</span>). Instead, it continuously rotates the velocity vector — changing only its direction. This is why planets remain in orbit: gravity provides centripetal (normal) acceleration that continuously redirects their velocity into a curved path, without speeding them up or slowing them down (in the idealised circular case). The greater the normal acceleration, the more rapidly the direction of motion changes — i.e. the more sharply the path curves.</p>
+<hr />
+<h2 id="summary-table">Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>General formula</th>
+<th>At <span class="arithmatex">\(t = 0\)</span></th>
+<th>At <span class="arithmatex">\(t = \pi/2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\vec{v}(t)\)</span></td>
+<td><span class="arithmatex">\((-a\sin t,\ b\cos t)\)</span></td>
+<td><span class="arithmatex">\((0, b)\)</span></td>
+<td><span class="arithmatex">\((-a, 0)\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\vec{a}(t)\)</span></td>
+<td><span class="arithmatex">\((-a\cos t,\ -b\sin t)\)</span></td>
+<td><span class="arithmatex">\((-a, 0)\)</span></td>
+<td><span class="arithmatex">\((0, -b)\)</span></td>
+</tr>
+<tr>
+<td>$</td>
+<td>\vec{v}(t)</td>
+<td>$</td>
+<td><span class="arithmatex">\(\sqrt{a^2\sin^2 t + b^2\cos^2 t}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a_t\)</span> (scalar)</td>
+<td>$\frac{(a^2-b^2)\sin t\cos t}{</td>
+<td>\vec{v}</td>
+<td>}$</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a_n\)</span> (scalar)</td>
+<td>$\frac{ab}{</td>
+<td>\vec{v}</td>
+<td>}$</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(R_c\)</span></td>
+<td>$\frac{</td>
+<td>\vec{v}</td>
+<td>^3}{ab}$</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> At <span class="arithmatex">\(t = 0\)</span> and <span class="arithmatex">\(t = \pi/2\)</span>, the tangential acceleration <span class="arithmatex">\(a_t = 0\)</span> — these are the points where the speed is momentarily at a maximum or minimum, so it is neither increasing nor decreasing. All the acceleration at these points is purely normal (centripetal).</p>
+</blockquote>
+<hr />
+<h2 id="5-possible-questions-answers">5 Possible Questions &amp; Answers</h2>
+<hr />
+<p><strong>Q1: Why is the tangential acceleration zero at <span class="arithmatex">\(t = 0\)</span> and <span class="arithmatex">\(t = \pi/2\)</span>?</strong></p>
+<p><strong>A:</strong> The tangential acceleration is <span class="arithmatex">\(a_t = (a^2 - b^2)\sin t \cos t / |\vec{v}|\)</span>. At <span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(\sin 0 = 0\)</span>, so <span class="arithmatex">\(a_t = 0\)</span>. At <span class="arithmatex">\(t = \pi/2\)</span>: <span class="arithmatex">\(\cos(\pi/2) = 0\)</span>, so <span class="arithmatex">\(a_t = 0\)</span> again. Physically, these are the points where the speed <span class="arithmatex">\(|\vec{v}|\)</span> is at a local maximum or minimum — speed cannot be simultaneously increasing and at a maximum, so its rate of change (tangential acceleration) must be zero there, just as the derivative of any function is zero at its extrema. At <span class="arithmatex">\(t = 0\)</span> the speed equals <span class="arithmatex">\(b\)</span> (its minimum if <span class="arithmatex">\(a &gt; b\)</span>), and at <span class="arithmatex">\(t = \pi/2\)</span> the speed equals <span class="arithmatex">\(a\)</span> (its maximum).</p>
+<hr />
+<p><strong>Q2: What is the physical meaning of the radius of curvature <span class="arithmatex">\(R_c\)</span>?</strong></p>
+<p><strong>A:</strong> The radius of curvature <span class="arithmatex">\(R_c\)</span> at a point on a curve is the radius of the <strong>osculating circle</strong> — the unique circle that best approximates the curve at that point (same position, same tangent, same curvature). A small <span class="arithmatex">\(R_c\)</span> means the curve bends sharply (like the tip of an ellipse), while a large <span class="arithmatex">\(R_c\)</span> means the curve is nearly straight. For a circle, <span class="arithmatex">\(R_c\)</span> equals the circle's own radius at every point. The formula <span class="arithmatex">\(a_n = v^2/R_c\)</span> connects this purely geometric quantity to dynamics: it says that to follow a tightly curved path (small <span class="arithmatex">\(R_c\)</span>) at speed <span class="arithmatex">\(v\)</span>, you need a large centripetal (normal) acceleration.</p>
+<hr />
+<p><strong>Q3: How does the decomposition <span class="arithmatex">\(\vec{a} = \vec{a}_t + \vec{a}_n\)</span> relate to Newton's second law?</strong></p>
+<p><strong>A:</strong> By Newton's second law, <span class="arithmatex">\(\vec{F} = m\vec{a}\)</span>. If we decompose the acceleration, the total force is also decomposed: <span class="arithmatex">\(\vec{F} = \vec{F}_t + \vec{F}_n\)</span>. The tangential force <span class="arithmatex">\(\vec{F}_t = ma_t\)</span> speeds the object up or slows it down. The normal force <span class="arithmatex">\(\vec{F}_n = ma_n\)</span> steers it — it keeps the object on its curved path without doing work. For example, a car's engine provides tangential force (acceleration/braking), while the tyres' sideways friction provides normal force (turning). The two effects are physically independent and can be analysed separately.</p>
+<hr />
+<p><strong>Q4: What happens to the radius of curvature of the ellipse if <span class="arithmatex">\(b \to 0\)</span> (the ellipse becomes very flat)?</strong></p>
+<p><strong>A:</strong> If <span class="arithmatex">\(b \to 0\)</span>, then at the end of the major axis: <span class="arithmatex">\(R_c = b^2/a \to 0\)</span> — the curvature becomes infinitely sharp (like the tip of a needle). At the end of the minor axis: <span class="arithmatex">\(R_c = a^2/b \to \infty\)</span> — the curve becomes nearly flat (almost a straight line). This makes geometric sense: as the ellipse flattens, its narrow tips become extremely pointed (high curvature) while the long sides become almost straight (nearly zero curvature). In the limit <span class="arithmatex">\(b = 0\)</span>, the ellipse degenerates into a straight line segment of length <span class="arithmatex">\(2a\)</span>, traversed back and forth.</p>
+<hr />
+<p><strong>Q5: Show that the formula <span class="arithmatex">\(R_c = |\vec{v}|^3 / (|\vec{v} \times \vec{a}|)\)</span> gives the same result for the ellipse at <span class="arithmatex">\(t = 0\)</span>.</strong></p>
+<p><strong>A:</strong> At <span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(\vec{v}(0) = (0, b)\)</span> and <span class="arithmatex">\(\vec{a}(0) = (-a, 0)\)</span>. The cross product in 2D gives a scalar (the <span class="arithmatex">\(z\)</span>-component): <span class="arithmatex">\(|\vec{v} \times \vec{a}| = |v_x a_y - v_y a_x| = |(0)(0) - (b)(-a)| = ab\)</span>. Then:
+$<span class="arithmatex">\(R_c = \frac{|\vec{v}|^3}{|\vec{v} \times \vec{a}|} = \frac{b^3}{ab} = \frac{b^2}{a}\)</span>$
+This matches the result from Step 5.4, confirming both approaches are equivalent. This general formula is often used in practice because it avoids having to decompose the acceleration explicitly.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

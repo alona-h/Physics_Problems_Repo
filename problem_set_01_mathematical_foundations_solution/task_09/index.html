@@ -1,0 +1,2970 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://alona-h.github.io/Physics_Problems_Repo/problem_set_01_mathematical_foundations_solution/task_09/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../pl/problem_set_01_mathematical_foundations_solution/task_09/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Problem Set 1 – Problem 9: Harmonic Oscillator - Physics Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-set-1-problem-9-harmonic-oscillator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Physics Problems" class="md-header__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physics Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Problem Set 1 – Problem 9: Harmonic Oscillator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../pl/problem_set_01_mathematical_foundations_solution/task_09/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Physics Problems" class="md-nav__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Physics Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Sets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Sets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 01
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 01
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_01_mathematical_foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 02
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 02
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_02_mechanics_and_kinematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 03
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 03
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_03_mechanics_ii_dynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 04
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 04
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_04_oscillations_and_waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_05_electromagnetism_i/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 06
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 06
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_06_electromagnetism_ii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 07
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 07
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_07_circuits_resistors_and_kirchhoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 08
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 08
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_08_statistics_and_measurements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 09
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 09
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_09_model_cosmology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 10
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 10
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_10_relativity_spacetime_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_11_modern_physics_quantum_and_nuclear_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/projectile_motion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projectile Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/conics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/kepler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kepler's Laws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/chaos_pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaotic Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/work_integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/flux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/electric_field_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electric Field Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/wave_atoms.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom waves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/grav_acc_measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gravitational Acceleration Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/numeric_integrator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numeric Integrator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_1_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_2_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_3_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_4_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#91-general-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 – General solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.1 – General solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-characteristic-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method: Characteristic equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-solving-for-given-initial-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 – Solving for given initial conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-htmljs-visualisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 – HTML/JS Visualisation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-possible-questions-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Possible Questions &amp; Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-set-1-problem-9-harmonic-oscillator">Problem Set 1 – Problem 9: Harmonic Oscillator</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>The <strong>harmonic oscillator</strong> is one of the most important equations in all of physics and engineering. It describes any system where a restoring force pulls an object back toward an equilibrium position with a strength proportional to the displacement. Examples include:</p>
+<ul>
+<li>A mass on a spring (Hooke's law)</li>
+<li>A pendulum for small angles</li>
+<li>An LC electrical circuit</li>
+<li>Vibrations of atoms in a crystal</li>
+<li>Sound waves, light waves</li>
+</ul>
+<p>The equation is:
+$<span class="arithmatex">\(\frac{d^2x}{dt^2} + \omega^2 x = 0\)</span>$</p>
+<blockquote>
+<p><strong>Plain-language meaning:</strong> The second derivative of <span class="arithmatex">\(x\)</span> (acceleration) is proportional to <span class="arithmatex">\(x\)</span> itself, but with a negative sign. If the object is displaced to the right (<span class="arithmatex">\(x &gt; 0\)</span>), the acceleration points left (<span class="arithmatex">\(\ddot{x} &lt; 0\)</span>) — restoring it. If displaced left (<span class="arithmatex">\(x &lt; 0\)</span>), the acceleration points right. This creates perpetual oscillation.</p>
+</blockquote>
+<p>The constant <span class="arithmatex">\(\omega\)</span> (omega) is the <strong>angular frequency</strong> of oscillation, measured in radians per second. It is related to the ordinary frequency <span class="arithmatex">\(f\)</span> and period <span class="arithmatex">\(T\)</span> by:
+$<span class="arithmatex">\(\omega = 2\pi f = \frac{2\pi}{T}\)</span>$</p>
+<hr />
+<h2 id="91-general-solution">9.1 – General solution</h2>
+<h3 id="method-characteristic-equation">Method: Characteristic equation</h3>
+<p>For a <strong>second-order linear ODE with constant coefficients</strong>, we try a solution of the form <span class="arithmatex">\(x(t) = e^{\lambda t}\)</span> and find which values of <span class="arithmatex">\(\lambda\)</span> work.</p>
+<p><strong>Step 1 — Substitute <span class="arithmatex">\(x = e^{\lambda t}\)</span> into the ODE:</strong></p>
+<div class="arithmatex">\[\frac{d^2}{dt^2}(e^{\lambda t}) + \omega^2 e^{\lambda t} = 0\]</div>
+<div class="arithmatex">\[\lambda^2 e^{\lambda t} + \omega^2 e^{\lambda t} = 0\]</div>
+<p>Factor out <span class="arithmatex">\(e^{\lambda t}\)</span> (which is never zero):</p>
+<div class="arithmatex">\[e^{\lambda t}(\lambda^2 + \omega^2) = 0 \implies \lambda^2 + \omega^2 = 0\]</div>
+<p><strong>Step 2 — Solve the characteristic equation:</strong></p>
+<div class="arithmatex">\[\lambda^2 = -\omega^2\]</div>
+<div class="arithmatex">\[\lambda = \pm\sqrt{-\omega^2} = \pm i\omega\]</div>
+<p>where <span class="arithmatex">\(i = \sqrt{-1}\)</span> is the imaginary unit. We get two <strong>complex conjugate roots</strong>: <span class="arithmatex">\(\lambda_1 = +i\omega\)</span> and <span class="arithmatex">\(\lambda_2 = -i\omega\)</span>.</p>
+<blockquote>
+<p><strong>Explanation:</strong> The appearance of imaginary numbers here is not a problem — it is the mathematical signal that the solution will be oscillatory rather than exponential. Complex roots always come in conjugate pairs for real-valued ODEs, and the resulting real solution is built from sines and cosines via Euler's formula: <span class="arithmatex">\(e^{i\theta} = \cos\theta + i\sin\theta\)</span>.</p>
+</blockquote>
+<p><strong>Step 3 — Write the general solution:</strong></p>
+<p>For complex roots <span class="arithmatex">\(\lambda = \pm i\omega\)</span>, the general <strong>real-valued</strong> solution is:</p>
+<div class="arithmatex">\[\boxed{x(t) = C_1 \cos(\omega t) + C_2 \sin(\omega t)}\]</div>
+<p>where <span class="arithmatex">\(C_1\)</span> and <span class="arithmatex">\(C_2\)</span> are arbitrary real constants determined by initial conditions.</p>
+<blockquote>
+<p><strong>Why cosine and sine?</strong> Starting from the complex exponentials <span class="arithmatex">\(e^{i\omega t}\)</span> and <span class="arithmatex">\(e^{-i\omega t}\)</span>, Euler's formula gives:
+$<span class="arithmatex">\(e^{i\omega t} = \cos(\omega t) + i\sin(\omega t)\)</span>$
+$<span class="arithmatex">\(e^{-i\omega t} = \cos(\omega t) - i\sin(\omega t)\)</span>$
+Taking real combinations: <span class="arithmatex">\(\frac{e^{i\omega t} + e^{-i\omega t}}{2} = \cos(\omega t)\)</span> and <span class="arithmatex">\(\frac{e^{i\omega t} - e^{-i\omega t}}{2i} = \sin(\omega t)\)</span>. These are both real-valued solutions, and every real solution is a linear combination of them.</p>
+</blockquote>
+<p><strong>Alternative form — amplitude and phase:</strong></p>
+<p>The general solution can equivalently be written as:</p>
+<div class="arithmatex">\[x(t) = A\cos(\omega t + \phi)\]</div>
+<p>where:
+- <span class="arithmatex">\(A = \sqrt{C_1^2 + C_2^2}\)</span> is the <strong>amplitude</strong> (maximum displacement)
+- <span class="arithmatex">\(\phi = \arctan(-C_2/C_1)\)</span> is the <strong>phase angle</strong> (shifts the cosine left or right in time)</p>
+<p>This form makes the physical oscillation more transparent.</p>
+<hr />
+<h2 id="92-solving-for-given-initial-conditions">9.2 – Solving for given initial conditions</h2>
+<p><strong>Given initial conditions:</strong>
+$<span class="arithmatex">\(x(0) = x_0, \qquad x'(0) = v_0\)</span>$</p>
+<p>(where <span class="arithmatex">\(x_0\)</span> is the initial displacement and <span class="arithmatex">\(v_0\)</span> is the initial velocity)</p>
+<p><strong>Step 1 — Apply <span class="arithmatex">\(x(0) = x_0\)</span>:</strong></p>
+<div class="arithmatex">\[x(0) = C_1\cos(0) + C_2\sin(0) = C_1 \cdot 1 + C_2 \cdot 0 = C_1\]</div>
+<div class="arithmatex">\[\therefore \quad C_1 = x_0\]</div>
+<p><strong>Step 2 — Differentiate <span class="arithmatex">\(x(t)\)</span> to get <span class="arithmatex">\(x'(t)\)</span>:</strong></p>
+<div class="arithmatex">\[x'(t) = -C_1\omega\sin(\omega t) + C_2\omega\cos(\omega t)\]</div>
+<p><strong>Step 3 — Apply <span class="arithmatex">\(x'(0) = v_0\)</span>:</strong></p>
+<div class="arithmatex">\[x'(0) = -C_1\omega\sin(0) + C_2\omega\cos(0) = 0 + C_2\omega = C_2\omega\]</div>
+<div class="arithmatex">\[\therefore \quad C_2 = \frac{v_0}{\omega}\]</div>
+<p><strong>Step 4 — Write the particular solution:</strong></p>
+<div class="arithmatex">\[\boxed{x(t) = x_0\cos(\omega t) + \frac{v_0}{\omega}\sin(\omega t)}\]</div>
+<p><strong>Step 5 — Compute <span class="arithmatex">\(x'(t)\)</span> and <span class="arithmatex">\(x''(t)\)</span>:</strong></p>
+<div class="arithmatex">\[x'(t) = -x_0\omega\sin(\omega t) + v_0\cos(\omega t)\]</div>
+<div class="arithmatex">\[x''(t) = -x_0\omega^2\cos(\omega t) - v_0\omega\sin(\omega t) = -\omega^2\underbrace{\left(x_0\cos(\omega t) + \frac{v_0}{\omega}\sin(\omega t)\right)}_{= x(t)}\]</div>
+<div class="arithmatex">\[\boxed{x''(t) = -\omega^2 x(t)}\]</div>
+<p><strong>Verification:</strong> <span class="arithmatex">\(x'' + \omega^2 x = -\omega^2 x + \omega^2 x = 0\)</span> ✓</p>
+<blockquote>
+<p><strong>Explanation:</strong> The two initial conditions <span class="arithmatex">\(x(0) = x_0\)</span> and <span class="arithmatex">\(x'(0) = v_0\)</span> uniquely determine the two constants <span class="arithmatex">\(C_1\)</span> and <span class="arithmatex">\(C_2\)</span>. This is expected: a second-order ODE needs exactly two pieces of initial information to pin down a unique solution from the two-parameter family. Physically, knowing where the oscillator starts <em>and</em> how fast it is moving at that moment completely determines its future motion forever.</p>
+</blockquote>
+<p><strong>Amplitude of the particular solution:</strong></p>
+<div class="arithmatex">\[A = \sqrt{C_1^2 + C_2^2} = \sqrt{x_0^2 + \frac{v_0^2}{\omega^2}}\]</div>
+<p><strong>Special cases:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Initial condition</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x_0 = A,\ v_0 = 0\)</span></td>
+<td><span class="arithmatex">\(x(t) = A\cos(\omega t)\)</span> — starts at max displacement, zero velocity</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x_0 = 0,\ v_0 = v\)</span></td>
+<td><span class="arithmatex">\(x(t) = \frac{v}{\omega}\sin(\omega t)\)</span> — starts at equilibrium, maximum velocity</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x_0 = A,\ v_0 = A\omega\)</span></td>
+<td>Full general case with both amplitude and phase shift</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="93-htmljs-visualisation">9.3 – HTML/JS Visualisation</h2>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;/&gt;
+  &lt;title&gt;Problem 9 – Harmonic Oscillator&lt;/title&gt;
+  &lt;style&gt;
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f8f9fa;
+      color: #222;
+    }
+    h2 { color: #2c3e50; margin-bottom: 4px; }
+    .subtitle { color: #666; margin-bottom: 20px; font-size: 0.95em; }
+    .panel {
+      background: white;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    h3 { margin: 0 0 14px; color: #2c3e50; }
+    canvas { display: block; margin: 0 auto; }
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px 24px;
+      margin-bottom: 16px;
+    }
+    .ctrl-row { display: flex; flex-direction: column; gap: 4px; }
+    label { font-weight: bold; font-size: 0.91em; color: #2c3e50; }
+    input[type=range] { width: 100%; }
+    .val-display { font-size: 0.82em; color: #777; }
+    .formula-box {
+      background: #eaf4fb;
+      border-left: 4px solid #2980b9;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 0.97em;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .info-card {
+      background: #f0f4f8;
+      border-radius: 6px;
+      padding: 9px 12px;
+      font-size: 0.86em;
+      text-align: center;
+    }
+    .info-card b { display: block; font-size: 1.1em; color: #2c3e50; margin-bottom: 2px; }
+    .legend {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 8px;
+      font-size: 0.88em;
+    }
+    .leg-item { display: flex; align-items: center; gap: 6px; }
+    .leg-swatch { width: 28px; height: 3px; display: inline-block; border-radius: 2px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88em;
+      margin-top: 8px;
+    }
+    th, td { border: 1px solid #ddd; padding: 5px 10px; text-align: right; }
+    th { background: #2c3e50; color: white; }
+    tr:nth-child(even) { background: #f5f5f5; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Problem 9 – Harmonic Oscillator: x'' + ω²x = 0&lt;/h2&gt;
+&lt;p class=&quot;subtitle&quot;&gt;General solution: x(t) = x₀cos(ωt) + (v₀/ω)sin(ωt)&lt;/p&gt;
+
+&lt;!-- CONTROLS --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Parameters &amp; Initial Conditions&lt;/h3&gt;
+  &lt;div class=&quot;controls&quot;&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Angular frequency ω = &lt;span id=&quot;wVal&quot;&gt;1.00&lt;/span&gt; rad/s&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;wSlider&quot; min=&quot;0.2&quot; max=&quot;4&quot; step=&quot;0.1&quot; value=&quot;1&quot;
+             oninput=&quot;document.getElementById('wVal').textContent=
+               parseFloat(this.value).toFixed(2); draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;Period T = 2π/ω&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Initial position x(0) = x₀ = &lt;span id=&quot;x0Val&quot;&gt;1.00&lt;/span&gt;&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;x0Slider&quot; min=&quot;-3&quot; max=&quot;3&quot; step=&quot;0.1&quot; value=&quot;1&quot;
+             oninput=&quot;document.getElementById('x0Val').textContent=
+               parseFloat(this.value).toFixed(2); draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;Displacement at t = 0&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Initial velocity x'(0) = v₀ = &lt;span id=&quot;v0Val&quot;&gt;0.00&lt;/span&gt;&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;v0Slider&quot; min=&quot;-4&quot; max=&quot;4&quot; step=&quot;0.1&quot; value=&quot;0&quot;
+             oninput=&quot;document.getElementById('v0Val').textContent=
+               parseFloat(this.value).toFixed(2); draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;Velocity at t = 0&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Time window T_max = &lt;span id=&quot;tmaxVal&quot;&gt;4&lt;/span&gt; periods&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;tmaxSlider&quot; min=&quot;1&quot; max=&quot;10&quot; step=&quot;1&quot; value=&quot;4&quot;
+             oninput=&quot;document.getElementById('tmaxVal').textContent=
+               this.value; draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;Number of periods to display&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Show derivatives&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;derivSlider&quot; min=&quot;0&quot; max=&quot;2&quot; step=&quot;1&quot; value=&quot;1&quot;
+             oninput=&quot;document.getElementById('derivVal').textContent=
+               ['x(t) only','x(t) and x\'(t)','all three'][this.value]; draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;&lt;span id=&quot;derivVal&quot;&gt;x(t) and x'(t)&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Phase portrait&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;phaseSlider&quot; min=&quot;0&quot; max=&quot;1&quot; step=&quot;1&quot; value=&quot;1&quot;
+             oninput=&quot;document.getElementById('phaseLabel').textContent=
+               this.value=='1'?'Shown':'Hidden'; draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;&lt;span id=&quot;phaseLabel&quot;&gt;Shown&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;formula-box&quot; id=&quot;formulaBox&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;info-grid&quot; id=&quot;infoGrid&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- MAIN TIME PLOT --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;x(t), x'(t), x''(t) vs time&lt;/h3&gt;
+  &lt;canvas id=&quot;mainCanvas&quot; width=&quot;840&quot; height=&quot;340&quot;&gt;&lt;/canvas&gt;
+  &lt;div class=&quot;legend&quot; id=&quot;legend&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- PHASE PORTRAIT --&gt;
+&lt;div class=&quot;panel&quot; id=&quot;phasePanel&quot;&gt;
+  &lt;h3&gt;Phase portrait: x'(t) vs x(t)&lt;/h3&gt;
+  &lt;canvas id=&quot;phaseCanvas&quot; width=&quot;840&quot; height=&quot;320&quot;&gt;&lt;/canvas&gt;
+  &lt;p style=&quot;color:#666;font-size:0.87em;text-align:center;margin-top:6px&quot;&gt;
+    An ellipse in phase space — the hallmark of undamped oscillation.
+    The trajectory loops forever in the same closed path.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- TABLE --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Solution values at selected times&lt;/h3&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;t&lt;/th&gt;
+        &lt;th&gt;x(t)&lt;/th&gt;
+        &lt;th&gt;x'(t)&lt;/th&gt;
+        &lt;th&gt;x''(t)&lt;/th&gt;
+        &lt;th&gt;Energy ½(x'²+ω²x²)&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody id=&quot;valBody&quot;&gt;&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  const COL = { x: '#2980b9', xp: '#e74c3c', xpp: '#27ae60', phase: '#8e44ad' };
+
+  function getP() {
+    return {
+      w:    parseFloat(document.getElementById('wSlider').value),
+      x0:   parseFloat(document.getElementById('x0Slider').value),
+      v0:   parseFloat(document.getElementById('v0Slider').value),
+      nPer: parseInt(document.getElementById('tmaxSlider').value),
+      deriv: parseInt(document.getElementById('derivSlider').value),
+      showPhase: document.getElementById('phaseSlider').value === '1'
+    };
+  }
+
+  function xFn(t, w, x0, v0)   { return x0*Math.cos(w*t) + (v0/w)*Math.sin(w*t); }
+  function xpFn(t, w, x0, v0)  { return -x0*w*Math.sin(w*t) + v0*Math.cos(w*t); }
+  function xppFn(t, w, x0, v0) { return -w*w*(x0*Math.cos(w*t) + (v0/w)*Math.sin(w*t)); }
+
+  // ── Axes helper ───────────────────────────────────────────────
+  function makeAxes(ctx, W, H, padL, padR, padT, padB,
+                    tMax, yMin, yMax, nTick=5) {
+    // grid
+    ctx.strokeStyle = '#efefef'; ctx.lineWidth = 1;
+    for (let i=0; i&lt;=nTick; i++) {
+      const t = i*tMax/nTick;
+      const xp = padL + (t/tMax)*(W-padL-padR);
+      ctx.beginPath(); ctx.moveTo(xp,padT); ctx.lineTo(xp,H-padB); ctx.stroke();
+      const yv = yMin + i*(yMax-yMin)/nTick;
+      const yp = padT + (1-(yv-yMin)/(yMax-yMin))*(H-padT-padB);
+      ctx.beginPath(); ctx.moveTo(padL,yp); ctx.lineTo(W-padR,yp); ctx.stroke();
+    }
+    // zero line
+    if (yMin &lt; 0 &amp;&amp; yMax &gt; 0) {
+      const y0p = padT + (1-(0-yMin)/(yMax-yMin))*(H-padT-padB);
+      ctx.strokeStyle='#bbb'; ctx.lineWidth=1;
+      ctx.beginPath(); ctx.moveTo(padL,y0p); ctx.lineTo(W-padR,y0p); ctx.stroke();
+    }
+    // axes
+    ctx.strokeStyle='#999'; ctx.lineWidth=1.5;
+    ctx.beginPath();
+    ctx.moveTo(padL,padT); ctx.lineTo(padL,H-padB);
+    ctx.lineTo(W-padR,H-padB); ctx.stroke();
+    // labels
+    ctx.fillStyle='#555'; ctx.font='11px Arial';
+    for (let i=0; i&lt;=nTick; i++) {
+      const t = i*tMax/nTick;
+      const xp = padL+(t/tMax)*(W-padL-padR);
+      ctx.fillText(t.toFixed(1), xp-10, H-padB+15);
+      const yv = yMin+i*(yMax-yMin)/nTick;
+      const yp = padT+(1-(yv-yMin)/(yMax-yMin))*(H-padT-padB);
+      ctx.fillText(yv.toFixed(2), 2, yp+4);
+    }
+  }
+
+  function plotCurve(ctx, fn, W, H, padL, padR, padT, padB,
+                     tMax, yMin, yMax, color, lw, dash=[]) {
+    ctx.strokeStyle=color; ctx.lineWidth=lw; ctx.setLineDash(dash);
+    ctx.beginPath();
+    for (let i=0; i&lt;=600; i++) {
+      const t = i/600*tMax;
+      const xp = padL+(t/tMax)*(W-padL-padR);
+      const yp = padT+(1-(fn(t)-yMin)/(yMax-yMin))*(H-padT-padB);
+      i===0 ? ctx.moveTo(xp,yp) : ctx.lineTo(xp,yp);
+    }
+    ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  // ── Main time plot ────────────────────────────────────────────
+  function drawMain(w, x0, v0, nPer, deriv) {
+    const canvas = document.getElementById('mainCanvas');
+    const ctx = canvas.getContext('2d');
+    const W=canvas.width, H=canvas.height;
+    const padL=55, padR=15, padT=20, padB=35;
+    ctx.clearRect(0,0,W,H);
+
+    const T  = 2*Math.PI/w;
+    const tMax = nPer*T;
+    const A  = Math.sqrt(x0*x0 + v0*v0/(w*w));
+    const Ap = w*A;
+    const App = w*w*A;
+    const yMax = Math.max(A, deriv&gt;=1?Ap:0, deriv&gt;=2?App:0)*1.15 || 1;
+    const yMin = -yMax;
+
+    makeAxes(ctx,W,H,padL,padR,padT,padB,tMax,yMin,yMax);
+
+    if (deriv&gt;=2) plotCurve(ctx, t=&gt;xppFn(t,w,x0,v0),
+      W,H,padL,padR,padT,padB,tMax,yMin,yMax,COL.xpp,1.5,[5,4]);
+    if (deriv&gt;=1) plotCurve(ctx, t=&gt;xpFn(t,w,x0,v0),
+      W,H,padL,padR,padT,padB,tMax,yMin,yMax,COL.xp,1.8,[6,3]);
+    plotCurve(ctx, t=&gt;xFn(t,w,x0,v0),
+      W,H,padL,padR,padT,padB,tMax,yMin,yMax,COL.x,2.5);
+
+    // Period marker
+    const px1 = padL, px2 = padL+(T/tMax)*(W-padL-padR);
+    const my = padT+10;
+    ctx.strokeStyle='#e67e22'; ctx.lineWidth=1.2;
+    ctx.beginPath(); ctx.moveTo(px1,my); ctx.lineTo(px2,my); ctx.stroke();
+    ctx.fillStyle='#e67e22'; ctx.font='bold 11px Arial';
+    ctx.fillText(`T = ${T.toFixed(2)}s`, (px1+px2)/2-20, my-4);
+    // tick marks
+    ctx.beginPath(); ctx.moveTo(px1,my-4); ctx.lineTo(px1,my+4); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(px2,my-4); ctx.lineTo(px2,my+4); ctx.stroke();
+
+    // Amplitude marker
+    const axp = padL + (0.25*T/tMax)*(W-padL-padR);
+    const ayp = padT+(1-(A-yMin)/(yMax-yMin))*(H-padT-padB);
+    ctx.fillStyle=COL.x; ctx.beginPath(); ctx.arc(axp,ayp,4,0,2*Math.PI); ctx.fill();
+    ctx.font='bold 11px Arial';
+    ctx.fillText(`A=${A.toFixed(3)}`, axp+6, ayp-4);
+
+    // Axis labels
+    ctx.fillStyle='#2c3e50'; ctx.font='12px Arial';
+    ctx.fillText('t (s)', W-padR+2, H-padB+4);
+    ctx.save(); ctx.translate(13,H/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('displacement / velocity / accel.', -80, 0); ctx.restore();
+  }
+
+  // ── Phase portrait ────────────────────────────────────────────
+  function drawPhase(w, x0, v0) {
+    const canvas = document.getElementById('phaseCanvas');
+    const ctx = canvas.getContext('2d');
+    const W=canvas.width, H=canvas.height;
+    const padL=60, padR=20, padT=25, padB=40;
+    ctx.clearRect(0,0,W,H);
+
+    const A  = Math.sqrt(x0*x0+v0*v0/(w*w));
+    const Ap = w*A;
+    const rng = Math.max(A,Ap)*1.25 || 1;
+    const xMin=-rng, xMax=rng, yMin=-rng*1.1, yMax=rng*1.1;
+
+    function px(xv){ return padL+(xv-xMin)/(xMax-xMin)*(W-padL-padR); }
+    function py(yv){ return padT+(1-(yv-yMin)/(yMax-yMin))*(H-padT-padB); }
+
+    // grid
+    ctx.strokeStyle='#efefef'; ctx.lineWidth=1;
+    for (let v=-2;v&lt;=2;v++) {
+      const xv=v*rng/2;
+      ctx.beginPath(); ctx.moveTo(px(xv),padT); ctx.lineTo(px(xv),H-padB); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(padL,py(xv)); ctx.lineTo(W-padR,py(xv)); ctx.stroke();
+    }
+    // axes
+    ctx.strokeStyle='#aaa'; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(px(0),padT); ctx.lineTo(px(0),H-padB); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(padL,py(0)); ctx.lineTo(W-padR,py(0)); ctx.stroke();
+
+    // Ellipse: x = A cos(wt+phi), x' = -Aw sin(wt+phi)
+    // =&gt; (x/A)² + (x'/(Aw))² = 1
+    ctx.strokeStyle=COL.phase; ctx.lineWidth=2.5;
+    ctx.beginPath();
+    for (let i=0;i&lt;=500;i++) {
+      const t=i/500*2*Math.PI/w;
+      const xv=xFn(t,w,x0,v0), yv=xpFn(t,w,x0,v0);
+      i===0 ? ctx.moveTo(px(xv),py(yv)) : ctx.lineTo(px(xv),py(yv));
+    }
+    ctx.stroke();
+
+    // Direction arrows along ellipse
+    for (let k=0;k&lt;6;k++) {
+      const t=(k/6)*2*Math.PI/w;
+      const xv=xFn(t,w,x0,v0), yv=xpFn(t,w,x0,v0);
+      const dt=0.01;
+      const xv2=xFn(t+dt,w,x0,v0), yv2=xpFn(t+dt,w,x0,v0);
+      const dx=px(xv2)-px(xv), dy=py(yv2)-py(yv);
+      const len=Math.sqrt(dx*dx+dy*dy);
+      if (len&lt;1) continue;
+      const sc=10/len;
+      ctx.fillStyle=COL.phase;
+      ctx.beginPath();
+      const angle=Math.atan2(dy,dx);
+      const hs=8;
+      ctx.moveTo(px(xv)+dx*sc, py(yv)+dy*sc);
+      ctx.lineTo(px(xv)+dx*sc-hs*Math.cos(angle-Math.PI/7),
+                 py(yv)+dy*sc-hs*Math.sin(angle-Math.PI/7));
+      ctx.lineTo(px(xv)+dx*sc-hs*Math.cos(angle+Math.PI/7),
+                 py(yv)+dy*sc-hs*Math.sin(angle+Math.PI/7));
+      ctx.closePath(); ctx.fill();
+    }
+
+    // Start point
+    ctx.fillStyle='#e74c3c';
+    ctx.beginPath(); ctx.arc(px(x0),py(v0),6,0,2*Math.PI); ctx.fill();
+    ctx.fillStyle='#c0392b'; ctx.font='bold 11px Arial';
+    ctx.fillText(`(x₀,v₀)=(${x0.toFixed(1)},${v0.toFixed(1)})`,px(x0)+8,py(v0)-6);
+
+    // Axis labels
+    ctx.fillStyle='#555'; ctx.font='12px Arial';
+    ctx.fillText('x(t)', W-padR+2, py(0)+4);
+    ctx.fillText(&quot;x'(t)&quot;, px(0)+4, padT-6);
+    for (let v=-2;v&lt;=2;v++) {
+      const xv=v*rng/2;
+      ctx.fillText(xv.toFixed(1), px(xv)-12, H-padB+15);
+      ctx.fillText(xv.toFixed(1), padL-36, py(xv)+4);
+    }
+
+    // Semi-axis labels
+    ctx.fillStyle=COL.phase; ctx.font='bold 11px Arial';
+    ctx.fillText(`semi-axis a = A = ${A.toFixed(3)}`, px(A)+4, py(0)-6);
+    ctx.fillText(`semi-axis b = Aω = ${Ap.toFixed(3)}`, px(0)+4, py(Ap)-6);
+
+    ctx.fillStyle='#2c3e50'; ctx.font='bold 12px Arial';
+    ctx.fillText('Phase portrait (x, x\') — closed ellipse', padL+10, padT+18);
+  }
+
+  // ── Formula and info cards ─────────────────────────────────────
+  function updateFormula(w, x0, v0) {
+    const A   = Math.sqrt(x0*x0+v0*v0/(w*w));
+    const phi = Math.atan2(-v0/w, x0);
+    const T   = 2*Math.PI/w;
+    const f   = 1/T;
+    const E   = 0.5*(v0*v0+w*w*x0*x0);
+
+    const c2  = (v0/w).toFixed(3);
+    document.getElementById('formulaBox').innerHTML =
+      `&lt;b&gt;x(t)&lt;/b&gt; = ${x0.toFixed(2)}·cos(${w.toFixed(2)}t) + ${c2}·sin(${w.toFixed(2)}t)`+
+      `&amp;nbsp;=&amp;nbsp;&lt;b&gt;${A.toFixed(3)}·cos(${w.toFixed(2)}t + ${phi.toFixed(3)})&lt;/b&gt;&lt;br&gt;`+
+      `&lt;b&gt;x'(t)&lt;/b&gt; = ${(-x0*w).toFixed(3)}·sin(${w.toFixed(2)}t) + ${v0.toFixed(2)}·cos(${w.toFixed(2)}t)&lt;br&gt;`+
+      `&lt;b&gt;x''(t)&lt;/b&gt; = −${(w*w).toFixed(3)}·x(t)`;
+
+    document.getElementById('infoGrid').innerHTML =
+      `&lt;div class=&quot;info-card&quot;&gt;&lt;b&gt;${A.toFixed(4)}&lt;/b&gt;Amplitude A&lt;/div&gt;`+
+      `&lt;div class=&quot;info-card&quot;&gt;&lt;b&gt;${T.toFixed(4)} s&lt;/b&gt;Period T = 2π/ω&lt;/div&gt;`+
+      `&lt;div class=&quot;info-card&quot;&gt;&lt;b&gt;${f.toFixed(4)} Hz&lt;/b&gt;Frequency f = 1/T&lt;/div&gt;`+
+      `&lt;div class=&quot;info-card&quot;&gt;&lt;b&gt;${E.toFixed(4)}&lt;/b&gt;Total energy ½(v₀²+ω²x₀²)&lt;/div&gt;`;
+  }
+
+  // ── Values table ──────────────────────────────────────────────
+  function buildTable(w, x0, v0) {
+    const T=2*Math.PI/w;
+    const times=[0, T/4, T/2, 3*T/4, T, 1.5*T, 2*T];
+    const tbody=document.getElementById('valBody');
+    tbody.innerHTML='';
+    for (const t of times) {
+      const xv  = xFn(t,w,x0,v0);
+      const xpv = xpFn(t,w,x0,v0);
+      const xppv= xppFn(t,w,x0,v0);
+      const E   = 0.5*(xpv*xpv+w*w*xv*xv);
+      const tr=document.createElement('tr');
+      tr.innerHTML=
+        `&lt;td&gt;${t.toFixed(4)}&lt;/td&gt;`+
+        `&lt;td&gt;${xv.toFixed(6)}&lt;/td&gt;`+
+        `&lt;td&gt;${xpv.toFixed(6)}&lt;/td&gt;`+
+        `&lt;td&gt;${xppv.toFixed(6)}&lt;/td&gt;`+
+        `&lt;td&gt;${E.toFixed(6)}&lt;/td&gt;`;
+      tbody.appendChild(tr);
+    }
+  }
+
+  // ── Legend ─────────────────────────────────────────────────────
+  function updateLegend(deriv) {
+    const items=[
+      {col:COL.x,   lw:2.5, dash:false, label:'x(t) — displacement'},
+      {col:COL.xp,  lw:1.8, dash:true,  label:&quot;x'(t) — velocity&quot;},
+      {col:COL.xpp, lw:1.5, dash:true,  label:&quot;x''(t) — acceleration&quot;},
+    ];
+    const leg=document.getElementById('legend');
+    leg.innerHTML=items.slice(0,deriv+1).map(it=&gt;
+      `&lt;div class=&quot;leg-item&quot;&gt;
+        &lt;span class=&quot;leg-swatch&quot; style=&quot;background:${it.col};
+          ${it.dash?'background: repeating-linear-gradient(90deg,'+it.col+' 0,'+it.col+' 5px,transparent 5px,transparent 9px)':''}&quot;&gt;
+        &lt;/span&gt;${it.label}&lt;/div&gt;`
+    ).join('');
+  }
+
+  // ── Master draw ───────────────────────────────────────────────
+  function draw() {
+    const {w,x0,v0,nPer,deriv,showPhase}=getP();
+    updateFormula(w,x0,v0);
+    const T=2*Math.PI/w;
+    drawMain(w,x0,v0,nPer,deriv);
+    updateLegend(deriv);
+    document.getElementById('phasePanel').style.display=showPhase?'block':'none';
+    if (showPhase) drawPhase(w,x0,v0);
+    buildTable(w,x0,v0);
+  }
+
+  draw();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<blockquote>
+<p><strong>How to use the application:</strong>
+- <strong>ω slider</strong> — changes the angular frequency. Higher <span class="arithmatex">\(\omega\)</span> → shorter period, faster oscillation.
+- <strong>x₀ slider</strong> — sets the initial displacement (how far the spring is stretched at <span class="arithmatex">\(t=0\)</span>).
+- <strong>v₀ slider</strong> — sets the initial velocity. Try <span class="arithmatex">\(x_0=0, v_0&gt;0\)</span> for a pure sine wave.
+- <strong>Periods slider</strong> — how many full oscillations to display.
+- <strong>Show derivatives slider</strong> — toggle between showing <span class="arithmatex">\(x(t)\)</span> only, <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(x'\)</span>, or all three curves.
+- <strong>Phase portrait</strong> — the <span class="arithmatex">\(x'\)</span> vs <span class="arithmatex">\(x\)</span> plot always traces a perfect ellipse, confirming undamped oscillation. The red dot marks the starting point <span class="arithmatex">\((x_0, v_0)\)</span>.
+- The <strong>values table</strong> shows <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(x'\)</span>, <span class="arithmatex">\(x''\)</span>, and total energy at key fractions of the period. Notice the energy column is constant — energy is conserved.</p>
+</blockquote>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ODE</td>
+<td><span class="arithmatex">\(x'' + \omega^2 x = 0\)</span></td>
+</tr>
+<tr>
+<td>Characteristic roots</td>
+<td><span class="arithmatex">\(\lambda = \pm i\omega\)</span></td>
+</tr>
+<tr>
+<td>General solution</td>
+<td><span class="arithmatex">\(x(t) = C_1\cos(\omega t) + C_2\sin(\omega t)\)</span></td>
+</tr>
+<tr>
+<td>With initial conditions</td>
+<td><span class="arithmatex">\(x(t) = x_0\cos(\omega t) + \frac{v_0}{\omega}\sin(\omega t)\)</span></td>
+</tr>
+<tr>
+<td>First derivative</td>
+<td><span class="arithmatex">\(x'(t) = -x_0\omega\sin(\omega t) + v_0\cos(\omega t)\)</span></td>
+</tr>
+<tr>
+<td>Second derivative</td>
+<td><span class="arithmatex">\(x''(t) = -\omega^2 x(t)\)</span></td>
+</tr>
+<tr>
+<td>Amplitude</td>
+<td><span class="arithmatex">\(A = \sqrt{x_0^2 + v_0^2/\omega^2}\)</span></td>
+</tr>
+<tr>
+<td>Period</td>
+<td><span class="arithmatex">\(T = 2\pi/\omega\)</span></td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td><span class="arithmatex">\(f = \omega/(2\pi)\)</span></td>
+</tr>
+<tr>
+<td>Total energy</td>
+<td><span class="arithmatex">\(E = \frac{1}{2}(v_0^2 + \omega^2 x_0^2) = \frac{1}{2}\omega^2 A^2\)</span> = const</td>
+</tr>
+<tr>
+<td>Phase portrait</td>
+<td>Ellipse with semi-axes <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A\omega\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-possible-questions-answers">5 Possible Questions &amp; Answers</h2>
+<hr />
+<p><strong>Q1: Why does the characteristic equation <span class="arithmatex">\(\lambda^2 + \omega^2 = 0\)</span> give imaginary roots, and what does that imply about the solution?</strong></p>
+<p><strong>A:</strong> The equation <span class="arithmatex">\(\lambda^2 = -\omega^2\)</span> has no real solutions because a real number squared is always non-negative — it cannot equal <span class="arithmatex">\(-\omega^2 &lt; 0\)</span>. The solutions are therefore complex: <span class="arithmatex">\(\lambda = \pm i\omega\)</span>. In general, complex roots <span class="arithmatex">\(\lambda = \alpha \pm i\beta\)</span> of a characteristic equation produce solutions of the form <span class="arithmatex">\(e^{\alpha t}(C_1\cos(\beta t) + C_2\sin(\beta t))\)</span>. Here <span class="arithmatex">\(\alpha = 0\)</span> (no real part), so there is no exponential growth or decay — only pure oscillation at frequency <span class="arithmatex">\(\beta = \omega\)</span>. If <span class="arithmatex">\(\alpha \neq 0\)</span>, the oscillation would also grow (<span class="arithmatex">\(\alpha &gt; 0\)</span>) or decay (<span class="arithmatex">\(\alpha &lt; 0\)</span>), giving a <strong>damped</strong> or <strong>unstable</strong> oscillator.</p>
+<hr />
+<p><strong>Q2: Show that the total mechanical energy <span class="arithmatex">\(E = \frac{1}{2}[(x')^2 + \omega^2 x^2]\)</span> is conserved.</strong></p>
+<p><strong>A:</strong> Differentiate <span class="arithmatex">\(E\)</span> with respect to time:
+$<span class="arithmatex">\(\frac{dE}{dt} = \frac{1}{2}\left[2x'x'' + 2\omega^2 x x'\right] = x'\left[x'' + \omega^2 x\right]\)</span>$
+But <span class="arithmatex">\(x'' + \omega^2 x = 0\)</span> from the ODE, so:
+$<span class="arithmatex">\(\frac{dE}{dt} = x' \cdot 0 = 0\)</span>$
+Therefore <span class="arithmatex">\(E\)</span> is constant for all <span class="arithmatex">\(t\)</span>. Physically, this means the total energy (kinetic <span class="arithmatex">\(\frac{1}{2}(x')^2\)</span> plus potential <span class="arithmatex">\(\frac{1}{2}\omega^2 x^2\)</span>, analogous to <span class="arithmatex">\(\frac{1}{2}mv^2 + \frac{1}{2}kx^2\)</span> for a spring) is perfectly conserved — there is no damping and no energy loss. In the phase portrait, this manifests as the trajectory tracing the same closed ellipse forever.</p>
+<hr />
+<p><strong>Q3: What is the phase portrait of the harmonic oscillator and what does its shape tell us?</strong></p>
+<p><strong>A:</strong> The phase portrait plots <span class="arithmatex">\(x'(t)\)</span> (velocity) on the vertical axis against <span class="arithmatex">\(x(t)\)</span> (position) on the horizontal axis, with <span class="arithmatex">\(t\)</span> as a parameter. For the harmonic oscillator, the trajectory traces an <strong>ellipse</strong> with semi-axes <span class="arithmatex">\(A\)</span> (along <span class="arithmatex">\(x\)</span>) and <span class="arithmatex">\(A\omega\)</span> (along <span class="arithmatex">\(x'\)</span>). This ellipse is closed — the system returns to exactly the same state after every period <span class="arithmatex">\(T\)</span>, confirming perfect periodic motion with no energy change. The shape encodes the ratio of kinetic to potential energy at each point: at the tips of the <span class="arithmatex">\(x\)</span>-axis (maximum displacement) all energy is potential and <span class="arithmatex">\(x' = 0\)</span>; at the tips of the <span class="arithmatex">\(x'\)</span>-axis (equilibrium) all energy is kinetic and <span class="arithmatex">\(x = 0\)</span>. If <span class="arithmatex">\(\omega = 1\)</span>, the ellipse becomes a circle.</p>
+<hr />
+<p><strong>Q4: How would the solution change if a damping term <span class="arithmatex">\(2\gamma x'\)</span> were added, giving <span class="arithmatex">\(x'' + 2\gamma x' + \omega^2 x = 0\)</span>?</strong></p>
+<p><strong>A:</strong> The characteristic equation becomes <span class="arithmatex">\(\lambda^2 + 2\gamma\lambda + \omega^2 = 0\)</span>, with roots <span class="arithmatex">\(\lambda = -\gamma \pm \sqrt{\gamma^2 - \omega^2}\)</span>. Three cases arise: (1) <strong>Underdamped</strong> (<span class="arithmatex">\(\gamma &lt; \omega\)</span>): roots are complex <span class="arithmatex">\(\lambda = -\gamma \pm i\sqrt{\omega^2-\gamma^2}\)</span>, giving <span class="arithmatex">\(x(t) = e^{-\gamma t}(C_1\cos(\omega_d t) + C_2\sin(\omega_d t))\)</span> where <span class="arithmatex">\(\omega_d = \sqrt{\omega^2-\gamma^2}\)</span> — an oscillation that decays exponentially. (2) <strong>Critically damped</strong> (<span class="arithmatex">\(\gamma = \omega\)</span>): one repeated root <span class="arithmatex">\(\lambda = -\gamma\)</span>, giving <span class="arithmatex">\(x(t) = (C_1+C_2 t)e^{-\gamma t}\)</span> — fastest possible return to equilibrium without oscillation. (3) <strong>Overdamped</strong> (<span class="arithmatex">\(\gamma &gt; \omega\)</span>): two distinct real roots, giving <span class="arithmatex">\(x(t) = C_1 e^{\lambda_1 t} + C_2 e^{\lambda_2 t}\)</span> — slow exponential return with no oscillation. In all damped cases, the phase portrait spirals inward rather than forming a closed ellipse.</p>
+<hr />
+<p><strong>Q5: A spring-mass system has mass <span class="arithmatex">\(m = 2\)</span> kg and spring constant <span class="arithmatex">\(k = 8\)</span> N/m. It is released from <span class="arithmatex">\(x_0 = 0.5\)</span> m with zero initial velocity. Write the solution explicitly.</strong></p>
+<p><strong>A:</strong> For a spring-mass system, the equation of motion is <span class="arithmatex">\(m\ddot{x} + kx = 0\)</span>, i.e. <span class="arithmatex">\(\ddot{x} + \frac{k}{m}x = 0\)</span>. The angular frequency is:
+$<span class="arithmatex">\(\omega = \sqrt{\frac{k}{m}} = \sqrt{\frac{8}{2}} = \sqrt{4} = 2 \text{ rad/s}\)</span>$
+With <span class="arithmatex">\(x_0 = 0.5\)</span>, <span class="arithmatex">\(v_0 = 0\)</span>:
+$<span class="arithmatex">\(C_1 = x_0 = 0.5, \qquad C_2 = \frac{v_0}{\omega} = 0\)</span>$
+$<span class="arithmatex">\(x(t) = 0.5\cos(2t) \text{ m}\)</span>$
+The period is <span class="arithmatex">\(T = 2\pi/2 = \pi \approx 3.14\)</span> s, the amplitude is <span class="arithmatex">\(A = 0.5\)</span> m, and the maximum velocity (at <span class="arithmatex">\(x = 0\)</span>) is <span class="arithmatex">\(|x'|_{\max} = A\omega = 0.5 \times 2 = 1\)</span> m/s. The total energy is <span class="arithmatex">\(E = \frac{1}{2}k A^2 = \frac{1}{2}(8)(0.25) = 1\)</span> J, constant throughout the motion.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2795 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://alona-h.github.io/Physics_Problems_Repo/problem_set_01_mathematical_foundations_solution/task_06/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../pl/problem_set_01_mathematical_foundations_solution/task_06/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Problem Set 1 – Problem 6: Curve Length and Numerical Integration - Physics Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-set-1-problem-6-curve-length-and-numerical-integration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Physics Problems" class="md-header__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physics Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Problem Set 1 – Problem 6: Curve Length and Numerical Integration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../pl/problem_set_01_mathematical_foundations_solution/task_06/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Physics Problems" class="md-nav__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Physics Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Sets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Sets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 01
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 01
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_01_mathematical_foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 02
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 02
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_02_mechanics_and_kinematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 03
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 03
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_03_mechanics_ii_dynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 04
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 04
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_04_oscillations_and_waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_05_electromagnetism_i/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 06
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 06
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_06_electromagnetism_ii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 07
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 07
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_07_circuits_resistors_and_kirchhoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 08
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 08
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_08_statistics_and_measurements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 09
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 09
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_09_model_cosmology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 10
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 10
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_10_relativity_spacetime_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_11_modern_physics_quantum_and_nuclear_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/projectile_motion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projectile Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/conics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/kepler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kepler's Laws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/chaos_pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaotic Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/work_integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/flux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/electric_field_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electric Field Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/wave_atoms.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom waves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/grav_acc_measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gravitational Acceleration Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/numeric_integrator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numeric Integrator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_1_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_2_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_3_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_4_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-velocity-vector-vecvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 – Velocity vector \(\vec{v}(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-magnitude-of-velocity-vecvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 – Magnitude of velocity \(|\vec{v}(t)|\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-arc-length-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 – Arc length integral
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-analytical-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 – Analytical evaluation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-trapezoidal-rule-implementation-in-htmljs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 – Trapezoidal rule implementation in HTML/JS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 – Trapezoidal rule implementation in HTML/JS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-trapezoidal-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the trapezoidal rule?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#htmljs-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML/JS Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-possible-questions-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Possible Questions &amp; Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-set-1-problem-6-curve-length-and-numerical-integration">Problem Set 1 – Problem 6: Curve Length and Numerical Integration</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This problem asks us to find the <strong>arc length</strong> of a parabolic trajectory — the actual distance travelled along the curve, not just the straight-line distance from start to finish. We will:</p>
+<ol>
+<li>Derive the velocity vector and its magnitude</li>
+<li>Set up the arc length integral</li>
+<li>Solve it analytically (it requires a substitution and a known integral formula)</li>
+<li>Also solve it numerically using the <strong>trapezoidal rule</strong></li>
+</ol>
+<blockquote>
+<p><strong>Key idea:</strong> The arc length of a parametric curve <span class="arithmatex">\(\vec{r}(t) = (x(t), y(t))\)</span> over <span class="arithmatex">\(t \in [a, b]\)</span> is:
+$<span class="arithmatex">\(s = \int_a^b |\vec{v}(t)|\, dt = \int_a^b \sqrt{\dot{x}^2 + \dot{y}^2}\, dt\)</span>$
+This formula says: add up all the tiny distances <span class="arithmatex">\(|\vec{v}(t)|\,dt\)</span> travelled in each infinitesimal time step <span class="arithmatex">\(dt\)</span>. It is the continuous generalisation of "distance = speed × time."</p>
+</blockquote>
+<p><strong>Given trajectory:</strong>
+$<span class="arithmatex">\(x(t) = t, \qquad y(t) = t^2, \qquad t \in [0, 1]\)</span>$</p>
+<hr />
+<h2 id="61-velocity-vector-vecvt">6.1 – Velocity vector <span class="arithmatex">\(\vec{v}(t)\)</span></h2>
+<p>Differentiating each component:</p>
+<div class="arithmatex">\[\vec{v}(t) = \frac{d\vec{r}}{dt} = \left(\frac{d}{dt}(t),\ \frac{d}{dt}(t^2)\right) = (1,\ 2t)\]</div>
+<div class="arithmatex">\[\boxed{\vec{v}(t) = (1,\ 2t)}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> This is the same parabola from Problem 4, Curve C. The velocity has a constant horizontal component of <span class="arithmatex">\(1\)</span> (the object always moves right at the same rate) and a vertical component <span class="arithmatex">\(2t\)</span> that grows linearly (the object moves upward faster and faster). The trajectory is the parabola <span class="arithmatex">\(y = x^2\)</span>.</p>
+</blockquote>
+<hr />
+<h2 id="62-magnitude-of-velocity-vecvt">6.2 – Magnitude of velocity <span class="arithmatex">\(|\vec{v}(t)|\)</span></h2>
+<div class="arithmatex">\[|\vec{v}(t)| = \sqrt{1^2 + (2t)^2} = \sqrt{1 + 4t^2}\]</div>
+<div class="arithmatex">\[\boxed{|\vec{v}(t)| = \sqrt{1 + 4t^2}}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> The speed grows with <span class="arithmatex">\(t\)</span> — the object moves faster as it travels further along the parabola. At <span class="arithmatex">\(t = 0\)</span> the speed is <span class="arithmatex">\(1\)</span>; at <span class="arithmatex">\(t = 1\)</span> the speed is <span class="arithmatex">\(\sqrt{5} \approx 2.236\)</span>. The total arc length is the integral of this speed over time.</p>
+</blockquote>
+<hr />
+<h2 id="63-arc-length-integral">6.3 – Arc length integral</h2>
+<div class="arithmatex">\[s = \int_0^1 |\vec{v}(t)|\, dt = \int_0^1 \sqrt{1 + 4t^2}\, dt\]</div>
+<div class="arithmatex">\[\boxed{s = \int_0^1 \sqrt{1 + 4t^2}\, dt}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> This integral cannot be simplified by inspection — <span class="arithmatex">\(\sqrt{1 + 4t^2}\)</span> has no elementary antiderivative in its current form. We need a substitution to reduce it to a standard form. However, before doing so analytically, let us note that this is a well-posed integral over a finite interval with a smooth, positive integrand — so both analytical and numerical methods will work.</p>
+</blockquote>
+<hr />
+<h2 id="64-analytical-evaluation">6.4 – Analytical evaluation</h2>
+<p>We use the standard integral formula (derived via trigonometric or hyperbolic substitution):</p>
+<div class="arithmatex">\[\int \sqrt{1 + u^2}\, du = \frac{u\sqrt{1+u^2}}{2} + \frac{1}{2}\ln\!\left(u + \sqrt{1+u^2}\right) + C\]</div>
+<p><strong>Step 1 — Substitution to match the standard form:</strong></p>
+<p>Let <span class="arithmatex">\(u = 2t\)</span>, so <span class="arithmatex">\(du = 2\, dt\)</span>, i.e. <span class="arithmatex">\(dt = \frac{du}{2}\)</span>.</p>
+<p>When <span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(u = 0\)</span>. When <span class="arithmatex">\(t = 1\)</span>: <span class="arithmatex">\(u = 2\)</span>.</p>
+<div class="arithmatex">\[\int_0^1 \sqrt{1 + 4t^2}\, dt = \int_0^2 \sqrt{1 + u^2}\cdot \frac{du}{2} = \frac{1}{2}\int_0^2 \sqrt{1+u^2}\, du\]</div>
+<p><strong>Step 2 — Apply the standard formula:</strong></p>
+<div class="arithmatex">\[\frac{1}{2}\int_0^2 \sqrt{1+u^2}\, du = \frac{1}{2}\left[\frac{u\sqrt{1+u^2}}{2} + \frac{1}{2}\ln\!\left(u + \sqrt{1+u^2}\right)\right]_0^2\]</div>
+<p><strong>Step 3 — Evaluate at <span class="arithmatex">\(u = 2\)</span>:</strong></p>
+<div class="arithmatex">\[\frac{u\sqrt{1+u^2}}{2}\bigg|_{u=2} = \frac{2\sqrt{1+4}}{2} = \frac{2\sqrt{5}}{2} = \sqrt{5}\]</div>
+<div class="arithmatex">\[\frac{1}{2}\ln\!\left(u + \sqrt{1+u^2}\right)\bigg|_{u=2} = \frac{1}{2}\ln\!\left(2 + \sqrt{5}\right)\]</div>
+<p><strong>Step 4 — Evaluate at <span class="arithmatex">\(u = 0\)</span>:</strong></p>
+<div class="arithmatex">\[\frac{u\sqrt{1+u^2}}{2}\bigg|_{u=0} = \frac{0 \cdot 1}{2} = 0\]</div>
+<div class="arithmatex">\[\frac{1}{2}\ln\!\left(u + \sqrt{1+u^2}\right)\bigg|_{u=0} = \frac{1}{2}\ln(0 + 1) = \frac{1}{2}\ln 1 = 0\]</div>
+<p><strong>Step 5 — Combine:</strong></p>
+<div class="arithmatex">\[s = \frac{1}{2}\left[\left(\sqrt{5} + \frac{1}{2}\ln(2+\sqrt{5})\right) - (0 + 0)\right]\]</div>
+<div class="arithmatex">\[= \frac{1}{2}\left(\sqrt{5} + \frac{1}{2}\ln(2+\sqrt{5})\right)\]</div>
+<div class="arithmatex">\[= \frac{\sqrt{5}}{2} + \frac{1}{4}\ln(2+\sqrt{5})\]</div>
+<p><strong>Numerical evaluation:</strong></p>
+<ul>
+<li><span class="arithmatex">\(\sqrt{5} \approx 2.2361\)</span>, so <span class="arithmatex">\(\frac{\sqrt{5}}{2} \approx 1.1180\)</span></li>
+<li><span class="arithmatex">\(2 + \sqrt{5} \approx 4.2361\)</span>, so <span class="arithmatex">\(\ln(4.2361) \approx 1.4436\)</span>, thus <span class="arithmatex">\(\frac{1}{4}\ln(2+\sqrt{5}) \approx 0.3609\)</span></li>
+</ul>
+<div class="arithmatex">\[\boxed{s = \frac{\sqrt{5}}{2} + \frac{1}{4}\ln(2+\sqrt{5}) \approx 1.4789}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> The substitution <span class="arithmatex">\(u = 2t\)</span> was needed to turn <span class="arithmatex">\(\sqrt{1 + 4t^2}\)</span> into the standard form <span class="arithmatex">\(\sqrt{1 + u^2}\)</span>. The standard integral itself is derived by the substitution <span class="arithmatex">\(u = \sinh\theta\)</span> (hyperbolic sine), which converts <span class="arithmatex">\(\sqrt{1 + u^2}\)</span> into <span class="arithmatex">\(\cosh\theta\)</span> — a much easier function to integrate. The appearance of <span class="arithmatex">\(\ln(2 + \sqrt{5})\)</span> is not a coincidence: it equals <span class="arithmatex">\(\sinh^{-1}(2) = \text{arcsinh}(2)\)</span>, the inverse hyperbolic sine of <span class="arithmatex">\(2\)</span>.</p>
+</blockquote>
+<hr />
+<h2 id="65-trapezoidal-rule-implementation-in-htmljs">6.5 – Trapezoidal rule implementation in HTML/JS</h2>
+<h3 id="what-is-the-trapezoidal-rule">What is the trapezoidal rule?</h3>
+<p>The <strong>trapezoidal rule</strong> approximates a definite integral by dividing the interval into <span class="arithmatex">\(N\)</span> equal subintervals and approximating the area under the curve in each subinterval with a <strong>trapezoid</strong> (instead of a rectangle). The formula is:</p>
+<div class="arithmatex">\[\int_a^b f(t)\, dt \approx \frac{h}{2}\left[f(t_0) + 2f(t_1) + 2f(t_2) + \cdots + 2f(t_{N-1}) + f(t_N)\right]\]</div>
+<p>where <span class="arithmatex">\(h = \frac{b-a}{N}\)</span> is the width of each subinterval and <span class="arithmatex">\(t_i = a + i\cdot h\)</span>.</p>
+<p>The <strong>error</strong> of the trapezoidal rule decreases as <span class="arithmatex">\(O(h^2) = O(1/N^2)\)</span> — doubling <span class="arithmatex">\(N\)</span> reduces the error by a factor of 4.</p>
+<blockquote>
+<p><strong>Explanation:</strong> Think of the trapezoidal rule as drawing <span class="arithmatex">\(N\)</span> thin trapezoids under the curve and summing their areas. Each trapezoid has parallel sides of heights <span class="arithmatex">\(f(t_i)\)</span> and <span class="arithmatex">\(f(t_{i+1})\)</span> and width <span class="arithmatex">\(h\)</span>, giving area <span class="arithmatex">\(\frac{h}{2}(f(t_i) + f(t_{i+1}))\)</span>. Summing these telescopes into the formula above. As <span class="arithmatex">\(N \to \infty\)</span>, the trapezoids become thinner and their total area converges to the exact integral.</p>
+</blockquote>
+<hr />
+<h3 id="htmljs-implementation">HTML/JS Implementation</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;title&gt;Problem 6 – Arc Length &amp; Trapezoidal Rule&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f8f9fa;
+      color: #222;
+    }
+    h2 { color: #2c3e50; }
+    .panel {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    canvas { display: block; margin: 0 auto; }
+    label { font-weight: bold; }
+    input[type=range] { width: 300px; vertical-align: middle; }
+    .result {
+      font-size: 1.1em;
+      margin-top: 12px;
+      background: #eaf4fb;
+      padding: 10px 16px;
+      border-radius: 6px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 0.92em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      text-align: right;
+    }
+    th { background: #2c3e50; color: white; }
+    tr:nth-child(even) { background: #f2f2f2; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Problem 6 – Arc Length of y = x² and Trapezoidal Rule&lt;/h2&gt;
+
+&lt;!-- TRAJECTORY CANVAS --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Trajectory: x(t) = t, y(t) = t², t ∈ [0,1]&lt;/h3&gt;
+  &lt;canvas id=&quot;trajCanvas&quot; width=&quot;500&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+
+&lt;!-- TRAPEZOIDAL RULE CONTROL --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Trapezoidal Rule Approximation&lt;/h3&gt;
+  &lt;label for=&quot;nSlider&quot;&gt;Number of divisions N = &lt;span id=&quot;nVal&quot;&gt;10&lt;/span&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;range&quot; id=&quot;nSlider&quot; min=&quot;1&quot; max=&quot;200&quot; value=&quot;10&quot;
+         oninput=&quot;document.getElementById('nVal').textContent=this.value; update()&quot;&gt;
+  &lt;div class=&quot;result&quot; id=&quot;resultBox&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- CONVERGENCE TABLE --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Convergence Table&lt;/h3&gt;
+  &lt;table id=&quot;convTable&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;N&lt;/th&gt;
+        &lt;th&gt;Approx. s&lt;/th&gt;
+        &lt;th&gt;Error |s − s_exact|&lt;/th&gt;
+        &lt;th&gt;Error / (1/N²)&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody id=&quot;convBody&quot;&gt;&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;!-- ERROR PLOT CANVAS --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Error vs N (log-log scale)&lt;/h3&gt;
+  &lt;canvas id=&quot;errCanvas&quot; width=&quot;600&quot; height=&quot;320&quot;&gt;&lt;/canvas&gt;
+  &lt;p style=&quot;text-align:center; color:#555; font-size:0.9em&quot;&gt;
+    Slope ≈ −2 on log-log scale confirms O(1/N²) convergence
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  // ── Exact answer ──────────────────────────────────────────────
+  const EXACT = Math.sqrt(5)/2 + Math.log(2 + Math.sqrt(5))/4;
+
+  // ── Integrand: speed |v(t)| = sqrt(1 + 4t²) ──────────────────
+  function speed(t) { return Math.sqrt(1 + 4*t*t); }
+
+  // ── Trapezoidal rule on [0,1] with N subintervals ─────────────
+  function trapezoid(N) {
+    const h = 1 / N;
+    let sum = speed(0) + speed(1);
+    for (let i = 1; i &lt; N; i++) sum += 2 * speed(i * h);
+    return (h / 2) * sum;
+  }
+
+  // ── Draw trajectory ───────────────────────────────────────────
+  function drawTrajectory() {
+    const canvas = document.getElementById('trajCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const pad = 60;
+    ctx.clearRect(0, 0, W, H);
+
+    // coordinate transform: t∈[0,1] → x∈[0,1], y∈[0,1]
+    function px(x) { return pad + x * (W - 2*pad); }
+    function py(y) { return H - pad - y * (H - 2*pad); }
+
+    // axes
+    ctx.strokeStyle = '#aaa'; ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad, pad); ctx.lineTo(pad, H-pad);
+    ctx.lineTo(W-pad, H-pad);
+    ctx.stroke();
+
+    // axis labels
+    ctx.fillStyle = '#555'; ctx.font = '13px Arial';
+    ctx.fillText('x', W-pad+8, H-pad+4);
+    ctx.fillText('y', pad-18, pad-8);
+    for (let v of [0, 0.25, 0.5, 0.75, 1.0]) {
+      ctx.fillText(v.toFixed(2), px(v)-14, H-pad+18);
+      ctx.fillText(v.toFixed(2), pad-42, py(v)+4);
+    }
+
+    // parabola
+    ctx.strokeStyle = '#2980b9'; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    for (let i = 0; i &lt;= 200; i++) {
+      const t = i / 200;
+      i === 0 ? ctx.moveTo(px(t), py(t*t)) : ctx.lineTo(px(t), py(t*t));
+    }
+    ctx.stroke();
+
+    // velocity arrow at t=0.5
+    const t0 = 0.5;
+    const vx = 1, vy = 2*t0;
+    const scale = 0.12;
+    ctx.strokeStyle = '#e74c3c'; ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(px(t0), py(t0*t0));
+    ctx.lineTo(px(t0 + vx*scale), py(t0*t0 + vy*scale));
+    ctx.stroke();
+    ctx.fillStyle = '#e74c3c';
+    ctx.fillText('v(0.5)', px(t0 + vx*scale)+4, py(t0*t0 + vy*scale)-4);
+
+    // start/end points
+    ctx.fillStyle = '#27ae60';
+    ctx.beginPath(); ctx.arc(px(0), py(0), 5, 0, 2*Math.PI); ctx.fill();
+    ctx.fillText('t=0', px(0)+8, py(0)-6);
+
+    ctx.fillStyle = '#8e44ad';
+    ctx.beginPath(); ctx.arc(px(1), py(1), 5, 0, 2*Math.PI); ctx.fill();
+    ctx.fillText('t=1', px(1)+6, py(1)-6);
+
+    // title
+    ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 14px Arial';
+    ctx.fillText('y = x²  (parabola, t ∈ [0,1])', pad, pad-20);
+  }
+
+  // ── Update result box ─────────────────────────────────────────
+  function update() {
+    const N = parseInt(document.getElementById('nSlider').value);
+    const approx = trapezoid(N);
+    const err = Math.abs(approx - EXACT);
+    document.getElementById('resultBox').innerHTML =
+      `&lt;b&gt;N = ${N}&lt;/b&gt;&lt;br&gt;` +
+      `Trapezoidal approximation: &lt;b&gt;s ≈ ${approx.toFixed(8)}&lt;/b&gt;&lt;br&gt;` +
+      `Exact value: s = ${EXACT.toFixed(8)}&lt;br&gt;` +
+      `Error: ${err.toExponential(4)}`;
+    drawErrorPlot();
+  }
+
+  // ── Build convergence table ───────────────────────────────────
+  function buildTable() {
+    const Nvals = [1, 2, 5, 10, 20, 50, 100, 200];
+    const tbody = document.getElementById('convBody');
+    tbody.innerHTML = '';
+    for (const N of Nvals) {
+      const approx = trapezoid(N);
+      const err = Math.abs(approx - EXACT);
+      const ratio = err * N * N;
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        `&lt;td&gt;${N}&lt;/td&gt;` +
+        `&lt;td&gt;${approx.toFixed(8)}&lt;/td&gt;` +
+        `&lt;td&gt;${err.toExponential(4)}&lt;/td&gt;` +
+        `&lt;td&gt;${ratio.toFixed(5)}&lt;/td&gt;`;
+      tbody.appendChild(tr);
+    }
+  }
+
+  // ── Error vs N log-log plot ───────────────────────────────────
+  function drawErrorPlot() {
+    const canvas = document.getElementById('errCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const pad = 60;
+    ctx.clearRect(0, 0, W, H);
+
+    const Nvals = [];
+    for (let n = 1; n &lt;= 200; n++) Nvals.push(n);
+    const errors = Nvals.map(n =&gt; Math.abs(trapezoid(n) - EXACT));
+
+    const logN = Nvals.map(n =&gt; Math.log10(n));
+    const logE = errors.map(e =&gt; e &gt; 0 ? Math.log10(e) : -12);
+
+    const minLN = 0, maxLN = Math.log10(200);
+    const minLE = Math.min(...logE.filter(v =&gt; isFinite(v))) - 0.3;
+    const maxLE = Math.max(...logE.filter(v =&gt; isFinite(v))) + 0.3;
+
+    function px(lx) { return pad + (lx - minLN) / (maxLN - minLN) * (W - 2*pad); }
+    function py(ly) { return H - pad - (ly - minLE) / (maxLE - minLE) * (H - 2*pad); }
+
+    // axes
+    ctx.strokeStyle = '#aaa'; ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad, pad); ctx.lineTo(pad, H-pad); ctx.lineTo(W-pad, H-pad);
+    ctx.stroke();
+
+    // axis labels
+    ctx.fillStyle = '#555'; ctx.font = '12px Arial';
+    ctx.fillText('log₁₀(N)', W/2 - 20, H-10);
+    ctx.save(); ctx.translate(16, H/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('log₁₀(error)', -40, 0); ctx.restore();
+
+    for (let lx = 0; lx &lt;= 2.4; lx += 0.5) {
+      ctx.fillText(lx.toFixed(1), px(lx)-8, H-pad+16);
+    }
+    for (let ly = Math.ceil(minLE); ly &lt;= Math.floor(maxLE); ly++) {
+      ctx.fillText(ly, pad-32, py(ly)+4);
+    }
+
+    // reference slope -2 line
+    ctx.strokeStyle = '#e74c3c'; ctx.lineWidth = 1.5;
+    ctx.setLineDash([6, 4]);
+    const refX1 = 0.5, refX2 = 2.2;
+    const refY1 = maxLE - 0.5;
+    const refY2 = refY1 - 2*(refX2 - refX1);
+    ctx.beginPath();
+    ctx.moveTo(px(refX1), py(refY1));
+    ctx.lineTo(px(refX2), py(refY2));
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#e74c3c';
+    ctx.fillText('slope = −2', px(refX2)+6, py(refY2)+4);
+
+    // error curve
+    ctx.strokeStyle = '#2980b9'; ctx.lineWidth = 2;
+    ctx.beginPath();
+    let started = false;
+    for (let i = 0; i &lt; Nvals.length; i++) {
+      if (!isFinite(logE[i])) continue;
+      if (!started) { ctx.moveTo(px(logN[i]), py(logE[i])); started = true; }
+      else ctx.lineTo(px(logN[i]), py(logE[i]));
+    }
+    ctx.stroke();
+
+    // current N marker
+    const N = parseInt(document.getElementById('nSlider').value);
+    const curLogN = Math.log10(N);
+    const curLogE = Math.log10(Math.abs(trapezoid(N) - EXACT));
+    if (isFinite(curLogE)) {
+      ctx.fillStyle = '#e67e22';
+      ctx.beginPath();
+      ctx.arc(px(curLogN), py(curLogE), 6, 0, 2*Math.PI);
+      ctx.fill();
+      ctx.fillStyle = '#e67e22';
+      ctx.font = 'bold 12px Arial';
+      ctx.fillText(`N=${N}`, px(curLogN)+8, py(curLogE)-6);
+    }
+
+    ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 13px Arial';
+    ctx.fillText('Error convergence (log-log)', pad, pad-18);
+  }
+
+  // ── Initialise ────────────────────────────────────────────────
+  drawTrajectory();
+  buildTable();
+  update();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<blockquote>
+<p><strong>How to use the application:</strong>
+- The top panel shows the parabolic trajectory <span class="arithmatex">\(y = x^2\)</span> with the velocity vector drawn at <span class="arithmatex">\(t = 0.5\)</span>.
+- The slider controls <span class="arithmatex">\(N\)</span> — drag it right to increase the number of trapezoids.
+- The result box shows the numerical approximation, the exact value, and the current error.
+- The convergence table shows the error for fixed values of <span class="arithmatex">\(N = 1, 2, 5, 10, 20, 50, 100, 200\)</span>.
+- The error plot shows error vs <span class="arithmatex">\(N\)</span> on a <strong>log-log scale</strong> — the slope of <span class="arithmatex">\(-2\)</span> confirms the trapezoidal rule converges as <span class="arithmatex">\(O(1/N^2)\)</span>.</p>
+</blockquote>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Velocity vector</td>
+<td><span class="arithmatex">\(\vec{v}(t) = (1,\ 2t)\)</span></td>
+</tr>
+<tr>
+<td>Speed</td>
+<td><span class="arithmatex">\(\|\vec{v}(t)\| = \sqrt{1 + 4t^2}\)</span></td>
+</tr>
+<tr>
+<td>Arc length integral</td>
+<td><span class="arithmatex">\(s = \displaystyle\int_0^1 \sqrt{1 + 4t^2}\, dt\)</span></td>
+</tr>
+<tr>
+<td>Substitution used</td>
+<td><span class="arithmatex">\(u = 2t\)</span>, reducing to <span class="arithmatex">\(\frac{1}{2}\int_0^2\sqrt{1+u^2}\,du\)</span></td>
+</tr>
+<tr>
+<td>Exact analytical result</td>
+<td><span class="arithmatex">\(s = \dfrac{\sqrt{5}}{2} + \dfrac{1}{4}\ln(2+\sqrt{5}) \approx 1.4789\)</span></td>
+</tr>
+<tr>
+<td>Trapezoidal rule error</td>
+<td><span class="arithmatex">\(O(1/N^2)\)</span> — halving <span class="arithmatex">\(h\)</span> reduces error by factor 4</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-possible-questions-answers">5 Possible Questions &amp; Answers</h2>
+<hr />
+<p><strong>Q1: Why can't we just compute the straight-line distance from <span class="arithmatex">\((0, 0)\)</span> to <span class="arithmatex">\((1, 1)\)</span> instead of integrating?</strong></p>
+<p><strong>A:</strong> The straight-line (Euclidean) distance from <span class="arithmatex">\((0,0)\)</span> to <span class="arithmatex">\((1,1)\)</span> is <span class="arithmatex">\(\sqrt{1^2 + 1^2} = \sqrt{2} \approx 1.414\)</span>. But this ignores the fact that the object does <em>not</em> travel in a straight line — it follows the curved parabola <span class="arithmatex">\(y = x^2\)</span>. The arc length <span class="arithmatex">\(s \approx 1.479\)</span> is larger than <span class="arithmatex">\(\sqrt{2}\)</span> because the actual path is longer than the shortcut. The integral <span class="arithmatex">\(\int |\vec{v}|\,dt\)</span> sums up infinitely many tiny straight-line segments along the curve, capturing the total path length correctly.</p>
+<hr />
+<p><strong>Q2: Why does the substitution <span class="arithmatex">\(u = 2t\)</span> simplify the integral? What is the general strategy?</strong></p>
+<p><strong>A:</strong> The integrand <span class="arithmatex">\(\sqrt{1 + 4t^2}\)</span> does not match any standard form directly, but <span class="arithmatex">\(\sqrt{1 + u^2}\)</span> does — it is a known integral solved by hyperbolic substitution <span class="arithmatex">\(u = \sinh\theta\)</span>. The substitution <span class="arithmatex">\(u = 2t\)</span> transforms the coefficient of <span class="arithmatex">\(t^2\)</span> from <span class="arithmatex">\(4\)</span> to <span class="arithmatex">\(1\)</span>, making the exponent match the standard form. The general strategy for arc length integrals is: (1) identify the form of the integrand, (2) use an algebraic substitution to reduce it to a standard form, (3) apply the known formula. For more complex curves, no closed form may exist and numerical methods become essential.</p>
+<hr />
+<p><strong>Q3: What is the order of convergence of the trapezoidal rule, and what does it mean practically?</strong></p>
+<p><strong>A:</strong> The trapezoidal rule has <strong>second-order convergence</strong>: the error scales as <span class="arithmatex">\(O(h^2) = O(1/N^2)\)</span>. This means if you double <span class="arithmatex">\(N\)</span> (halve <span class="arithmatex">\(h\)</span>), the error decreases by a factor of <span class="arithmatex">\(4\)</span>. For example, from the convergence table: at <span class="arithmatex">\(N = 10\)</span> the error is roughly <span class="arithmatex">\(10^{-3}\)</span>, and at <span class="arithmatex">\(N = 100\)</span> it is roughly <span class="arithmatex">\(10^{-5}\)</span> — a reduction by <span class="arithmatex">\(100 = 10^2\)</span>, consistent with <span class="arithmatex">\(O(1/N^2)\)</span>. On a log-log plot of error vs <span class="arithmatex">\(N\)</span>, this appears as a straight line with slope <span class="arithmatex">\(-2\)</span>. In practice, second-order convergence is decent but not spectacular — higher-order methods like Simpson's rule (<span class="arithmatex">\(O(h^4)\)</span>) or Gaussian quadrature converge much faster.</p>
+<hr />
+<p><strong>Q4: The arc length integral involves <span class="arithmatex">\(\ln(2 + \sqrt{5})\)</span>. Is this related to inverse hyperbolic functions?</strong></p>
+<p><strong>A:</strong> Yes — this is not a coincidence. The standard integral <span class="arithmatex">\(\int_0^u \sqrt{1+s^2}\,ds\)</span> produces <span class="arithmatex">\(\sinh^{-1}(u) = \ln(u + \sqrt{1+u^2})\)</span> as part of its result. At the upper limit <span class="arithmatex">\(u = 2\)</span>: <span class="arithmatex">\(\sinh^{-1}(2) = \ln(2 + \sqrt{4+1}) = \ln(2 + \sqrt{5})\)</span>. The appearance of the natural logarithm here is a direct consequence of the hyperbolic substitution used to evaluate the integral. This is one of many places in mathematics where arc length computations naturally produce inverse hyperbolic or logarithmic expressions, even for simple polynomial curves.</p>
+<hr />
+<p><strong>Q5: Why is it important to plot the error on a log-log scale rather than a linear scale?</strong></p>
+<p><strong>A:</strong> On a <strong>linear scale</strong>, the error curve for large <span class="arithmatex">\(N\)</span> is essentially flat near zero and uninformative — it is very hard to distinguish between <span class="arithmatex">\(O(1/N)\)</span>, <span class="arithmatex">\(O(1/N^2)\)</span>, and <span class="arithmatex">\(O(1/N^3)\)</span> convergence visually. On a <strong>log-log scale</strong>, a power-law relationship <span class="arithmatex">\(\text{error} \propto N^{-p}\)</span> appears as a straight line with slope <span class="arithmatex">\(-p\)</span>. This makes it trivial to read off the convergence order: a slope of <span class="arithmatex">\(-2\)</span> confirms <span class="arithmatex">\(O(1/N^2)\)</span>, a slope of <span class="arithmatex">\(-4\)</span> would confirm Simpson's rule (<span class="arithmatex">\(O(1/N^4)\)</span>), etc. Log-log plots are the standard tool in numerical analysis for diagnosing and verifying convergence rates of algorithms.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

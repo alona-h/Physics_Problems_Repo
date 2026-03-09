@@ -1,0 +1,2932 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://alona-h.github.io/Physics_Problems_Repo/problem_set_01_mathematical_foundations_solution/task_08/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../pl/problem_set_01_mathematical_foundations_solution/task_08/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Problem Set 1 – Problem 8: First-Order Differential Equation - Physics Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-set-1-problem-8-first-order-differential-equation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Physics Problems" class="md-header__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physics Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Problem Set 1 – Problem 8: First-Order Differential Equation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../pl/problem_set_01_mathematical_foundations_solution/task_08/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Physics Problems" class="md-nav__button md-logo" aria-label="Physics Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Physics Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Sets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Sets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 01
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 01
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_01_mathematical_foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 02
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 02
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_02_mechanics_and_kinematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 03
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 03
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_03_mechanics_ii_dynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 04
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 04
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_04_oscillations_and_waves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_05_electromagnetism_i/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 06
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 06
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_06_electromagnetism_ii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 07
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 07
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_07_circuits_resistors_and_kirchhoff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 08
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 08
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_08_statistics_and_measurements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 09
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 09
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_09_model_cosmology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 10
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 10
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_10_relativity_spacetime_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Set 11
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Set 11
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem_set_11_modern_physics_quantum_and_nuclear_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/projectile_motion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projectile Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/conics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/kepler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kepler's Laws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/chaos_pendulum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaotic Pendulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/work_integral.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/flux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/electric_field_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electric Field Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/wave_atoms.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom waves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/grav_acc_measure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gravitational Acceleration Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anim/numeric_integrator.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numeric Integrator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_1_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_1/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_2_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_2/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_3_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_3/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_4_formulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/problem_4/problem_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-solving-the-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 – Solving the equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1 – Solving the equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-separation-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method: Separation of Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behaviour-depending-on-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behaviour depending on \(k\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-htmljs-visualisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 – HTML/JS Visualisation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-possible-questions-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Possible Questions &amp; Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-set-1-problem-8-first-order-differential-equation">Problem Set 1 – Problem 8: First-Order Differential Equation</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This problem introduces <strong>ordinary differential equations (ODEs)</strong> — equations that relate a function to its own derivative. Instead of asking "what is <span class="arithmatex">\(y\)</span> at a specific value of <span class="arithmatex">\(t\)</span>?", a differential equation asks "what function <span class="arithmatex">\(y(t)\)</span> satisfies this relationship between <span class="arithmatex">\(y\)</span> and its rate of change?"</p>
+<p>The equation here is:
+$<span class="arithmatex">\(\frac{dy}{dt} = -ky\)</span>$</p>
+<blockquote>
+<p><strong>Plain-language meaning:</strong> The rate of change of <span class="arithmatex">\(y\)</span> is proportional to <span class="arithmatex">\(y\)</span> itself, but with a negative sign. If <span class="arithmatex">\(y\)</span> is large, it decreases quickly. If <span class="arithmatex">\(y\)</span> is small, it decreases slowly. This is the mathematical description of <strong>exponential decay</strong> — the same law that governs radioactive decay, cooling of objects, discharge of capacitors, and population decline.</p>
+</blockquote>
+<hr />
+<h2 id="81-solving-the-equation">8.1 – Solving the equation</h2>
+<h3 id="method-separation-of-variables">Method: Separation of Variables</h3>
+<p>The idea is to rearrange the equation so that all terms involving <span class="arithmatex">\(y\)</span> are on one side and all terms involving <span class="arithmatex">\(t\)</span> are on the other — then integrate both sides.</p>
+<p><strong>Step 1 — Separate variables:</strong></p>
+<p>Starting from:
+$<span class="arithmatex">\(\frac{dy}{dt} = -ky\)</span>$</p>
+<p>Divide both sides by <span class="arithmatex">\(y\)</span> (assuming <span class="arithmatex">\(y \neq 0\)</span>) and multiply both sides by <span class="arithmatex">\(dt\)</span>:</p>
+<div class="arithmatex">\[\frac{dy}{y} = -k\, dt\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> We are treating <span class="arithmatex">\(\frac{dy}{dt}\)</span> as if it were a fraction and "separating" <span class="arithmatex">\(dy\)</span> from <span class="arithmatex">\(dt\)</span>. This is a standard technique and is rigorously justified by the chain rule. The key requirement is that the equation can be written in the form <span class="arithmatex">\(f(y)\,dy = g(t)\,dt\)</span> — i.e. the <span class="arithmatex">\(y\)</span>-parts and <span class="arithmatex">\(t\)</span>-parts can be cleanly separated to opposite sides.</p>
+</blockquote>
+<p><strong>Step 2 — Integrate both sides:</strong></p>
+<div class="arithmatex">\[\int \frac{dy}{y} = \int -k\, dt\]</div>
+<div class="arithmatex">\[\ln|y| = -kt + C\]</div>
+<p>where <span class="arithmatex">\(C\)</span> is the constant of integration.</p>
+<blockquote>
+<p><strong>Explanation:</strong> The left-hand integral <span class="arithmatex">\(\int \frac{1}{y}\,dy = \ln|y|\)</span> is a standard result. The right-hand integral <span class="arithmatex">\(\int -k\,dt = -kt + C\)</span> is straightforward since <span class="arithmatex">\(k\)</span> is a constant. The constant <span class="arithmatex">\(C\)</span> appears on one side only (we can absorb it there without loss of generality).</p>
+</blockquote>
+<p><strong>Step 3 — Solve for <span class="arithmatex">\(y\)</span>:</strong></p>
+<p>Exponentiate both sides to undo the natural logarithm:</p>
+<div class="arithmatex">\[|y| = e^{-kt + C} = e^C \cdot e^{-kt}\]</div>
+<p>Since <span class="arithmatex">\(e^C\)</span> is just a positive constant, we rename it <span class="arithmatex">\(A = e^C &gt; 0\)</span>. Dropping the absolute value (allowing <span class="arithmatex">\(A\)</span> to be any nonzero real number to cover both signs of <span class="arithmatex">\(y\)</span>):</p>
+<div class="arithmatex">\[y(t) = A e^{-kt}\]</div>
+<p><strong>Step 4 — Apply initial condition <span class="arithmatex">\(y(0) = y_0\)</span>:</strong></p>
+<div class="arithmatex">\[y(0) = A e^{0} = A = y_0\]</div>
+<p>Therefore <span class="arithmatex">\(A = y_0\)</span>, and the <strong>general solution</strong> is:</p>
+<div class="arithmatex">\[\boxed{y(t) = y_0\, e^{-kt}}\]</div>
+<blockquote>
+<p><strong>Explanation:</strong> The constant <span class="arithmatex">\(A\)</span> (equivalently <span class="arithmatex">\(y_0\)</span>) is the value of <span class="arithmatex">\(y\)</span> at time <span class="arithmatex">\(t = 0\)</span> — the initial condition. Without it, we only know the <em>shape</em> of the solution (exponential decay), but not where it starts. The initial condition pins down the unique solution from the infinite family <span class="arithmatex">\(y = Ae^{-kt}\)</span>. Every different starting value <span class="arithmatex">\(y_0\)</span> gives a different curve, all with the same exponential shape.</p>
+</blockquote>
+<hr />
+<h3 id="verification">Verification</h3>
+<p>Differentiate the solution and check it satisfies the original equation:</p>
+<div class="arithmatex">\[\frac{dy}{dt} = \frac{d}{dt}\left(y_0 e^{-kt}\right) = y_0 \cdot (-k) e^{-kt} = -k \underbrace{(y_0 e^{-kt})}_{= y} = -ky \checkmark\]</div>
+<hr />
+<h3 id="behaviour-depending-on-k">Behaviour depending on <span class="arithmatex">\(k\)</span></h3>
+<table>
+<thead>
+<tr>
+<th>Value of <span class="arithmatex">\(k\)</span></th>
+<th>Behaviour of <span class="arithmatex">\(y(t)\)</span></th>
+<th>Physical example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(k &gt; 0\)</span></td>
+<td>Exponential <strong>decay</strong> toward 0</td>
+<td>Radioactive decay, cooling</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(k = 0\)</span></td>
+<td>Constant: <span class="arithmatex">\(y(t) = y_0\)</span></td>
+<td>No change</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(k &lt; 0\)</span></td>
+<td>Exponential <strong>growth</strong> without bound</td>
+<td>Population growth, compound interest</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Explanation:</strong> The sign of <span class="arithmatex">\(k\)</span> completely determines the long-term fate of <span class="arithmatex">\(y\)</span>. For <span class="arithmatex">\(k &gt; 0\)</span>, the negative feedback drives <span class="arithmatex">\(y\)</span> back toward zero — the larger <span class="arithmatex">\(y\)</span> is, the faster it falls. For <span class="arithmatex">\(k &lt; 0\)</span>, the equation becomes <span class="arithmatex">\(dy/dt = |k|y\)</span>, a positive feedback loop where <span class="arithmatex">\(y\)</span> grows without limit. The parameter <span class="arithmatex">\(1/k\)</span> (for <span class="arithmatex">\(k &gt; 0\)</span>) is called the <strong>time constant</strong> <span class="arithmatex">\(\tau\)</span> — it is the time after which <span class="arithmatex">\(y\)</span> has decayed to <span class="arithmatex">\(e^{-1} \approx 36.8\%\)</span> of its initial value.</p>
+</blockquote>
+<hr />
+<h2 id="82-htmljs-visualisation">8.2 – HTML/JS Visualisation</h2>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;/&gt;
+  &lt;title&gt;Problem 8 – Exponential Decay/Growth&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f8f9fa;
+      color: #222;
+    }
+    h2 { color: #2c3e50; margin-bottom: 4px; }
+    .subtitle { color: #666; margin-bottom: 20px; font-size: 0.95em; }
+    .panel {
+      background: white;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    canvas { display: block; margin: 0 auto; }
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 30px;
+      margin-bottom: 16px;
+    }
+    .ctrl-row { display: flex; flex-direction: column; gap: 4px; }
+    label { font-weight: bold; font-size: 0.93em; color: #2c3e50; }
+    input[type=range] { width: 100%; }
+    .val-display {
+      font-size: 0.88em;
+      color: #555;
+      text-align: right;
+    }
+    .formula-box {
+      background: #eaf4fb;
+      border-left: 4px solid #2980b9;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 1.0em;
+      margin-bottom: 14px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .info-card {
+      background: #f0f4f8;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 0.88em;
+      text-align: center;
+    }
+    .info-card b { display: block; font-size: 1.1em; color: #2c3e50; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.89em;
+      margin-top: 8px;
+    }
+    th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: right; }
+    th { background: #2c3e50; color: white; }
+    tr:nth-child(even) { background: #f5f5f5; }
+    h3 { margin: 0 0 14px 0; color: #2c3e50; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Problem 8 – First-Order ODE: dy/dt = −ky&lt;/h2&gt;
+&lt;p class=&quot;subtitle&quot;&gt;Solution: y(t) = y₀ · e&lt;sup&gt;−kt&lt;/sup&gt;&lt;/p&gt;
+
+&lt;!-- CONTROLS --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Parameters&lt;/h3&gt;
+  &lt;div class=&quot;controls&quot;&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Decay constant k = &lt;span id=&quot;kVal&quot;&gt;1.00&lt;/span&gt;&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;kSlider&quot; min=&quot;-2&quot; max=&quot;3&quot; step=&quot;0.05&quot; value=&quot;1&quot;
+             oninput=&quot;document.getElementById('kVal').textContent=
+               parseFloat(this.value).toFixed(2); draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;Range: −2 to 3 &amp;nbsp;(negative k → growth)&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Initial condition y(0) = &lt;span id=&quot;y0Val&quot;&gt;1.00&lt;/span&gt;&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;y0Slider&quot; min=&quot;-3&quot; max=&quot;3&quot; step=&quot;0.1&quot; value=&quot;1&quot;
+             oninput=&quot;document.getElementById('y0Val').textContent=
+               parseFloat(this.value).toFixed(2); draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;Range: −3 to 3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Time range t ∈ [0, T],  T = &lt;span id=&quot;tVal&quot;&gt;5.0&lt;/span&gt;&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;tSlider&quot; min=&quot;1&quot; max=&quot;10&quot; step=&quot;0.5&quot; value=&quot;5&quot;
+             oninput=&quot;document.getElementById('tVal').textContent=
+               parseFloat(this.value).toFixed(1); draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;Range: 1 to 10&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ctrl-row&quot;&gt;
+      &lt;label&gt;Extra curves (different y₀)&lt;/label&gt;
+      &lt;input type=&quot;range&quot; id=&quot;curvesSlider&quot; min=&quot;0&quot; max=&quot;5&quot; step=&quot;1&quot; value=&quot;3&quot;
+             oninput=&quot;document.getElementById('curvesVal').textContent=
+               this.value; draw()&quot;&gt;
+      &lt;div class=&quot;val-display&quot;&gt;
+        Show &lt;span id=&quot;curvesVal&quot;&gt;3&lt;/span&gt; additional initial conditions
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;formula-box&quot; id=&quot;formulaBox&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;info-grid&quot; id=&quot;infoGrid&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- MAIN PLOT --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Solution curves y(t) = y₀ · e&lt;sup&gt;−kt&lt;/sup&gt;&lt;/h3&gt;
+  &lt;canvas id=&quot;mainCanvas&quot; width=&quot;780&quot; height=&quot;380&quot;&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+
+&lt;!-- PHASE PORTRAIT --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Phase portrait: dy/dt vs y &amp;nbsp;(slope field)&lt;/h3&gt;
+  &lt;canvas id=&quot;phaseCanvas&quot; width=&quot;780&quot; height=&quot;280&quot;&gt;&lt;/canvas&gt;
+  &lt;p style=&quot;color:#666; font-size:0.88em; text-align:center; margin-top:8px&quot;&gt;
+    Each arrow shows the direction of change at that point.
+    Horizontal axis: y &amp;nbsp;|&amp;nbsp; Vertical axis: dy/dt = −ky
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- TABLE --&gt;
+&lt;div class=&quot;panel&quot;&gt;
+  &lt;h3&gt;Solution values at selected times&lt;/h3&gt;
+  &lt;table id=&quot;valTable&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;&lt;th&gt;t&lt;/th&gt;&lt;th&gt;y(t) = y₀·e^(−kt)&lt;/th&gt;
+          &lt;th&gt;dy/dt = −k·y(t)&lt;/th&gt;&lt;th&gt;% of y₀ remaining&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody id=&quot;valBody&quot;&gt;&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  const COLORS = ['#2980b9','#e74c3c','#27ae60','#8e44ad','#e67e22','#16a085'];
+
+  function getParams() {
+    return {
+      k:  parseFloat(document.getElementById('kSlider').value),
+      y0: parseFloat(document.getElementById('y0Slider').value),
+      T:  parseFloat(document.getElementById('tSlider').value),
+      nExtra: parseInt(document.getElementById('curvesSlider').value)
+    };
+  }
+
+  function y(t, k, y0) { return y0 * Math.exp(-k * t); }
+
+  // ── Main solution plot ────────────────────────────────────────
+  function drawMain(k, y0, T, nExtra) {
+    const canvas = document.getElementById('mainCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const padL = 60, padR = 20, padT = 20, padB = 40;
+
+    // Determine y-range from all curves
+    const allY0s = [y0];
+    for (let i = 1; i &lt;= nExtra; i++) allY0s.push(y0 * (0.5 * i + 0.5));
+    if (y0 &gt; 0) allY0s.push(-y0 * 0.7);
+
+    let yMin = Infinity, yMax = -Infinity;
+    for (const y0c of allY0s) {
+      const vals = [y0c, y(T, k, y0c)];
+      yMin = Math.min(yMin, ...vals);
+      yMax = Math.max(yMax, ...vals);
+    }
+    const pad = (yMax - yMin) * 0.1 || 0.5;
+    yMin -= pad; yMax += pad;
+    if (yMin &gt; -0.1) yMin = -0.1;
+    if (yMax &lt; 0.1) yMax = 0.1;
+
+    function px(t)  { return padL + (t / T) * (W - padL - padR); }
+    function py(yv) { return padT + (1 - (yv - yMin) / (yMax - yMin)) * (H - padT - padB); }
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Grid
+    ctx.strokeStyle = '#efefef'; ctx.lineWidth = 1;
+    for (let i = 0; i &lt;= 5; i++) {
+      const t = i * T / 5;
+      ctx.beginPath(); ctx.moveTo(px(t), padT); ctx.lineTo(px(t), H - padB); ctx.stroke();
+    }
+    const nYGrid = 5;
+    for (let i = 0; i &lt;= nYGrid; i++) {
+      const yv = yMin + i * (yMax - yMin) / nYGrid;
+      ctx.beginPath(); ctx.moveTo(padL, py(yv)); ctx.lineTo(W - padR, py(yv)); ctx.stroke();
+    }
+
+    // Zero lines
+    ctx.strokeStyle = '#aaa'; ctx.lineWidth = 1;
+    if (yMin &lt; 0 &amp;&amp; yMax &gt; 0) {
+      ctx.beginPath(); ctx.moveTo(padL, py(0)); ctx.lineTo(W - padR, py(0)); ctx.stroke();
+    }
+    ctx.beginPath(); ctx.moveTo(padL, padT); ctx.lineTo(padL, H - padB);
+    ctx.lineTo(W - padR, H - padB); ctx.stroke();
+
+    // Axis labels
+    ctx.fillStyle = '#555'; ctx.font = '12px Arial';
+    for (let i = 0; i &lt;= 5; i++) {
+      const t = i * T / 5;
+      ctx.fillText(t.toFixed(1), px(t) - 10, H - padB + 16);
+    }
+    for (let i = 0; i &lt;= nYGrid; i++) {
+      const yv = yMin + i * (yMax - yMin) / nYGrid;
+      ctx.fillText(yv.toFixed(2), 2, py(yv) + 4);
+    }
+    ctx.fillStyle = '#2c3e50';
+    ctx.fillText('t', W - padR + 4, H - padB + 4);
+    ctx.save(); ctx.translate(14, H / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('y(t)', -16, 0); ctx.restore();
+
+    // Extra curves (different y0)
+    const extraY0s = [];
+    for (let i = 1; i &lt;= nExtra; i++) extraY0s.push(y0 * (0.5 * i + 0.5));
+
+    let ci = 1;
+    for (const ey0 of extraY0s) {
+      ctx.strokeStyle = COLORS[ci % COLORS.length];
+      ctx.lineWidth = 1.5; ctx.setLineDash([5, 4]);
+      ctx.beginPath();
+      for (let n = 0; n &lt;= 400; n++) {
+        const t = n / 400 * T;
+        n === 0 ? ctx.moveTo(px(t), py(y(t, k, ey0)))
+                : ctx.lineTo(px(t), py(y(t, k, ey0)));
+      }
+      ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle = COLORS[ci % COLORS.length];
+      ctx.font = '11px Arial';
+      ctx.fillText(`y₀=${ey0.toFixed(1)}`, px(0) + 4, py(ey0) - 5);
+      ci++;
+    }
+
+    // Main curve
+    ctx.strokeStyle = COLORS[0]; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    for (let n = 0; n &lt;= 400; n++) {
+      const t = n / 400 * T;
+      n === 0 ? ctx.moveTo(px(t), py(y(t, k, y0)))
+              : ctx.lineTo(px(t), py(y(t, k, y0)));
+    }
+    ctx.stroke();
+
+    // Tangent line at t=0
+    const slope0 = -k * y0;
+    const t1tang = Math.min(T * 0.2, 1.5);
+    ctx.strokeStyle = '#e74c3c'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]);
+    ctx.beginPath();
+    ctx.moveTo(px(0), py(y0));
+    ctx.lineTo(px(t1tang), py(y0 + slope0 * t1tang));
+    ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = '#e74c3c'; ctx.font = '11px Arial';
+    ctx.fillText('tangent at t=0', px(t1tang * 0.3), py(y0 + slope0 * t1tang * 0.3) - 8);
+
+    // Half-life / doubling time marker
+    if (k !== 0) {
+      const tHalf = Math.log(2) / Math.abs(k);
+      if (tHalf &lt; T) {
+        const yHalf = y(tHalf, k, y0);
+        ctx.fillStyle = '#27ae60';
+        ctx.beginPath(); ctx.arc(px(tHalf), py(yHalf), 5, 0, 2 * Math.PI); ctx.fill();
+        ctx.font = 'bold 11px Arial';
+        ctx.fillText(k &gt; 0 ? `t½ = ${tHalf.toFixed(2)}` : `t×2 = ${tHalf.toFixed(2)}`,
+          px(tHalf) + 7, py(yHalf) - 6);
+        // dashed drop line
+        ctx.strokeStyle = '#27ae60'; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+        ctx.beginPath();
+        ctx.moveTo(px(tHalf), py(yHalf));
+        ctx.lineTo(px(tHalf), H - padB);
+        ctx.stroke(); ctx.setLineDash([]);
+      }
+    }
+
+    // Start dot
+    ctx.fillStyle = COLORS[0];
+    ctx.beginPath(); ctx.arc(px(0), py(y0), 5, 0, 2 * Math.PI); ctx.fill();
+    ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 12px Arial';
+    ctx.fillText(`y(0) = ${y0.toFixed(2)}`, px(0) + 8, py(y0) - 8);
+  }
+
+  // ── Phase portrait ────────────────────────────────────────────
+  function drawPhase(k, y0, T) {
+    const canvas = document.getElementById('phaseCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const padL = 60, padR = 20, padT = 20, padB = 35;
+
+    const yRange = Math.max(Math.abs(y0) * 1.5, 2);
+    const yMin = -yRange, yMax = yRange;
+    const dydtMin = -k * yMax - 0.2, dydtMax = -k * yMin + 0.2;
+
+    function px(yv) {
+      return padL + (yv - yMin) / (yMax - yMin) * (W - padL - padR);
+    }
+    function py(dydt) {
+      return padT + (1 - (dydt - dydtMin) / (dydtMax - dydtMin)) * (H - padT - padB);
+    }
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Grid
+    ctx.strokeStyle = '#efefef'; ctx.lineWidth = 1;
+    for (let i = -4; i &lt;= 4; i++) {
+      const yv = i * yRange / 4;
+      ctx.beginPath(); ctx.moveTo(px(yv), padT); ctx.lineTo(px(yv), H - padB); ctx.stroke();
+    }
+
+    // Axes
+    ctx.strokeStyle = '#aaa'; ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(padL, padT); ctx.lineTo(padL, H - padB);
+    ctx.lineTo(W - padR, H - padB); ctx.stroke();
+    // zero-dydt line
+    if (dydtMin &lt; 0 &amp;&amp; dydtMax &gt; 0) {
+      ctx.beginPath();
+      ctx.moveTo(padL, py(0)); ctx.lineTo(W - padR, py(0)); ctx.stroke();
+    }
+
+    // dy/dt = -ky  →  straight line through origin
+    ctx.strokeStyle = '#2980b9'; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.moveTo(px(yMin), py(-k * yMin));
+    ctx.lineTo(px(yMax), py(-k * yMax));
+    ctx.stroke();
+
+    // Slope arrows
+    const nArrows = 12;
+    for (let i = 0; i &lt;= nArrows; i++) {
+      const yv = yMin + i * (yMax - yMin) / nArrows;
+      const dydt = -k * yv;
+      const sc = 0.18 * (yMax - yMin) / nArrows;
+      const len = Math.sqrt(1 + dydt * dydt / ((yMax - yMin) * (yMax - yMin)));
+      const dx = sc / len, dDydt = (dydt / (yMax - yMin)) * sc / len;
+      const x0 = px(yv), y0p = py(dydt);
+      drawArrow2(ctx, x0 - dx * 40, y0p + dDydt * 40,
+                      x0 + dx * 40, y0p - dDydt * 40, '#e74c3c', 1.5);
+    }
+
+    // Axis labels
+    ctx.fillStyle = '#555'; ctx.font = '12px Arial';
+    for (let i = -4; i &lt;= 4; i++) {
+      const yv = i * yRange / 4;
+      ctx.fillText(yv.toFixed(1), px(yv) - 12, H - padB + 16);
+    }
+    ctx.fillStyle = '#2c3e50';
+    ctx.fillText('y', W - padR + 4, H - padB + 4);
+    ctx.save(); ctx.translate(14, H / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('dy/dt', -20, 0); ctx.restore();
+
+    ctx.fillStyle = '#2980b9'; ctx.font = 'bold 12px Arial';
+    ctx.fillText(`dy/dt = −${k.toFixed(2)} · y   (slope = −k = ${(-k).toFixed(2)})`,
+      padL + 10, padT + 18);
+  }
+
+  function drawArrow2(ctx, x1, y1, x2, y2, color, lw) {
+    const dx = x2 - x1, dy = y2 - y1;
+    const angle = Math.atan2(dy, dx);
+    const hs = 7;
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = lw;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 - hs * Math.cos(angle - Math.PI / 7),
+               y2 - hs * Math.sin(angle - Math.PI / 7));
+    ctx.lineTo(x2 - hs * Math.cos(angle + Math.PI / 7),
+               y2 - hs * Math.sin(angle + Math.PI / 7));
+    ctx.closePath(); ctx.fill();
+  }
+
+  // ── Update formula box and info cards ────────────────────────
+  function updateFormula(k, y0, T) {
+    const sign = k &gt;= 0 ? '' : '+';
+    document.getElementById('formulaBox').innerHTML =
+      `&lt;b&gt;Solution:&lt;/b&gt; &amp;nbsp; y(t) = ${y0.toFixed(2)} · e&lt;sup&gt;${sign}${(-k).toFixed(2)}t&lt;/sup&gt;` +
+      `&amp;nbsp;&amp;nbsp;&amp;nbsp; (k = ${k.toFixed(2)}, &amp;nbsp; y₀ = ${y0.toFixed(2)})`;
+
+    const tHalf = k !== 0 ? (Math.log(2) / Math.abs(k)).toFixed(3) : '∞';
+    const tau   = k !== 0 ? (1 / Math.abs(k)).toFixed(3) : '∞';
+    const yAtT  = y(T, k, y0).toFixed(4);
+    const label = k &gt; 0 ? 'Half-life t½' : k &lt; 0 ? 'Doubling time' : 'Half-life t½';
+    document.getElementById('infoGrid').innerHTML =
+      `&lt;div class=&quot;info-card&quot;&gt;&lt;b&gt;${tHalf}&lt;/b&gt;${label}&lt;/div&gt;` +
+      `&lt;div class=&quot;info-card&quot;&gt;&lt;b&gt;${tau}&lt;/b&gt;Time constant τ = 1/|k|&lt;/div&gt;` +
+      `&lt;div class=&quot;info-card&quot;&gt;&lt;b&gt;${yAtT}&lt;/b&gt;y at t = T = ${T.toFixed(1)}&lt;/div&gt;`;
+  }
+
+  // ── Solution value table ──────────────────────────────────────
+  function buildTable(k, y0, T) {
+    const times = [0, 0.25, 0.5, 1, 1.5, 2, 3, 5, T].filter(t =&gt; t &lt;= T);
+    const unique = [...new Set(times)].sort((a, b) =&gt; a - b);
+    const tbody = document.getElementById('valBody');
+    tbody.innerHTML = '';
+    for (const t of unique) {
+      const yv  = y(t, k, y0);
+      const dydtv = -k * yv;
+      const pct = y0 !== 0 ? (yv / y0 * 100).toFixed(2) : '—';
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        `&lt;td&gt;${t.toFixed(2)}&lt;/td&gt;` +
+        `&lt;td&gt;${yv.toFixed(6)}&lt;/td&gt;` +
+        `&lt;td&gt;${dydtv.toFixed(6)}&lt;/td&gt;` +
+        `&lt;td&gt;${pct}%&lt;/td&gt;`;
+      tbody.appendChild(tr);
+    }
+  }
+
+  // ── Master draw ───────────────────────────────────────────────
+  function draw() {
+    const { k, y0, T, nExtra } = getParams();
+    updateFormula(k, y0, T);
+    drawMain(k, y0, T, nExtra);
+    drawPhase(k, y0, T);
+    buildTable(k, y0, T);
+  }
+
+  draw();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<blockquote>
+<p><strong>How to use the application:</strong>
+- <strong>k slider</strong> — drag right for faster decay, left past zero for exponential growth.
+- <strong>y₀ slider</strong> — sets the starting value; try negative values to see the curve below the axis.
+- <strong>T slider</strong> — extends or compresses the time window.
+- <strong>Extra curves slider</strong> — adds dashed curves for different initial conditions with the same <span class="arithmatex">\(k\)</span>, showing the full <em>family</em> of solutions.
+- The <strong>info cards</strong> show the half-life <span class="arithmatex">\(t_{1/2} = \ln 2 / k\)</span>, the time constant <span class="arithmatex">\(\tau = 1/k\)</span>, and the value of <span class="arithmatex">\(y\)</span> at the end of the time window.
+- The <strong>phase portrait</strong> shows <span class="arithmatex">\(dy/dt\)</span> as a function of <span class="arithmatex">\(y\)</span> — a straight line through the origin with slope <span class="arithmatex">\(-k\)</span>. The red arrows indicate the direction of change at each value of <span class="arithmatex">\(y\)</span>.
+- The <strong>solution table</strong> gives numerical values at selected time points.</p>
+</blockquote>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ODE</td>
+<td><span class="arithmatex">\(dy/dt = -ky\)</span></td>
+</tr>
+<tr>
+<td>Method</td>
+<td>Separation of variables</td>
+</tr>
+<tr>
+<td>General solution</td>
+<td><span class="arithmatex">\(y(t) = A e^{-kt}\)</span></td>
+</tr>
+<tr>
+<td>With initial condition</td>
+<td><span class="arithmatex">\(y(t) = y_0\,e^{-kt}\)</span></td>
+</tr>
+<tr>
+<td>Half-life (<span class="arithmatex">\(k &gt; 0\)</span>)</td>
+<td><span class="arithmatex">\(t_{1/2} = \ln 2\, /\, k \approx 0.693/k\)</span></td>
+</tr>
+<tr>
+<td>Time constant</td>
+<td><span class="arithmatex">\(\tau = 1/k\)</span> (time to decay to <span class="arithmatex">\(e^{-1} \approx 36.8\%\)</span>)</td>
+</tr>
+<tr>
+<td>Behaviour for <span class="arithmatex">\(k &gt; 0\)</span></td>
+<td>Exponential decay to 0</td>
+</tr>
+<tr>
+<td>Behaviour for <span class="arithmatex">\(k &lt; 0\)</span></td>
+<td>Exponential growth to <span class="arithmatex">\(\pm\infty\)</span></td>
+</tr>
+<tr>
+<td>Behaviour for <span class="arithmatex">\(k = 0\)</span></td>
+<td>Constant <span class="arithmatex">\(y(t) = y_0\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-possible-questions-answers">5 Possible Questions &amp; Answers</h2>
+<hr />
+<p><strong>Q1: Why is separation of variables valid? Are there restrictions on when it can be used?</strong></p>
+<p><strong>A:</strong> Separation of variables works when the ODE can be written as <span class="arithmatex">\(f(y)\,dy = g(t)\,dt\)</span> — i.e. the right-hand side factors into a product of a function of <span class="arithmatex">\(y\)</span> only and a function of <span class="arithmatex">\(t\)</span> only. For <span class="arithmatex">\(dy/dt = -ky\)</span>, this factoring is immediate: <span class="arithmatex">\(\frac{dy}{y} = -k\,dt\)</span>. The technique is valid as long as <span class="arithmatex">\(y \neq 0\)</span> (we divided by <span class="arithmatex">\(y\)</span>). The case <span class="arithmatex">\(y = 0\)</span> is actually a separate solution — the trivial solution <span class="arithmatex">\(y(t) = 0\)</span> for all <span class="arithmatex">\(t\)</span> — which satisfies the ODE trivially since both sides equal zero. For initial conditions <span class="arithmatex">\(y_0 \neq 0\)</span>, the exponential solution is the correct one and never crosses zero in finite time (since <span class="arithmatex">\(e^{-kt} \neq 0\)</span> for any finite <span class="arithmatex">\(t\)</span>).</p>
+<hr />
+<p><strong>Q2: What is the half-life <span class="arithmatex">\(t_{1/2}\)</span> and how is it derived from the solution?</strong></p>
+<p><strong>A:</strong> The half-life <span class="arithmatex">\(t_{1/2}\)</span> is the time at which <span class="arithmatex">\(y\)</span> has decreased to half its initial value: <span class="arithmatex">\(y(t_{1/2}) = y_0/2\)</span>. Setting up the equation:
+$<span class="arithmatex">\(y_0 e^{-k t_{1/2}} = \frac{y_0}{2}\)</span>$
+Dividing both sides by <span class="arithmatex">\(y_0\)</span> and taking the natural log:
+$<span class="arithmatex">\(-k t_{1/2} = \ln\!\left(\frac{1}{2}\right) = -\ln 2\)</span>$
+$<span class="arithmatex">\(t_{1/2} = \frac{\ln 2}{k} \approx \frac{0.693}{k}\)</span>$
+The half-life depends only on <span class="arithmatex">\(k\)</span>, not on the initial value <span class="arithmatex">\(y_0\)</span>. This is the hallmark of exponential decay: it takes the same time to go from <span class="arithmatex">\(100\)</span> to <span class="arithmatex">\(50\)</span> as from <span class="arithmatex">\(50\)</span> to <span class="arithmatex">\(25\)</span>, or from <span class="arithmatex">\(10\)</span> to <span class="arithmatex">\(5\)</span>.</p>
+<hr />
+<p><strong>Q3: What is the time constant <span class="arithmatex">\(\tau\)</span> and how does it differ from the half-life?</strong></p>
+<p><strong>A:</strong> The time constant <span class="arithmatex">\(\tau = 1/k\)</span> is the time at which <span class="arithmatex">\(y\)</span> has decayed to <span class="arithmatex">\(e^{-1} \approx 36.8\%\)</span> of its initial value:
+$<span class="arithmatex">\(y(\tau) = y_0 e^{-k \cdot (1/k)} = y_0 e^{-1} \approx 0.368\, y_0\)</span>$
+The half-life and time constant are related by <span class="arithmatex">\(t_{1/2} = \tau \ln 2 \approx 0.693\,\tau\)</span>. The time constant is more natural in physics and engineering (e.g. RC circuits), while the half-life is more common in nuclear physics and medicine. Both characterise the same decay rate — they are just different reference thresholds (50% vs <span class="arithmatex">\(\approx\)</span>37%).</p>
+<hr />
+<p><strong>Q4: How would you solve <span class="arithmatex">\(dy/dt = -ky + c\)</span> where <span class="arithmatex">\(c\)</span> is a constant (non-homogeneous case)?</strong></p>
+<p><strong>A:</strong> This is a <strong>non-homogeneous</strong> linear ODE. The standard approach is: (1) find the equilibrium by setting <span class="arithmatex">\(dy/dt = 0\)</span>: <span class="arithmatex">\(y^* = c/k\)</span>. (2) Substitute <span class="arithmatex">\(u = y - y^*\)</span> to shift the equation: <span class="arithmatex">\(du/dt = d(y - y^*)/dt = dy/dt = -k(u + y^*) + c = -ku\)</span>. This is the same homogeneous equation in <span class="arithmatex">\(u\)</span>, so <span class="arithmatex">\(u(t) = (y_0 - y^*) e^{-kt}\)</span>. (3) Translate back: <span class="arithmatex">\(y(t) = y^* + (y_0 - y^*)e^{-kt} = \frac{c}{k} + \left(y_0 - \frac{c}{k}\right)e^{-kt}\)</span>. The solution still decays exponentially, but now toward the non-zero equilibrium <span class="arithmatex">\(c/k\)</span> rather than toward zero.</p>
+<hr />
+<p><strong>Q5: Give three real-world phenomena modelled by <span class="arithmatex">\(dy/dt = -ky\)</span> and identify what <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(k\)</span>, and <span class="arithmatex">\(t\)</span> represent in each.</strong></p>
+<p><strong>A:</strong>
+- <strong>Radioactive decay:</strong> <span class="arithmatex">\(y\)</span> = number of radioactive atoms, <span class="arithmatex">\(k\)</span> = decay constant (related to the isotope's half-life), <span class="arithmatex">\(t\)</span> = time. The equation says each atom decays independently with constant probability per unit time, giving exponential decrease in the total count.
+- <strong>Newton's law of cooling:</strong> <span class="arithmatex">\(y\)</span> = temperature difference between an object and its surroundings, <span class="arithmatex">\(k\)</span> = heat transfer coefficient (depends on material and surface area), <span class="arithmatex">\(t\)</span> = time. The object cools faster when the temperature gap is large, slower as it approaches room temperature — classic exponential decay of the temperature difference.
+- <strong>Capacitor discharge:</strong> <span class="arithmatex">\(y\)</span> = charge <span class="arithmatex">\(Q\)</span> on a capacitor discharging through a resistor <span class="arithmatex">\(R\)</span> with capacitance <span class="arithmatex">\(C\)</span>, <span class="arithmatex">\(k = 1/(RC)\)</span>, <span class="arithmatex">\(t\)</span> = time. The voltage (and charge) decays exponentially with time constant <span class="arithmatex">\(\tau = RC\)</span>. This is why electronics engineers talk about "RC time constants" when designing timing circuits.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
