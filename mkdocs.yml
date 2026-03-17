@@ -47,7 +47,7 @@ plugins:
                 - Rozwiązania: 'problem_set_01_mathematical_foundations_solution/index.md'
               - Lista 02:
                 - Zadania: 'problem_set_02_mechanics_and_kinematics.md'
-                # - Rozwiązania: 'problem_set_02_mechanics_and_kinematics_solution/index.md'
+                - Rozwiązania: 'problem_set_02_mechanics_and_kinematics_solution/index.md'
               - Lista 03:
                 - Zadania: 'problem_set_03_mechanics_ii_dynamics.md'
                 # - Rozwiązania: 'problem_set_03_mechanics_ii_dynamics_solution/index.md'
@@ -102,7 +102,7 @@ plugins:
                 - Solutions: 'problem_set_01_mathematical_foundations_solution/index.md'
               - Problem Set 02:
                 - Problems: 'problem_set_02_mechanics_and_kinematics.md'
-                # - Solutions: 'problem_set_02_mechanics_and_kinematics_solution/index.md'
+                - Solutions: 'problem_set_02_mechanics_and_kinematics_solution/index.md'
               - Problem Set 03:
                 - Problems: 'problem_set_03_mechanics_ii_dynamics.md'
                 # - Solutions: 'problem_set_03_mechanics_ii_dynamics_solution/index.md'
