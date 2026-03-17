@@ -25,7 +25,7 @@
     
     
       
-        <title>Task 01 - Physics Problems</title>
+        <title>Problem 1 – Uniform and Uniformly Accelerated Motion - Physics Problems</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#problem-1-uniform-and-uniformly-accelerated-motion" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 01
+              Problem 1 – Uniform and Uniformly Accelerated Motion
             
           </span>
         </div>
@@ -2149,6 +2154,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-11-determine-the-velocity-vt-and-acceleration-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 1.1 – Determine the velocity \(v(t)\) and acceleration \(a(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-12-numerical-calculations-for-x_0-0-v_0-5-textms-a-2-textms2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 1.2 – Numerical calculations for \(x_0 = 0\), \(v_0 = 5\ \text{m/s}\), \(a = -2\ \text{m/s}^2\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 1.2 – Numerical calculations for \(x_0 = 0\), \(v_0 = 5\ \text{m/s}\), \(a = -2\ \text{m/s}^2\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#12a-stopping-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2a – Stopping time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12b-maximum-velocity-depending-on-time-and-the-sign-of-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2b – Maximum velocity depending on time and the sign of acceleration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12c-maximum-displacement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2c – Maximum displacement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-13-visualize-xt-vt-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 1.3 – Visualize \(x(t)\), \(v(t)\), \(a(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-questions-and-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible Questions and Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2165,9 +2263,237 @@
 
 
 
-  <h1>Task 01</h1>
-
-
+<h1 id="problem-1-uniform-and-uniformly-accelerated-motion">Problem 1 – Uniform and Uniformly Accelerated Motion</h1>
+<p>The equation of motion is given:</p>
+<div class="arithmatex">\[
+x(t) = x_0 + v_0 t + \frac{1}{2} a t^2
+\]</div>
+<hr />
+<h2 id="question-11-determine-the-velocity-vt-and-acceleration-at">Question 1.1 – Determine the velocity <span class="arithmatex">\(v(t)\)</span> and acceleration <span class="arithmatex">\(a(t)\)</span></h2>
+<p><strong>Solution:</strong></p>
+<p>Velocity is the first derivative of position with respect to time:</p>
+<div class="arithmatex">\[
+v(t) = \frac{dx}{dt} = \frac{d}{dt}\left(x_0 + v_0 t + \frac{1}{2}a t^2\right)
+\]</div>
+<p>Differentiating term by term:
+- <span class="arithmatex">\(\frac{d}{dt}(x_0) = 0\)</span> (constant)
+- <span class="arithmatex">\(\frac{d}{dt}(v_0 t) = v_0\)</span>
+- <span class="arithmatex">\(\frac{d}{dt}\!\left(\frac{1}{2}a t^2\right) = at\)</span></p>
+<div class="arithmatex">\[
+\boxed{v(t) = v_0 + at}
+\]</div>
+<p>Acceleration is the first derivative of velocity (or the second derivative of position):</p>
+<div class="arithmatex">\[
+a(t) = \frac{dv}{dt} = \frac{d}{dt}(v_0 + at)
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\frac{d}{dt}(v_0) = 0\)</span> (constant)</li>
+<li><span class="arithmatex">\(\frac{d}{dt}(at) = a\)</span></li>
+</ul>
+<div class="arithmatex">\[
+\boxed{a(t) = a = \text{const}}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+Think of position <span class="arithmatex">\(x(t)\)</span> as describing <em>where</em> something is at time <span class="arithmatex">\(t\)</span>. Velocity tells you <em>how fast</em> the position is changing — so you find it by differentiating <span class="arithmatex">\(x(t)\)</span>. Acceleration tells you <em>how fast the velocity is changing</em> — so you differentiate <span class="arithmatex">\(v(t)\)</span> once more. Notice that the acceleration <span class="arithmatex">\(a\)</span> turns out to be just a constant number, which makes sense: "uniformly accelerated" literally means the acceleration doesn't change over time.</p>
+</blockquote>
+<hr />
+<h2 id="question-12-numerical-calculations-for-x_0-0-v_0-5-textms-a-2-textms2">Question 1.2 – Numerical calculations for <span class="arithmatex">\(x_0 = 0\)</span>, <span class="arithmatex">\(v_0 = 5\ \text{m/s}\)</span>, <span class="arithmatex">\(a = -2\ \text{m/s}^2\)</span></h2>
+<p>With these values the equations become:</p>
+<div class="arithmatex">\[
+x(t) = 5t - t^2, \qquad v(t) = 5 - 2t, \qquad a(t) = -2\ \text{m/s}^2
+\]</div>
+<hr />
+<h3 id="12a-stopping-time">1.2a – Stopping time</h3>
+<p><strong>Question:</strong> When does the body stop (i.e. when is <span class="arithmatex">\(v(t) = 0\)</span>)?</p>
+<p><strong>Solution:</strong></p>
+<p>Set <span class="arithmatex">\(v(t) = 0\)</span>:</p>
+<div class="arithmatex">\[
+v_0 + at = 0
+\]</div>
+<div class="arithmatex">\[
+5 + (-2)t = 0
+\]</div>
+<div class="arithmatex">\[
+5 - 2t = 0
+\]</div>
+<div class="arithmatex">\[
+t = \frac{5}{2} = 2.5\ \text{s}
+\]</div>
+<div class="arithmatex">\[
+\boxed{t_{\text{stop}} = 2.5\ \text{s}}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+The body starts moving at <span class="arithmatex">\(5\ \text{m/s}\)</span> but is being slowed down by the negative acceleration (think of it as a braking force). Every second, the velocity drops by <span class="arithmatex">\(2\ \text{m/s}\)</span>. After <span class="arithmatex">\(2.5\)</span> seconds the velocity reaches exactly zero — the body has stopped. Note: it doesn't <em>stay</em> stopped; if the force continues, the body would start moving backwards.</p>
+</blockquote>
+<hr />
+<h3 id="12b-maximum-velocity-depending-on-time-and-the-sign-of-acceleration">1.2b – Maximum velocity depending on time and the sign of acceleration</h3>
+<p><strong>Solution:</strong></p>
+<p>The velocity function is:</p>
+<div class="arithmatex">\[
+v(t) = v_0 + at
+\]</div>
+<p>This is a linear function of time. Its behaviour depends on the sign of <span class="arithmatex">\(a\)</span>:</p>
+<p><strong>Case 1: <span class="arithmatex">\(a &gt; 0\)</span> (positive acceleration)</strong>
+- <span class="arithmatex">\(v(t)\)</span> increases without bound as <span class="arithmatex">\(t \to \infty\)</span>
+- The maximum velocity over a finite interval <span class="arithmatex">\([0, T]\)</span> is at <span class="arithmatex">\(t = T\)</span>:</p>
+<div class="arithmatex">\[
+v_{\max} = v_0 + aT
+\]</div>
+<p><strong>Case 2: <span class="arithmatex">\(a &lt; 0\)</span> (negative acceleration) — our case</strong>
+- <span class="arithmatex">\(v(t)\)</span> decreases over time
+- The maximum velocity is at <span class="arithmatex">\(t = 0\)</span>:</p>
+<div class="arithmatex">\[
+v_{\max} = v_0 = 5\ \text{m/s}
+\]</div>
+<ul>
+<li>After <span class="arithmatex">\(t_{\text{stop}} = 2.5\ \text{s}\)</span>, the velocity becomes negative (body moves in the opposite direction)</li>
+</ul>
+<p><strong>Case 3: <span class="arithmatex">\(a = 0\)</span> (uniform motion)</strong>
+- <span class="arithmatex">\(v(t) = v_0 = \text{const}\)</span> — velocity is constant at all times</p>
+<div class="arithmatex">\[
+\boxed{v_{\max} = v_0 = 5\ \text{m/s} \quad (\text{at } t = 0, \text{ for } a &lt; 0)}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+Because the acceleration is negative (like a car braking), the body starts at its fastest and slows down from there. The highest speed is therefore right at the start, <span class="arithmatex">\(t = 0\)</span>. If instead the acceleration were positive (like a car speeding up), the body would get faster and faster, and there would be no maximum unless you set a time limit. The sign of <span class="arithmatex">\(a\)</span> completely controls whether the object is speeding up or slowing down.</p>
+</blockquote>
+<hr />
+<h3 id="12c-maximum-displacement">1.2c – Maximum displacement</h3>
+<p><strong>Question:</strong> How far does the body travel before it stops?</p>
+<p><strong>Solution:</strong></p>
+<p>The body reaches maximum displacement at the stopping time <span class="arithmatex">\(t_{\text{stop}} = 2.5\ \text{s}\)</span> (because after this point it moves backwards, reducing <span class="arithmatex">\(x\)</span>).</p>
+<p>Substituting into <span class="arithmatex">\(x(t)\)</span>:</p>
+<div class="arithmatex">\[
+x_{\max} = x(t_{\text{stop}}) = x_0 + v_0\, t_{\text{stop}} + \frac{1}{2}a\, t_{\text{stop}}^2
+\]</div>
+<div class="arithmatex">\[
+x_{\max} = 0 + 5 \cdot 2.5 + \frac{1}{2}(-2)(2.5)^2
+\]</div>
+<div class="arithmatex">\[
+x_{\max} = 12.5 + \frac{1}{2}(-2)(6.25)
+\]</div>
+<div class="arithmatex">\[
+x_{\max} = 12.5 - 6.25
+\]</div>
+<div class="arithmatex">\[
+\boxed{x_{\max} = 6.25\ \text{m}}
+\]</div>
+<p>Alternatively, using the kinematic formula <span class="arithmatex">\(v^2 = v_0^2 + 2a\,\Delta x\)</span> and setting <span class="arithmatex">\(v = 0\)</span>:</p>
+<div class="arithmatex">\[
+0 = v_0^2 + 2a\,x_{\max}
+\]</div>
+<div class="arithmatex">\[
+x_{\max} = -\frac{v_0^2}{2a} = -\frac{25}{2 \cdot (-2)} = \frac{25}{4} = 6.25\ \text{m}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+The body moves forward while <span class="arithmatex">\(v &gt; 0\)</span>, i.e. until <span class="arithmatex">\(t = 2.5\ \text{s}\)</span>. After that it starts going backwards, so the <em>furthest point</em> it ever reaches is at exactly <span class="arithmatex">\(t = 2.5\ \text{s}\)</span>. Plugging that time into the position formula gives <span class="arithmatex">\(6.25\ \text{m}\)</span>. An easy way to remember: "maximum displacement happens when velocity is zero."</p>
+</blockquote>
+<hr />
+<h2 id="question-13-visualize-xt-vt-at">Question 1.3 – Visualize <span class="arithmatex">\(x(t)\)</span>, <span class="arithmatex">\(v(t)\)</span>, <span class="arithmatex">\(a(t)\)</span></h2>
+<p>Below is a description of the three graphs for <span class="arithmatex">\(x_0=0\)</span>, <span class="arithmatex">\(v_0=5\ \text{m/s}\)</span>, <span class="arithmatex">\(a=-2\ \text{m/s}^2\)</span>:</p>
+<p><strong>Position <span class="arithmatex">\(x(t) = 5t - t^2\)</span></strong>
+- Parabola opening downward
+- Starts at <span class="arithmatex">\(x = 0\)</span>, rises to a maximum of <span class="arithmatex">\(6.25\ \text{m}\)</span> at <span class="arithmatex">\(t = 2.5\ \text{s}\)</span>, then decreases</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t\ (\text{s})\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x\ (\text{m})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.5</td>
+<td style="text-align: center;">6.25</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Velocity <span class="arithmatex">\(v(t) = 5 - 2t\)</span></strong>
+- Straight line with negative slope
+- Starts at <span class="arithmatex">\(v = 5\ \text{m/s}\)</span>, crosses zero at <span class="arithmatex">\(t = 2.5\ \text{s}\)</span>, becomes negative afterward</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t\ (\text{s})\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(v\ (\text{m/s})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.5</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">−1</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">−3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Acceleration <span class="arithmatex">\(a(t) = -2\ \text{m/s}^2\)</span></strong>
+- Horizontal line at <span class="arithmatex">\(a = -2\ \text{m/s}^2\)</span> for all <span class="arithmatex">\(t\)</span></p>
+<blockquote>
+<p><strong>Explanation:</strong>
+The three graphs tell the full story of the motion. The position graph (<span class="arithmatex">\(x\)</span>) looks like an upside-down parabola — the body moves forward, slows to a stop, then turns around. The velocity graph (<span class="arithmatex">\(v\)</span>) is a straight line going downhill — it starts positive, shrinks to zero, then goes negative (backwards motion). The acceleration graph is just a flat horizontal line — the acceleration never changes, which is the defining feature of <em>uniformly accelerated</em> motion.</p>
+</blockquote>
+<hr />
+<h2 id="possible-questions-and-answers">Possible Questions and Answers</h2>
+<p><strong>Q1: What is the physical meaning of a negative acceleration when the initial velocity is positive?</strong></p>
+<p>A: A negative acceleration means the acceleration vector points in the opposite direction to the motion. When <span class="arithmatex">\(v_0 &gt; 0\)</span> and <span class="arithmatex">\(a &lt; 0\)</span>, the body is decelerating — it slows down, stops, and then (if the force continues) accelerates in the negative direction. In everyday language, this is braking.</p>
+<hr />
+<p><strong>Q2: What is the difference between deceleration and negative acceleration?</strong></p>
+<p>A: "Deceleration" informally means the speed (magnitude of velocity) is decreasing. "Negative acceleration" simply means the acceleration vector points in the negative direction. They are the same when the body is moving in the positive direction, but if the body is already moving in the negative direction, a negative acceleration actually <em>speeds it up</em>.</p>
+<hr />
+<p><strong>Q3: Why is the maximum displacement found at <span class="arithmatex">\(t_{\text{stop}}\)</span> and not at a later time?</strong></p>
+<p>A: Because for <span class="arithmatex">\(t &gt; t_{\text{stop}}\)</span> the velocity is negative, meaning the body moves in the <span class="arithmatex">\(-x\)</span> direction and the position <span class="arithmatex">\(x(t)\)</span> decreases. The position is largest when <span class="arithmatex">\(v = 0\)</span>, i.e. at <span class="arithmatex">\(t_{\text{stop}} = 2.5\ \text{s}\)</span>.</p>
+<hr />
+<p><strong>Q4: How does the kinematic formula <span class="arithmatex">\(v^2 = v_0^2 + 2a\Delta x\)</span> follow from <span class="arithmatex">\(x(t)\)</span> and <span class="arithmatex">\(v(t)\)</span>?</strong></p>
+<p>A: From <span class="arithmatex">\(v(t) = v_0 + at\)</span> we get <span class="arithmatex">\(t = \frac{v - v_0}{a}\)</span>. Substituting into <span class="arithmatex">\(x(t) = x_0 + v_0 t + \frac{1}{2}at^2\)</span> and simplifying yields <span class="arithmatex">\(v^2 = v_0^2 + 2a(x - x_0)\)</span>. This formula is useful because it eliminates time entirely.</p>
+<hr />
+<p><strong>Q5: What happens to <span class="arithmatex">\(x(t)\)</span> as <span class="arithmatex">\(t \to \infty\)</span> for <span class="arithmatex">\(a &lt; 0\)</span>?</strong></p>
+<p>A: Since <span class="arithmatex">\(x(t) = x_0 + v_0 t + \frac{1}{2}at^2\)</span> and <span class="arithmatex">\(a &lt; 0\)</span>, the <span class="arithmatex">\(\frac{1}{2}at^2\)</span> term dominates for large <span class="arithmatex">\(t\)</span> and drives <span class="arithmatex">\(x(t) \to -\infty\)</span>. The body eventually moves infinitely far in the negative direction. In a real physical scenario (e.g. a car), the braking force would stop being applied once the car halts, but mathematically with constant <span class="arithmatex">\(a &lt; 0\)</span> the motion continues in reverse forever.</p>
 
 
 

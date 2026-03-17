@@ -25,7 +25,7 @@
     
     
       
-        <title>Task 09 - Physics Problems</title>
+        <title>Problem 9 – Change of Reference Frame (Copernican Model → Geocentric Description) - Physics Problems</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#problem-9-change-of-reference-frame-copernican-model-geocentric-description" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 09
+              Problem 9 – Change of Reference Frame (Copernican Model → Geocentric Description)
             
           </span>
         </div>
@@ -2149,6 +2154,138 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-91-draw-both-motions-in-the-heliocentric-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 9.1 – Draw both motions in the heliocentric system
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-92-determine-the-position-of-mars-relative-to-earth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 9.2 – Determine the position of Mars relative to Earth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 9.2 – Determine the position of Mars relative to Earth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-of-relative-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition of relative position
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numerical-example-at-selected-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Numerical example at selected times
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-93-html-animation-with-two-panels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 9.3 – HTML Animation with two panels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 9.3 – HTML Animation with two panels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#panel-a-heliocentric-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panel A — Heliocentric motion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-b-geocentric-view-mars-as-seen-from-earth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panel B — Geocentric view (Mars as seen from Earth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-between-the-two-panels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection between the two panels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-questions-and-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible Questions and Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2165,9 +2302,409 @@
 
 
 
-  <h1>Task 09</h1>
-
-
+<h1 id="problem-9-change-of-reference-frame-copernican-model-geocentric-description">Problem 9 – Change of Reference Frame (Copernican Model → Geocentric Description)</h1>
+<p>Earth and Mars move in circles around the Sun in the same direction.</p>
+<p>Heliocentric (Sun-centered) positions:</p>
+<div class="arithmatex">\[
+\vec{r}_E(t) = R_E\,\bigl(\cos(\omega_E t),\ \sin(\omega_E t)\bigr)
+\]</div>
+<div class="arithmatex">\[
+\vec{r}_M(t) = R_M\,\bigl(\cos(\omega_M t),\ \sin(\omega_M t)\bigr)
+\]</div>
+<p>where:
+- <span class="arithmatex">\(R_E\)</span> = orbital radius of Earth, <span class="arithmatex">\(R_M\)</span> = orbital radius of Mars
+- <span class="arithmatex">\(\omega_E\)</span> = angular velocity of Earth, <span class="arithmatex">\(\omega_M\)</span> = angular velocity of Mars
+- Both planets start on the positive <span class="arithmatex">\(x\)</span>-axis at <span class="arithmatex">\(t = 0\)</span></p>
+<p><strong>Physical values used in examples:</strong>
+- <span class="arithmatex">\(R_E = 1\ \text{AU}\)</span>, <span class="arithmatex">\(R_M = 1.524\ \text{AU}\)</span>
+- <span class="arithmatex">\(T_E = 1\ \text{year}\)</span>, <span class="arithmatex">\(T_M = 1.881\ \text{years}\)</span>
+- <span class="arithmatex">\(\omega_E = \frac{2\pi}{T_E} = 2\pi\ \text{rad/year}\)</span>
+- <span class="arithmatex">\(\omega_M = \frac{2\pi}{T_M} \approx 3.340\ \text{rad/year}\)</span></p>
+<hr />
+<h2 id="question-91-draw-both-motions-in-the-heliocentric-system">Question 9.1 – Draw both motions in the heliocentric system</h2>
+<p><strong>Question:</strong> Describe the trajectories of Earth and Mars as seen from the Sun,
+and identify their key properties.</p>
+<p><strong>Solution:</strong></p>
+<p>Both planets move in <strong>circles</strong> centered on the Sun (the origin):</p>
+<p><strong>Earth's trajectory:</strong></p>
+<div class="arithmatex">\[
+|\vec{r}_E(t)| = \sqrt{R_E^2\cos^2(\omega_E t) + R_E^2\sin^2(\omega_E t)}
+= R_E\sqrt{\cos^2 + \sin^2} = R_E
+\]</div>
+<p>Earth traces a circle of radius <span class="arithmatex">\(R_E\)</span> with period:</p>
+<div class="arithmatex">\[
+T_E = \frac{2\pi}{\omega_E} = 1\ \text{year}
+\]</div>
+<p><strong>Mars's trajectory:</strong></p>
+<div class="arithmatex">\[
+|\vec{r}_M(t)| = R_M = \text{const}
+\]</div>
+<p>Mars traces a circle of radius <span class="arithmatex">\(R_M\)</span> with period:</p>
+<div class="arithmatex">\[
+T_M = \frac{2\pi}{\omega_M} \approx 1.881\ \text{years}
+\]</div>
+<p><strong>Key properties of the heliocentric picture:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: center;">Earth</th>
+<th style="text-align: center;">Mars</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Orbit shape</td>
+<td style="text-align: center;">Circle</td>
+<td style="text-align: center;">Circle</td>
+</tr>
+<tr>
+<td style="text-align: left;">Orbital radius</td>
+<td style="text-align: center;"><span class="arithmatex">\(R_E = 1\ \text{AU}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(R_M = 1.524\ \text{AU}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Period</td>
+<td style="text-align: center;"><span class="arithmatex">\(1\ \text{year}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.881\ \text{years}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Angular velocity</td>
+<td style="text-align: center;"><span class="arithmatex">\(\omega_E = 2\pi\ \text{rad/yr}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\omega_M \approx 3.340\ \text{rad/yr}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Direction</td>
+<td style="text-align: center;">Counter-clockwise</td>
+<td style="text-align: center;">Counter-clockwise</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Starting positions (at <span class="arithmatex">\(t = 0\)</span>):</strong></p>
+<div class="arithmatex">\[
+\vec{r}_E(0) = R_E(\cos 0,\ \sin 0) = (R_E,\ 0)
+\]</div>
+<div class="arithmatex">\[
+\vec{r}_M(0) = R_M(\cos 0,\ \sin 0) = (R_M,\ 0)
+\]</div>
+<p>Both planets start on the positive <span class="arithmatex">\(x\)</span>-axis — they begin in
+<strong>conjunction</strong> (lined up on the same side of the Sun).</p>
+<p><strong>Angular separation over time:</strong></p>
+<p>The angle between Earth and Mars grows as:</p>
+<div class="arithmatex">\[
+\Delta\theta(t) = \omega_E t - \omega_M t = (\omega_E - \omega_M)t
+\]</div>
+<p>Since <span class="arithmatex">\(\omega_E &gt; \omega_M\)</span> (Earth orbits faster), Earth gradually laps Mars.
+The time between successive conjunctions (synodic period) is:</p>
+<div class="arithmatex">\[
+T_{\text{syn}} = \frac{2\pi}{\omega_E - \omega_M} = \frac{1}{\frac{1}{T_E} - \frac{1}{T_M}}
+= \frac{T_E \cdot T_M}{T_M - T_E} \approx \frac{1 \times 1.881}{1.881 - 1} \approx 2.135\ \text{years}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+In the heliocentric (Sun-centered) picture, everything is beautifully simple:
+both planets just go around the Sun in circles at their own constant speeds.
+Earth is closer to the Sun so it moves faster (<span class="arithmatex">\(\omega_E &gt; \omega_M\)</span>) and
+completes one full orbit in less time. Mars is farther out, moves more slowly,
+and takes almost two Earth-years to complete one orbit. Both start at the
+same angle (positive <span class="arithmatex">\(x\)</span>-axis), but Earth quickly pulls ahead. After about
+<span class="arithmatex">\(2.135\)</span> years Earth has lapped Mars and they are aligned again — this is
+called a synodic period. The heliocentric picture was Copernicus's great
+insight: the Solar System looks simple and orderly when you put the Sun in
+the center.</p>
+</blockquote>
+<hr />
+<h2 id="question-92-determine-the-position-of-mars-relative-to-earth">Question 9.2 – Determine the position of Mars relative to Earth</h2>
+<p><strong>Question:</strong> Write down the position of Mars as seen from Earth —
+the geocentric description.</p>
+<h3 id="definition-of-relative-position">Definition of relative position</h3>
+<div class="arithmatex">\[
+\vec{r}_{M/E}(t) = \vec{r}_M(t) - \vec{r}_E(t)
+\]</div>
+<h3 id="step-by-step-calculation">Step-by-step calculation</h3>
+<p>Substitute the heliocentric positions:</p>
+<div class="arithmatex">\[
+\vec{r}_{M/E}(t) = R_M\bigl(\cos(\omega_M t),\ \sin(\omega_M t)\bigr)
+- R_E\bigl(\cos(\omega_E t),\ \sin(\omega_E t)\bigr)
+\]</div>
+<p>Subtract component by component:</p>
+<p><strong><span class="arithmatex">\(x\)</span>-component:</strong></p>
+<div class="arithmatex">\[
+x_{M/E}(t) = R_M\cos(\omega_M t) - R_E\cos(\omega_E t)
+\]</div>
+<p><strong><span class="arithmatex">\(y\)</span>-component:</strong></p>
+<div class="arithmatex">\[
+y_{M/E}(t) = R_M\sin(\omega_M t) - R_E\sin(\omega_E t)
+\]</div>
+<div class="arithmatex">\[
+\boxed{
+\vec{r}_{M/E}(t) = \bigl(
+R_M\cos(\omega_M t) - R_E\cos(\omega_E t),\
+R_M\sin(\omega_M t) - R_E\sin(\omega_E t)
+\bigr)
+}
+\]</div>
+<h3 id="numerical-example-at-selected-times">Numerical example at selected times</h3>
+<p>Using <span class="arithmatex">\(R_E = 1\)</span>, <span class="arithmatex">\(R_M = 1.524\)</span>, <span class="arithmatex">\(\omega_E = 2\pi\)</span>, <span class="arithmatex">\(\omega_M = 2\pi/1.881\)</span>
+(in AU and years):</p>
+<p><strong>At <span class="arithmatex">\(t = 0\)</span> (conjunction — both on same side of Sun):</strong></p>
+<div class="arithmatex">\[
+x_{M/E}(0) = 1.524\cos(0) - 1\cos(0) = 1.524 - 1 = 0.524\ \text{AU}
+\]</div>
+<div class="arithmatex">\[
+y_{M/E}(0) = 1.524\sin(0) - 1\sin(0) = 0
+\]</div>
+<div class="arithmatex">\[
+\vec{r}_{M/E}(0) = (0.524,\ 0)\ \text{AU}
+\]</div>
+<p>Mars is <span class="arithmatex">\(0.524\)</span> AU directly to the right of Earth.</p>
+<p><strong>At <span class="arithmatex">\(t = T_E/4 = 0.25\ \text{years}\)</span>:</strong></p>
+<div class="arithmatex">\[
+\omega_E t = 2\pi \cdot 0.25 = \frac{\pi}{2}, \qquad
+\omega_M t = \frac{2\pi}{1.881} \cdot 0.25 \approx 0.836\ \text{rad}
+\]</div>
+<div class="arithmatex">\[
+x_{M/E} = 1.524\cos(0.836) - 1\cos(\pi/2) \approx 1.524(0.670) - 0 \approx 1.021\ \text{AU}
+\]</div>
+<div class="arithmatex">\[
+y_{M/E} = 1.524\sin(0.836) - 1\sin(\pi/2) \approx 1.524(0.742) - 1 \approx 0.131\ \text{AU}
+\]</div>
+<p><strong>Distance from Earth to Mars over time:</strong></p>
+<div class="arithmatex">\[
+|\vec{r}_{M/E}(t)| = \sqrt{(R_M\cos(\omega_M t) - R_E\cos(\omega_E t))^2
++ (R_M\sin(\omega_M t) - R_E\sin(\omega_E t))^2}
+\]</div>
+<p>Expand using <span class="arithmatex">\(\cos^2 + \sin^2 = 1\)</span>:</p>
+<div class="arithmatex">\[
+= \sqrt{R_M^2 + R_E^2 - 2R_M R_E\cos((\omega_M - \omega_E)t)}
+\]</div>
+<div class="arithmatex">\[
+\boxed{|\vec{r}_{M/E}(t)| = \sqrt{R_M^2 + R_E^2 - 2R_M R_E\cos((\omega_M - \omega_E)t)}}
+\]</div>
+<p><strong>Maximum distance</strong> (opposition — planets on opposite sides of Sun,
+<span class="arithmatex">\(\cos = -1\)</span>):</p>
+<div class="arithmatex">\[
+|\vec{r}_{M/E}|_{\max} = \sqrt{R_M^2 + R_E^2 + 2R_M R_E}
+= R_M + R_E = 1.524 + 1 = 2.524\ \text{AU}
+\]</div>
+<p><strong>Minimum distance</strong> (conjunction — planets on same side of Sun,
+<span class="arithmatex">\(\cos = +1\)</span>):</p>
+<div class="arithmatex">\[
+|\vec{r}_{M/E}|_{\min} = \sqrt{R_M^2 + R_E^2 - 2R_M R_E}
+= |R_M - R_E| = 1.524 - 1 = 0.524\ \text{AU}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+To find where Mars is "as seen from Earth," we simply subtract Earth's
+position vector from Mars's position vector. This is the same subtraction
+used in Problem 8 for relative motion — the principle is identical. The
+result is a vector that points from Earth to Mars, with a length equal to
+the Earth–Mars distance. When both planets are on the same side of the Sun
+(conjunction), they are closest (<span class="arithmatex">\(0.524\)</span> AU apart). When they are on
+opposite sides (opposition), they are farthest (<span class="arithmatex">\(2.524\)</span> AU apart). The
+distance formula <span class="arithmatex">\(\sqrt{R_M^2 + R_E^2 - 2R_MR_E\cos(\Delta\theta)}\)</span> is
+just the <strong>law of cosines</strong> applied to the triangle Sun–Earth–Mars.</p>
+</blockquote>
+<hr />
+<h2 id="question-93-html-animation-with-two-panels">Question 9.3 – HTML Animation with two panels</h2>
+<p><strong>Question:</strong> Describe what the two-panel animation shows and how it
+connects the heliocentric and geocentric views.</p>
+<h3 id="panel-a-heliocentric-motion">Panel A — Heliocentric motion</h3>
+<p><strong>What is shown:</strong></p>
+<ul>
+<li>The <strong>Sun</strong> at the center (origin), drawn as a yellow circle</li>
+<li><strong>Earth</strong> orbiting the Sun in a circle of radius <span class="arithmatex">\(R_E\)</span>:
+  $$
+  \vec{r}_E(t) = R_E(\cos(\omega_E t),\ \sin(\omega_E t))
+  $$</li>
+<li><strong>Mars</strong> orbiting the Sun in a circle of radius <span class="arithmatex">\(R_M\)</span>:
+  $$
+  \vec{r}_M(t) = R_M(\cos(\omega_M t),\ \sin(\omega_M t))
+  $$</li>
+<li>Orbital circles drawn as thin reference rings</li>
+<li>A line connecting Earth and Mars to show their current separation</li>
+</ul>
+<p><strong>Key moments visible in Panel A:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Event</th>
+<th style="text-align: left;">Condition</th>
+<th style="text-align: center;">Earth–Mars angle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Conjunction</td>
+<td style="text-align: left;">Both on same side</td>
+<td style="text-align: center;"><span class="arithmatex">\(0°\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Quadrature</td>
+<td style="text-align: left;">Mars <span class="arithmatex">\(90°\)</span> from Earth</td>
+<td style="text-align: center;"><span class="arithmatex">\(90°\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Opposition</td>
+<td style="text-align: left;">Opposite sides of Sun</td>
+<td style="text-align: center;"><span class="arithmatex">\(180°\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="panel-b-geocentric-view-mars-as-seen-from-earth">Panel B — Geocentric view (Mars as seen from Earth)</h3>
+<p><strong>What is shown:</strong></p>
+<ul>
+<li><strong>Earth fixed</strong> at the center of Panel B</li>
+<li>The <strong>trace of Mars</strong> plotted as:
+  $$
+  \vec{r}_{M/E}(t) = \bigl(R_M\cos(\omega_M t) - R_E\cos(\omega_E t),\
+  R_M\sin(\omega_M t) - R_E\sin(\omega_E t)\bigr)
+  $$</li>
+<li>The path traced out over a full synodic period (<span class="arithmatex">\(\approx 2.135\)</span> years)</li>
+</ul>
+<p><strong>The retrograde loop:</strong></p>
+<p>The most striking feature of Panel B is the <strong>retrograde loop</strong> — a period
+when Mars appears to move backward (westward) against the background stars.
+This occurs near <strong>opposition</strong>, when Earth passes between the Sun and Mars.</p>
+<p><strong>Why retrograde happens — step by step:</strong></p>
+<ol>
+<li>Earth moves faster than Mars (<span class="arithmatex">\(\omega_E &gt; \omega_M\)</span>)</li>
+<li>As Earth approaches opposition, it overtakes Mars</li>
+<li>From Earth's perspective, Mars appears to slow down, stop, reverse
+   direction, stop again, then resume forward motion</li>
+<li>This creates a loop or zigzag in the geocentric trajectory</li>
+</ol>
+<p><strong>Approximate angular velocity of Mars as seen from Earth:</strong></p>
+<p>The apparent angular velocity of Mars in the geocentric frame is:</p>
+<div class="arithmatex">\[
+\frac{d}{dt}\!\left[\arctan\!\left(\frac{y_{M/E}}{x_{M/E}}\right)\right]
+\]</div>
+<p>This is complicated in general, but near opposition it becomes approximately:</p>
+<div class="arithmatex">\[
+\omega_{\text{apparent}} \approx \omega_M - \omega_E &lt; 0
+\]</div>
+<p>The negative value means Mars moves <strong>backward</strong> (retrograde) near opposition.</p>
+<p><strong>Shape of the geocentric path:</strong></p>
+<p>The path is not a simple circle — it is a complex looping curve called an
+<strong>epitrochoid</strong> (a curve traced by a point on a circle rolling around another
+circle). Over many synodic periods it fills out a rosette pattern.</p>
+<blockquote>
+<p><strong>Explanation:</strong>
+This is one of the most historically important results in all of astronomy.
+Before Copernicus, people could not explain why Mars sometimes appears to
+move backward across the sky. The geocentric (Earth-centered) model required
+complicated "epicycles" to reproduce this behavior. The Copernican
+(Sun-centered) model explains it instantly: retrograde motion is just an
+optical illusion caused by Earth overtaking Mars on the inside lane of the
+solar system, like a faster car on a highway overtaking a slower one — the
+slower car appears to move backward relative to the distant background.
+Panel A shows the true, simple circular motion. Panel B shows what an
+Earth-based observer actually sees — the confusing loops that puzzled
+astronomers for centuries.</p>
+</blockquote>
+<hr />
+<h3 id="connection-between-the-two-panels">Connection between the two panels</h3>
+<p>The two panels show the <strong>same physical reality</strong> from two different viewpoints:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Panel A (Heliocentric)</th>
+<th style="text-align: center;">Panel B (Geocentric)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Center</td>
+<td style="text-align: center;">Sun</td>
+<td style="text-align: center;">Earth</td>
+</tr>
+<tr>
+<td style="text-align: left;">Earth's path</td>
+<td style="text-align: center;">Circle of radius <span class="arithmatex">\(R_E\)</span></td>
+<td style="text-align: center;">Fixed point</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mars's path</td>
+<td style="text-align: center;">Circle of radius <span class="arithmatex">\(R_M\)</span></td>
+<td style="text-align: center;">Looping epitrochoid</td>
+</tr>
+<tr>
+<td style="text-align: left;">Motion appearance</td>
+<td style="text-align: center;">Simple, orderly</td>
+<td style="text-align: center;">Complex, with retrograde</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mathematical description</td>
+<td style="text-align: center;"><span class="arithmatex">\(\vec{r}_M(t)\)</span>, <span class="arithmatex">\(\vec{r}_E(t)\)</span> separate</td>
+<td style="text-align: center;"><span class="arithmatex">\(\vec{r}_{M/E}(t) = \vec{r}_M - \vec{r}_E\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The transformation between them is simply:</p>
+<div class="arithmatex">\[
+\vec{r}_{M/E}(t) = \vec{r}_M(t) - \vec{r}_E(t)
+\]</div>
+<hr />
+<h2 id="possible-questions-and-answers">Possible Questions and Answers</h2>
+<p><strong>Q1: What is the synodic period, and how does it differ from the
+orbital period?</strong></p>
+<p>A: The <strong>orbital period</strong> (sidereal period) is the time for a planet to
+complete one full orbit around the Sun relative to the fixed stars:
+<span class="arithmatex">\(T_E = 1\)</span> year, <span class="arithmatex">\(T_M = 1.881\)</span> years. The <strong>synodic period</strong> is the time
+between successive identical alignments of Earth and Mars as seen from
+Earth (e.g., conjunction to conjunction). It is given by:
+$$
+\frac{1}{T_{\text{syn}}} = \frac{1}{T_E} - \frac{1}{T_M}
+\implies T_{\text{syn}} = \frac{T_E T_M}{T_M - T_E} \approx 2.135\ \text{years}
+$$
+The synodic period is always longer than the difference of the orbital periods
+because Earth must "catch up" to Mars after already completing a full orbit.</p>
+<hr />
+<p><strong>Q2: Why does Mars appear to move backward (retrograde) as seen from Earth?</strong></p>
+<p>A: Because Earth moves faster than Mars and periodically overtakes it. Near
+opposition (when Earth is directly between the Sun and Mars), Earth is
+moving faster in the same direction as Mars. From Earth's perspective, Mars
+appears to shift backward against the background stars — just as a slower
+car on a highway appears to move backward relative to you when you overtake
+it. Mathematically, the geocentric angular velocity of Mars becomes negative
+near opposition: the angle of <span class="arithmatex">\(\vec{r}_{M/E}\)</span> temporarily decreases instead
+of increasing. This lasts for about <span class="arithmatex">\(72\)</span> days for Mars.</p>
+<hr />
+<p><strong>Q3: At opposition, Mars is closest to Earth. Why is this the best time
+to observe Mars?</strong></p>
+<p>A: At opposition, three things coincide: (1) Mars is on the opposite side
+of Earth from the Sun, so it rises at sunset and is visible all night;
+(2) Mars is at its minimum distance from Earth (<span class="arithmatex">\(|R_M - R_E| = 0.524\)</span> AU),
+so it appears largest and brightest in the sky; (3) the full face of Mars
+is illuminated by the Sun as seen from Earth. These factors make opposition
+the ideal time for telescopic observation. Not all oppositions are equal —
+if opposition occurs when Mars is near perihelion (closest point to the Sun),
+the distance can be as small as <span class="arithmatex">\(0.37\)</span> AU (a "perihelic opposition").</p>
+<hr />
+<p><strong>Q4: How does the formula <span class="arithmatex">\(|\vec{r}_{M/E}| = \sqrt{R_M^2 + R_E^2 - 2R_MR_E\cos\theta}\)</span>
+relate to the law of cosines?</strong></p>
+<p>A: It is exactly the law of cosines. The Sun, Earth, and Mars form a triangle.
+The Sun is at the origin, Earth is at distance <span class="arithmatex">\(R_E\)</span>, Mars is at distance <span class="arithmatex">\(R_M\)</span>,
+and the angle at the Sun between them is <span class="arithmatex">\(\theta = (\omega_M - \omega_E)t\)</span>.
+The law of cosines for a triangle with sides <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span> and included angle <span class="arithmatex">\(C\)</span>
+states <span class="arithmatex">\(c^2 = a^2 + b^2 - 2ab\cos C\)</span>. Here <span class="arithmatex">\(a = R_E\)</span>, <span class="arithmatex">\(b = R_M\)</span>, <span class="arithmatex">\(C = \theta\)</span>,
+and <span class="arithmatex">\(c = |\vec{r}_{M/E}|\)</span>. The formula gives the Earth–Mars distance directly
+from the triangle geometry without needing to compute the full vector.</p>
+<hr />
+<p><strong>Q5: What would the geocentric trajectory of Mars look like if both planets
+had the same orbital period?</strong></p>
+<p>A: If <span class="arithmatex">\(\omega_E = \omega_M = \omega\)</span> (same period), then:
+$$
+\vec{r}_{M/E}(t) = \bigl((R_M - R_E)\cos(\omega t),\ (R_M - R_E)\sin(\omega t)\bigr)
+$$
+This is a <strong>perfect circle</strong> of radius <span class="arithmatex">\(R_M - R_E\)</span> centered on Earth. Mars
+would appear to orbit Earth at a fixed distance, always at the same angular
+speed, with no retrograde motion at all. The retrograde loops only appear
+because the two planets have different orbital periods — the changing
+angular separation is what creates the complex looping path in the
+geocentric frame.</p>
 
 
 

@@ -25,7 +25,7 @@
     
     
       
-        <title>Task 02 - Physics Problems</title>
+        <title>Problem 2 – Projectile Motion - Physics Problems</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#problem-2-projectile-motion" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 02
+              Problem 2 – Projectile Motion
             
           </span>
         </div>
@@ -2149,6 +2154,93 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-21-derive-the-equations-of-motion-in-the-horizontal-and-vertical-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2.1 – Derive the equations of motion in the horizontal and vertical directions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-22-determine-the-time-of-flight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2.2 – Determine the time of flight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-23-determine-the-maximum-height" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2.3 – Determine the maximum height
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-24-determine-the-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2.4 – Determine the range
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-25-for-what-angle-is-the-range-maximum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2.5 – For what angle is the range maximum?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-26-animation-of-the-trajectory-for-different-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2.6 – Animation of the trajectory for different \(\alpha\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-questions-and-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible Questions and Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2165,9 +2257,246 @@
 
 
 
-  <h1>Task 02</h1>
-
-
+<h1 id="problem-2-projectile-motion">Problem 2 – Projectile Motion</h1>
+<p>A body is launched with initial velocity <span class="arithmatex">\(v_0\)</span> at angle <span class="arithmatex">\(\alpha\)</span> above the horizontal,
+moving under gravity alone (no air resistance).</p>
+<hr />
+<h2 id="question-21-derive-the-equations-of-motion-in-the-horizontal-and-vertical-directions">Question 2.1 – Derive the equations of motion in the horizontal and vertical directions</h2>
+<p><strong>Setup:</strong></p>
+<p>At <span class="arithmatex">\(t = 0\)</span> the body is at the origin <span class="arithmatex">\((0, 0)\)</span> with:
+- Horizontal initial velocity: <span class="arithmatex">\(v_{0x} = v_0 \cos\alpha\)</span>
+- Vertical initial velocity: <span class="arithmatex">\(v_{0y} = v_0 \sin\alpha\)</span></p>
+<p>The only force acting is gravity, pulling downward:
+$$
+a_x = 0, \qquad a_y = -g
+$$</p>
+<p><strong>Horizontal direction</strong> (no acceleration):</p>
+<p>Starting from <span class="arithmatex">\(x(t) = x_0 + v_{0x}t + \frac{1}{2}a_x t^2\)</span> with <span class="arithmatex">\(x_0 = 0\)</span>, <span class="arithmatex">\(a_x = 0\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{x(t) = v_0 \cos\alpha \cdot t}
+\]</div>
+<p>The horizontal velocity is constant throughout the flight:</p>
+<div class="arithmatex">\[
+v_x(t) = v_0 \cos\alpha = \text{const}
+\]</div>
+<p><strong>Vertical direction</strong> (constant downward acceleration <span class="arithmatex">\(g\)</span>):</p>
+<p>Starting from <span class="arithmatex">\(y(t) = y_0 + v_{0y}t + \frac{1}{2}a_y t^2\)</span> with <span class="arithmatex">\(y_0 = 0\)</span>, <span class="arithmatex">\(a_y = -g\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{y(t) = v_0 \sin\alpha \cdot t - \frac{1}{2}g t^2}
+\]</div>
+<p>The vertical velocity changes over time:</p>
+<div class="arithmatex">\[
+v_y(t) = v_0 \sin\alpha - g t
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+Projectile motion is actually two separate, independent motions happening at the same time. Horizontally, there is no force at all, so the body just keeps moving at the same speed forever — like sliding on a frictionless surface. Vertically, gravity pulls the body downward with acceleration <span class="arithmatex">\(g \approx 9.81\ \text{m/s}^2\)</span>, exactly like a ball thrown straight up. The key insight is that these two directions do not affect each other. The horizontal motion does not care about gravity, and the vertical motion does not care about horizontal speed.</p>
+</blockquote>
+<hr />
+<h2 id="question-22-determine-the-time-of-flight">Question 2.2 – Determine the time of flight</h2>
+<p><strong>Question:</strong> How long is the body in the air?</p>
+<p><strong>Solution:</strong></p>
+<p>The body lands when it returns to <span class="arithmatex">\(y = 0\)</span> (ground level):</p>
+<div class="arithmatex">\[
+y(t) = 0
+\]</div>
+<div class="arithmatex">\[
+v_0 \sin\alpha \cdot t - \frac{1}{2}g t^2 = 0
+\]</div>
+<p>Factor out <span class="arithmatex">\(t\)</span>:</p>
+<div class="arithmatex">\[
+t\!\left(v_0 \sin\alpha - \frac{1}{2}g t\right) = 0
+\]</div>
+<p>This gives two solutions:</p>
+<div class="arithmatex">\[
+t = 0 \quad \text{(launch moment — trivial solution)}
+\]</div>
+<div class="arithmatex">\[
+v_0 \sin\alpha - \frac{1}{2}g t = 0 \implies t = \frac{2 v_0 \sin\alpha}{g}
+\]</div>
+<div class="arithmatex">\[
+\boxed{T = \frac{2 v_0 \sin\alpha}{g}}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+Setting <span class="arithmatex">\(y = 0\)</span> asks: "at what times is the body at ground level?" The answer is <span class="arithmatex">\(t = 0\)</span> (when it was launched) and <span class="arithmatex">\(t = T\)</span> (when it lands). The second solution is the one we care about. Notice that the time of flight depends only on the vertical component of the initial velocity (<span class="arithmatex">\(v_0 \sin\alpha\)</span>) and on gravity <span class="arithmatex">\(g\)</span>. The horizontal speed plays no role in how long the body stays airborne — a bullet fired horizontally and a ball dropped from the same height both hit the ground at the same time.</p>
+</blockquote>
+<hr />
+<h2 id="question-23-determine-the-maximum-height">Question 2.3 – Determine the maximum height</h2>
+<p><strong>Question:</strong> What is the highest point the body reaches?</p>
+<p><strong>Solution:</strong></p>
+<p>The body is at maximum height when the vertical velocity equals zero (it stops going up before it starts coming down):</p>
+<div class="arithmatex">\[
+v_y(t) = 0
+\]</div>
+<div class="arithmatex">\[
+v_0 \sin\alpha - g t = 0
+\]</div>
+<div class="arithmatex">\[
+t_{\text{top}} = \frac{v_0 \sin\alpha}{g}
+\]</div>
+<p>Note: this is exactly <strong>half</strong> the total flight time <span class="arithmatex">\(T\)</span>, which makes sense by symmetry.</p>
+<p>Now substitute <span class="arithmatex">\(t_{\text{top}}\)</span> into <span class="arithmatex">\(y(t)\)</span>:</p>
+<div class="arithmatex">\[
+H = y(t_{\text{top}}) = v_0 \sin\alpha \cdot \frac{v_0 \sin\alpha}{g} - \frac{1}{2}g\left(\frac{v_0 \sin\alpha}{g}\right)^2
+\]</div>
+<div class="arithmatex">\[
+H = \frac{v_0^2 \sin^2\alpha}{g} - \frac{1}{2}g \cdot \frac{v_0^2 \sin^2\alpha}{g^2}
+\]</div>
+<div class="arithmatex">\[
+H = \frac{v_0^2 \sin^2\alpha}{g} - \frac{v_0^2 \sin^2\alpha}{2g}
+\]</div>
+<div class="arithmatex">\[
+H = \frac{v_0^2 \sin^2\alpha}{g}\left(1 - \frac{1}{2}\right)
+\]</div>
+<div class="arithmatex">\[
+\boxed{H = \frac{v_0^2 \sin^2\alpha}{2g}}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+At the very top of the trajectory, the body is neither going up nor going down — the vertical velocity is zero for just an instant. That moment in time is <span class="arithmatex">\(t_{\text{top}}\)</span>. Plugging it back into the height formula gives the maximum height <span class="arithmatex">\(H\)</span>. You can see that <span class="arithmatex">\(H\)</span> grows with <span class="arithmatex">\(v_0^2\)</span> (launch speed matters a lot) and with <span class="arithmatex">\(\sin^2\alpha\)</span> (steeper angles give greater height, up to <span class="arithmatex">\(90°\)</span> which is straight up). Horizontal speed contributes nothing to how high the body goes.</p>
+</blockquote>
+<hr />
+<h2 id="question-24-determine-the-range">Question 2.4 – Determine the range</h2>
+<p><strong>Question:</strong> How far from the launch point does the body land?</p>
+<p><strong>Solution:</strong></p>
+<p>The range is the horizontal distance at the moment of landing <span class="arithmatex">\(t = T\)</span>:</p>
+<div class="arithmatex">\[
+R = x(T) = v_0 \cos\alpha \cdot T
+\]</div>
+<p>Substitute <span class="arithmatex">\(T = \dfrac{2v_0 \sin\alpha}{g}\)</span>:</p>
+<div class="arithmatex">\[
+R = v_0 \cos\alpha \cdot \frac{2 v_0 \sin\alpha}{g}
+\]</div>
+<div class="arithmatex">\[
+R = \frac{2 v_0^2 \sin\alpha \cos\alpha}{g}
+\]</div>
+<p>Using the double-angle identity <span class="arithmatex">\(2\sin\alpha\cos\alpha = \sin(2\alpha)\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{R = \frac{v_0^2 \sin(2\alpha)}{g}}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+The range is simply: "how fast am I going horizontally" times "how long am I in the air". The neat simplification using <span class="arithmatex">\(\sin(2\alpha)\)</span> shows that the range depends on the angle through a single sine function of the doubled angle. This will be very useful in the next question.</p>
+</blockquote>
+<hr />
+<h2 id="question-25-for-what-angle-is-the-range-maximum">Question 2.5 – For what angle is the range maximum?</h2>
+<p><strong>Solution:</strong></p>
+<p>From the range formula:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\alpha)}{g}
+\]</div>
+<p>The range is maximum when <span class="arithmatex">\(\sin(2\alpha)\)</span> is maximum. The sine function reaches its maximum value of <span class="arithmatex">\(1\)</span> when its argument equals <span class="arithmatex">\(90°\)</span>:</p>
+<div class="arithmatex">\[
+\sin(2\alpha) = 1
+\]</div>
+<div class="arithmatex">\[
+2\alpha = 90°
+\]</div>
+<div class="arithmatex">\[
+\boxed{\alpha = 45°}
+\]</div>
+<p>The maximum range is:</p>
+<div class="arithmatex">\[
+R_{\max} = \frac{v_0^2}{g}
+\]</div>
+<p><strong>Verification — symmetry of the range:</strong></p>
+<p>Note that <span class="arithmatex">\(\sin(2\alpha) = \sin(180° - 2\alpha) = \sin(2(90° - \alpha))\)</span>, which means:</p>
+<div class="arithmatex">\[
+R(\alpha) = R(90° - \alpha)
+\]</div>
+<p>For example, <span class="arithmatex">\(\alpha = 30°\)</span> and <span class="arithmatex">\(\alpha = 60°\)</span> give exactly the same range. The two angles are always symmetric around <span class="arithmatex">\(45°\)</span>.</p>
+<blockquote>
+<p><strong>Explanation:</strong>
+Since <span class="arithmatex">\(R \propto \sin(2\alpha)\)</span>, and the sine function peaks at <span class="arithmatex">\(90°\)</span>, the range is largest when <span class="arithmatex">\(2\alpha = 90°\)</span>, i.e. <span class="arithmatex">\(\alpha = 45°\)</span>. This is a famous result in physics: a <span class="arithmatex">\(45°\)</span> launch angle gives the maximum horizontal distance (on flat ground, with no air resistance). The symmetry result is also intuitive — a very flat shot (<span class="arithmatex">\(30°\)</span>) and a very steep shot (<span class="arithmatex">\(60°\)</span>) travel the same horizontal distance, just with very different shapes of trajectory. The flat one is fast but low; the steep one is slow horizontally but spends more time in the air.</p>
+</blockquote>
+<hr />
+<h2 id="question-26-animation-of-the-trajectory-for-different-alpha">Question 2.6 – Animation of the trajectory for different <span class="arithmatex">\(\alpha\)</span></h2>
+<p>Below is a description of what the animation or set of plots shows.</p>
+<p><strong>Trajectory equation (eliminating <span class="arithmatex">\(t\)</span>):</strong></p>
+<p>From <span class="arithmatex">\(x = v_0\cos\alpha \cdot t\)</span> we get <span class="arithmatex">\(t = \dfrac{x}{v_0 \cos\alpha}\)</span>.</p>
+<p>Substitute into <span class="arithmatex">\(y(t)\)</span>:</p>
+<div class="arithmatex">\[
+y = v_0\sin\alpha \cdot \frac{x}{v_0\cos\alpha} - \frac{1}{2}g\left(\frac{x}{v_0\cos\alpha}\right)^2
+\]</div>
+<div class="arithmatex">\[
+\boxed{y(x) = x\tan\alpha - \frac{g}{2v_0^2\cos^2\alpha}\,x^2}
+\]</div>
+<p>This is a <strong>downward-opening parabola</strong> in <span class="arithmatex">\(x\)</span>.</p>
+<p><strong>Summary table for <span class="arithmatex">\(v_0 = 10\ \text{m/s}\)</span>, <span class="arithmatex">\(g = 9.81\ \text{m/s}^2\)</span>:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(\alpha\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(T\ (\text{s})\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(H\ (\text{m})\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(R\ (\text{m})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(15°\)</span></td>
+<td style="text-align: center;">0.53</td>
+<td style="text-align: center;">0.33</td>
+<td style="text-align: center;">5.10</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(30°\)</span></td>
+<td style="text-align: center;">1.02</td>
+<td style="text-align: center;">1.27</td>
+<td style="text-align: center;">8.83</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(45°\)</span></td>
+<td style="text-align: center;">1.44</td>
+<td style="text-align: center;">2.55</td>
+<td style="text-align: center;">10.19</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(60°\)</span></td>
+<td style="text-align: center;">1.77</td>
+<td style="text-align: center;">3.82</td>
+<td style="text-align: center;">8.83</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(75°\)</span></td>
+<td style="text-align: center;">1.97</td>
+<td style="text-align: center;">4.70</td>
+<td style="text-align: center;">5.10</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(90°\)</span></td>
+<td style="text-align: center;">2.04</td>
+<td style="text-align: center;">5.10</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key observations visible from the plots:</strong>
+- <span class="arithmatex">\(\alpha = 45°\)</span> gives the longest range
+- <span class="arithmatex">\(30°\)</span> and <span class="arithmatex">\(60°\)</span> produce identical ranges (symmetry around <span class="arithmatex">\(45°\)</span>)
+- Higher angles produce taller but shorter trajectories
+- <span class="arithmatex">\(\alpha = 90°\)</span> (straight up) gives zero range and maximum height</p>
+<blockquote>
+<p><strong>Explanation:</strong>
+The trajectory formula <span class="arithmatex">\(y(x)\)</span> shows that the path is a parabola — a smooth, symmetric arch. For small angles the path is flat and wide; for large angles it is tall and narrow. The animation (or set of overlaid curves) makes it visually clear that <span class="arithmatex">\(45°\)</span> hits the sweet spot: it balances "going fast horizontally" with "staying in the air long enough." The table also confirms that <span class="arithmatex">\(15°\)</span> and <span class="arithmatex">\(75°\)</span> give the same range, as do <span class="arithmatex">\(30°\)</span> and <span class="arithmatex">\(60°\)</span>.</p>
+</blockquote>
+<hr />
+<h2 id="possible-questions-and-answers">Possible Questions and Answers</h2>
+<p><strong>Q1: Why is the horizontal acceleration zero in projectile motion?</strong></p>
+<p>A: Because the only force acting on the body is gravity, which acts purely in the vertical (downward) direction. By Newton's second law, <span class="arithmatex">\(a = F/m\)</span>, so if there is no horizontal force, there is no horizontal acceleration. The horizontal velocity therefore stays constant throughout the entire flight.</p>
+<hr />
+<p><strong>Q2: At what point in the trajectory is the speed (magnitude of velocity) minimum?</strong></p>
+<p>A: At the highest point of the trajectory. At that moment the vertical component of velocity <span class="arithmatex">\(v_y = 0\)</span>, so the total speed is <span class="arithmatex">\(|\vec{v}| = \sqrt{v_x^2 + v_y^2} = |v_x| = v_0\cos\alpha\)</span>, which is the smallest value it ever takes. The horizontal component <span class="arithmatex">\(v_x\)</span> never changes, so the minimum speed equals <span class="arithmatex">\(v_0\cos\alpha\)</span>.</p>
+<hr />
+<p><strong>Q3: How does doubling the initial speed <span class="arithmatex">\(v_0\)</span> affect the range?</strong></p>
+<p>A: The range is <span class="arithmatex">\(R = \dfrac{v_0^2\sin(2\alpha)}{g}\)</span>, so it depends on <span class="arithmatex">\(v_0^2\)</span>. Doubling <span class="arithmatex">\(v_0\)</span> increases the range by a factor of <span class="arithmatex">\(2^2 = 4\)</span>. This quadratic dependence means that small increases in launch speed produce large increases in range.</p>
+<hr />
+<p><strong>Q4: Does the time of flight depend on the initial horizontal velocity?</strong></p>
+<p>A: No. The time of flight is <span class="arithmatex">\(T = \dfrac{2v_0\sin\alpha}{g}\)</span>, which depends only on the vertical component of the initial velocity <span class="arithmatex">\(v_{0y} = v_0\sin\alpha\)</span> and on gravity. Two projectiles launched at the same angle and speed but in different gravitational fields would have different flight times, but changing only <span class="arithmatex">\(\cos\alpha\)</span> (the horizontal component) does not affect <span class="arithmatex">\(T\)</span>.</p>
+<hr />
+<p><strong>Q5: What assumption does the formula <span class="arithmatex">\(R = \dfrac{v_0^2\sin(2\alpha)}{g}\)</span> rely on, and when does it break down?</strong></p>
+<p>A: The formula assumes: (1) the launch and landing heights are equal (flat ground), (2) there is no air resistance, and (3) <span class="arithmatex">\(g\)</span> is constant (valid near Earth's surface). It breaks down for very long ranges (where Earth's curvature matters), for objects with significant air drag (e.g. a feather or a bullet at high speed), and when the landing point is at a different height than the launch point (e.g. throwing off a cliff), in which case <span class="arithmatex">\(T\)</span> changes and a modified formula is needed.</p>
 
 
 

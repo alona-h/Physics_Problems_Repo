@@ -25,7 +25,7 @@
     
     
       
-        <title>Task 10 - Physics Problems</title>
+        <title>Problem 10 – Analysis of Motion from Numerical Data - Physics Problems</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#problem-10-analysis-of-motion-from-numerical-data" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 10
+              Problem 10 – Analysis of Motion from Numerical Data
             
           </span>
         </div>
@@ -2149,6 +2154,249 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-101-approximate-the-velocity-using-the-finite-difference-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 10.1 – Approximate the velocity using the finite difference method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 10.1 – Approximate the velocity using the finite difference method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-finite-difference-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the finite difference method?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applying-the-central-difference-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applying the central difference formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-102-approximate-the-acceleration-using-the-finite-difference-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 10.2 – Approximate the acceleration using the finite difference method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 10.2 – Approximate the acceleration using the finite difference method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-second-finite-difference-applied-to-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 1: Second finite difference applied to position
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-example-at-t-10-i-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step example at \(t = 1.0\) (\(i = 10\)):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-example-at-t-50-i-50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step example at \(t = 5.0\) (\(i = 50\)):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-example-at-t-90-i-90" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step example at \(t = 9.0\) (\(i = 90\)):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-103-compare-with-the-analytical-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 10.3 – Compare with the analytical solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 10.3 – Compare with the analytical solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analytical-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytical solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-numerical-vs-analytical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison: numerical vs analytical
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-104-investigate-the-effect-of-time-step-on-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 10.4 – Investigate the effect of time step on accuracy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 10.4 – Investigate the effect of time step on accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theoretical-error-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theoretical error analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-with-a-more-complex-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test with a more complex function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-of-delta-t-on-our-specific-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effect of \(\Delta t\) on our specific problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-comparison-of-all-three-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary: Comparison of all three methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-questions-and-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible Questions and Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2165,9 +2413,776 @@
 
 
 
-  <h1>Task 10</h1>
-
-
+<h1 id="problem-10-analysis-of-motion-from-numerical-data">Problem 10 – Analysis of Motion from Numerical Data</h1>
+<p>The position is given by:</p>
+<div class="arithmatex">\[
+x(t) = t + \frac{1}{20}t^2
+\]</div>
+<p>on the interval <span class="arithmatex">\(t \in [0, 10]\)</span> with time step <span class="arithmatex">\(\Delta t = 0.1\)</span>.</p>
+<hr />
+<h2 id="question-101-approximate-the-velocity-using-the-finite-difference-method">Question 10.1 – Approximate the velocity using the finite difference method</h2>
+<p><strong>Question:</strong> How do you estimate velocity numerically from discrete position
+data, without using calculus?</p>
+<h3 id="what-is-the-finite-difference-method">What is the finite difference method?</h3>
+<p>Instead of computing the exact derivative <span class="arithmatex">\(v = dx/dt\)</span>, we approximate it
+using nearby data points. The idea is simple: if you know where something
+is at two nearby times, the average velocity between them approximates the
+instantaneous velocity.</p>
+<p>There are three standard finite difference formulas:</p>
+<p><strong>Forward difference</strong> (uses the point ahead):</p>
+<div class="arithmatex">\[
+v(t_i) \approx \frac{x(t_i + \Delta t) - x(t_i)}{\Delta t}
+= \frac{x_{i+1} - x_i}{\Delta t}
+\]</div>
+<p><strong>Backward difference</strong> (uses the point behind):</p>
+<div class="arithmatex">\[
+v(t_i) \approx \frac{x(t_i) - x(t_i - \Delta t)}{\Delta t}
+= \frac{x_i - x_{i-1}}{\Delta t}
+\]</div>
+<p><strong>Central difference</strong> (uses both neighbours — most accurate):</p>
+<div class="arithmatex">\[
+v(t_i) \approx \frac{x(t_i + \Delta t) - x(t_i - \Delta t)}{2\Delta t}
+= \frac{x_{i+1} - x_{i-1}}{2\Delta t}
+\]</div>
+<p>We will use the <strong>central difference</strong> as the primary method since it is
+the most accurate.</p>
+<h3 id="setting-up-the-data">Setting up the data</h3>
+<p>Generate position values using <span class="arithmatex">\(x(t) = t + \frac{1}{20}t^2\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(i\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(t_i\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x_i = t_i + \frac{t_i^2}{20}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.1005\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.202\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.3045\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.408\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.5125\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(50\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.250\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(99\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9.9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(14.8005\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(10.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(15.000\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="applying-the-central-difference-formula">Applying the central difference formula</h3>
+<p>For interior points (<span class="arithmatex">\(i = 1, 2, \ldots, 98\)</span>):</p>
+<div class="arithmatex">\[
+v(t_i) \approx \frac{x_{i+1} - x_{i-1}}{2\Delta t}
+\]</div>
+<p><strong>Step-by-step example at <span class="arithmatex">\(t = 1.0\)</span> (i.e. <span class="arithmatex">\(i = 10\)</span>):</strong></p>
+<div class="arithmatex">\[
+t_{10} = 1.0, \quad t_{11} = 1.1, \quad t_9 = 0.9
+\]</div>
+<div class="arithmatex">\[
+x_{11} = 1.1 + \frac{(1.1)^2}{20} = 1.1 + \frac{1.21}{20} = 1.1 + 0.0605 = 1.1605
+\]</div>
+<div class="arithmatex">\[
+x_9 = 0.9 + \frac{(0.9)^2}{20} = 0.9 + \frac{0.81}{20} = 0.9 + 0.0405 = 0.9405
+\]</div>
+<div class="arithmatex">\[
+v(1.0) \approx \frac{x_{11} - x_9}{2\Delta t} = \frac{1.1605 - 0.9405}{2 \times 0.1}
+= \frac{0.22}{0.2} = 1.10\ \text{m/s}
+\]</div>
+<p><strong>Step-by-step example at <span class="arithmatex">\(t = 5.0\)</span> (<span class="arithmatex">\(i = 50\)</span>):</strong></p>
+<div class="arithmatex">\[
+x_{51} = 5.1 + \frac{(5.1)^2}{20} = 5.1 + \frac{26.01}{20} = 5.1 + 1.3005 = 6.4005
+\]</div>
+<div class="arithmatex">\[
+x_{49} = 4.9 + \frac{(4.9)^2}{20} = 4.9 + \frac{24.01}{20} = 4.9 + 1.2005 = 6.1005
+\]</div>
+<div class="arithmatex">\[
+v(5.0) \approx \frac{6.4005 - 6.1005}{0.2} = \frac{0.30}{0.2} = 1.50\ \text{m/s}
+\]</div>
+<p><strong>Step-by-step example at <span class="arithmatex">\(t = 10.0\)</span> — backward difference at endpoint:</strong></p>
+<p>At the last point we cannot use central difference (no <span class="arithmatex">\(x_{i+1}\)</span> exists),
+so we use the backward difference:</p>
+<div class="arithmatex">\[
+v(10.0) \approx \frac{x_{100} - x_{99}}{\Delta t}
+= \frac{15.000 - 14.8005}{0.1} = \frac{0.1995}{0.1} = 1.995\ \text{m/s}
+\]</div>
+<p><strong>Numerical velocity table (selected points):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t_i\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x_{i-1}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x_{i+1}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(v \approx \frac{x_{i+1}-x_{i-1}}{2\Delta t}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.9405\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.1605\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.100\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.980\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.222\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.210\)</span> (wait — recheck below)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(3.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.1205\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.3845\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.320\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.1005\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.4005\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.500\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(7.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9.6805\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(10.0405\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.800\)</span> (wait — recheck below)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(10.0\)</span></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\(\approx 2.000\)</span> (backward diff.)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recheck at <span class="arithmatex">\(t = 2.0\)</span>:</strong></p>
+<div class="arithmatex">\[
+x_{21} = 2.1 + \frac{(2.1)^2}{20} = 2.1 + \frac{4.41}{20} = 2.1 + 0.2205 = 2.3205
+\]</div>
+<div class="arithmatex">\[
+x_{19} = 1.9 + \frac{(1.9)^2}{20} = 1.9 + \frac{3.61}{20} = 1.9 + 0.1805 = 2.0805
+\]</div>
+<div class="arithmatex">\[
+v(2.0) \approx \frac{2.3205 - 2.0805}{0.2} = \frac{0.24}{0.2} = 1.20\ \text{m/s}
+\]</div>
+<p><strong>Recheck at <span class="arithmatex">\(t = 7.0\)</span>:</strong></p>
+<div class="arithmatex">\[
+x_{71} = 7.1 + \frac{(7.1)^2}{20} = 7.1 + \frac{50.41}{20} = 7.1 + 2.5205 = 9.6205
+\]</div>
+<div class="arithmatex">\[
+x_{69} = 6.9 + \frac{(6.9)^2}{20} = 6.9 + \frac{47.61}{20} = 6.9 + 2.3805 = 9.2805
+\]</div>
+<div class="arithmatex">\[
+v(7.0) \approx \frac{9.6205 - 9.2805}{0.2} = \frac{0.34}{0.2} = 1.70\ \text{m/s}
+\]</div>
+<p><strong>Corrected velocity table:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t\)</span></th>
+<th style="text-align: center;">Numerical <span class="arithmatex">\(v\)</span> (central diff.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.100\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.200\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(3.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.300\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(4.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.400\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.500\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(6.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.600\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(7.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.700\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(8.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.800\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(9.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.900\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(10.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\approx 2.000\)</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Explanation:</strong>
+In real experiments you do not have a formula — you only have measurements
+of position at discrete time steps. The finite difference method is the
+standard way to estimate velocity from such data. The central difference
+is the most accurate basic formula because it uses a point on each side of
+the time you are interested in, symmetrically. Think of it as asking:
+"How far did the object travel in the small time interval around this moment,
+divided by that time interval?" The smaller the time step <span class="arithmatex">\(\Delta t\)</span>, the
+closer this approximation is to the true instantaneous velocity. The central
+difference is preferred over forward or backward differences because it
+has a smaller error — its error is proportional to <span class="arithmatex">\((\Delta t)^2\)</span> rather
+than <span class="arithmatex">\(\Delta t\)</span>.</p>
+</blockquote>
+<hr />
+<h2 id="question-102-approximate-the-acceleration-using-the-finite-difference-method">Question 10.2 – Approximate the acceleration using the finite difference method</h2>
+<p><strong>Question:</strong> How do you estimate acceleration numerically from the
+velocity data (or directly from position data)?</p>
+<h3 id="method-1-second-finite-difference-applied-to-position">Method 1: Second finite difference applied to position</h3>
+<p>The acceleration is the second derivative of position. We can estimate it
+directly from position data using:</p>
+<div class="arithmatex">\[
+a(t_i) \approx \frac{x_{i+1} - 2x_i + x_{i-1}}{(\Delta t)^2}
+\]</div>
+<p>This is derived by applying the finite difference twice:</p>
+<p><strong>Derivation:</strong></p>
+<p>Forward difference of <span class="arithmatex">\(x\)</span> gives an approximation to <span class="arithmatex">\(v\)</span>:</p>
+<div class="arithmatex">\[
+v_{i+1/2} \approx \frac{x_{i+1} - x_i}{\Delta t}
+\]</div>
+<div class="arithmatex">\[
+v_{i-1/2} \approx \frac{x_i - x_{i-1}}{\Delta t}
+\]</div>
+<p>Finite difference of these two velocity estimates gives acceleration:</p>
+<div class="arithmatex">\[
+a(t_i) \approx \frac{v_{i+1/2} - v_{i-1/2}}{\Delta t}
+= \frac{\frac{x_{i+1} - x_i}{\Delta t} - \frac{x_i - x_{i-1}}{\Delta t}}{\Delta t}
+= \frac{x_{i+1} - 2x_i + x_{i-1}}{(\Delta t)^2}
+\]</div>
+<h3 id="step-by-step-example-at-t-10-i-10">Step-by-step example at <span class="arithmatex">\(t = 1.0\)</span> (<span class="arithmatex">\(i = 10\)</span>):</h3>
+<div class="arithmatex">\[
+x_{11} = 1.1605, \quad x_{10} = 1.0 + \frac{1.0}{20} = 1.0500, \quad x_9 = 0.9405
+\]</div>
+<div class="arithmatex">\[
+a(1.0) \approx \frac{1.1605 - 2(1.0500) + 0.9405}{(0.1)^2}
+= \frac{1.1605 - 2.1000 + 0.9405}{0.01}
+= \frac{0.0010}{0.01} = 0.10\ \text{m/s}^2
+\]</div>
+<h3 id="step-by-step-example-at-t-50-i-50">Step-by-step example at <span class="arithmatex">\(t = 5.0\)</span> (<span class="arithmatex">\(i = 50\)</span>):</h3>
+<div class="arithmatex">\[
+x_{51} = 6.4005, \quad x_{50} = 5.0 + \frac{25}{20} = 6.2500, \quad x_{49} = 6.1005
+\]</div>
+<div class="arithmatex">\[
+a(5.0) \approx \frac{6.4005 - 2(6.2500) + 6.1005}{(0.1)^2}
+= \frac{6.4005 - 12.5000 + 6.1005}{0.01}
+= \frac{0.0010}{0.01} = 0.10\ \text{m/s}^2
+\]</div>
+<h3 id="step-by-step-example-at-t-90-i-90">Step-by-step example at <span class="arithmatex">\(t = 9.0\)</span> (<span class="arithmatex">\(i = 90\)</span>):</h3>
+<div class="arithmatex">\[
+x_{91} = 9.1 + \frac{(9.1)^2}{20} = 9.1 + \frac{82.81}{20} = 9.1 + 4.1405 = 13.2405
+\]</div>
+<div class="arithmatex">\[
+x_{90} = 9.0 + \frac{81}{20} = 9.0 + 4.05 = 13.0500
+\]</div>
+<div class="arithmatex">\[
+x_{89} = 8.9 + \frac{(8.9)^2}{20} = 8.9 + \frac{79.21}{20} = 8.9 + 3.9605 = 12.8605
+\]</div>
+<div class="arithmatex">\[
+a(9.0) \approx \frac{13.2405 - 2(13.0500) + 12.8605}{0.01}
+= \frac{13.2405 - 26.1000 + 12.8605}{0.01}
+= \frac{0.0010}{0.01} = 0.10\ \text{m/s}^2
+\]</div>
+<p><strong>Numerical acceleration table:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x_{i-1}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x_i\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x_{i+1}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(a \approx \frac{x_{i+1}-2x_i+x_{i-1}}{(\Delta t)^2}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.9405\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.0500\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.1605\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(3.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.1205\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.2450\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.3705\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.1005\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.2500\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.4005\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(7.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9.2805\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9.4500\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9.6205\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(9.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(12.8605\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(13.0500\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(13.2405\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The numerical acceleration is <span class="arithmatex">\(0.100\ \text{m/s}^2\)</span> at every point.</p>
+<blockquote>
+<p><strong>Explanation:</strong>
+The second finite difference formula <span class="arithmatex">\(\frac{x_{i+1} - 2x_i + x_{i-1}}{(\Delta t)^2}\)</span>
+is the discrete equivalent of the second derivative. It measures how much
+the position "curves" — if the position were growing at a perfectly constant
+rate (constant velocity), the numerator would be zero. Any curvature away
+from a straight line indicates acceleration. The formula comes from applying
+the finite difference twice: first to get approximate velocities on each side
+of the point, then again to get the rate of change of velocity. The
+<span class="arithmatex">\((\Delta t)^2\)</span> in the denominator appears because we divided by <span class="arithmatex">\(\Delta t\)</span>
+twice. The fact that we get exactly <span class="arithmatex">\(0.10\)</span> at every point is confirmed in
+the next section.</p>
+</blockquote>
+<hr />
+<h2 id="question-103-compare-with-the-analytical-solution">Question 10.3 – Compare with the analytical solution</h2>
+<p><strong>Question:</strong> What are the exact velocity and acceleration, and how well
+do the numerical estimates match?</p>
+<h3 id="analytical-solution">Analytical solution</h3>
+<p><strong>Exact velocity</strong> — differentiate <span class="arithmatex">\(x(t) = t + \frac{1}{20}t^2\)</span>:</p>
+<div class="arithmatex">\[
+v(t) = \frac{dx}{dt} = \frac{d}{dt}\!\left(t + \frac{t^2}{20}\right)
+= 1 + \frac{2t}{20} = 1 + \frac{t}{10}
+\]</div>
+<div class="arithmatex">\[
+\boxed{v(t) = 1 + \frac{t}{10}\ \text{m/s}}
+\]</div>
+<p><strong>Exact acceleration</strong> — differentiate <span class="arithmatex">\(v(t)\)</span>:</p>
+<div class="arithmatex">\[
+a(t) = \frac{dv}{dt} = \frac{d}{dt}\!\left(1 + \frac{t}{10}\right) = \frac{1}{10}
+\]</div>
+<div class="arithmatex">\[
+\boxed{a(t) = \frac{1}{10} = 0.1\ \text{m/s}^2 = \text{const}}
+\]</div>
+<p>This is <strong>uniformly accelerated motion</strong> — constant acceleration,
+just like Problem 1.</p>
+<h3 id="comparison-numerical-vs-analytical">Comparison: numerical vs analytical</h3>
+<p><strong>Velocity comparison:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t\)</span></th>
+<th style="text-align: center;">Analytical <span class="arithmatex">\(v = 1 + t/10\)</span></th>
+<th style="text-align: center;">Numerical <span class="arithmatex">\(v\)</span> (central diff.)</th>
+<th style="text-align: center;">Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.200\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.200\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(3.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.300\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.300\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.500\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.500\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(7.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.700\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.700\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(9.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.900\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.900\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(10.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.000\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\approx 2.000\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\approx 0.000\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why is the error exactly zero for the central difference here?</strong></p>
+<p>For a quadratic function <span class="arithmatex">\(x(t) = t + \frac{t^2}{20}\)</span>, the central
+difference formula gives the <strong>exact</strong> derivative — not just an approximation!</p>
+<p><strong>Proof:</strong></p>
+<div class="arithmatex">\[
+\frac{x(t+\Delta t) - x(t-\Delta t)}{2\Delta t}
+\]</div>
+<div class="arithmatex">\[
+= \frac{\left[(t+\Delta t) + \frac{(t+\Delta t)^2}{20}\right]
+- \left[(t-\Delta t) + \frac{(t-\Delta t)^2}{20}\right]}{2\Delta t}
+\]</div>
+<p>Expand <span class="arithmatex">\((t + \Delta t)^2 = t^2 + 2t\Delta t + (\Delta t)^2\)</span>
+and <span class="arithmatex">\((t - \Delta t)^2 = t^2 - 2t\Delta t + (\Delta t)^2\)</span>:</p>
+<div class="arithmatex">\[
+= \frac{(t+\Delta t - t+\Delta t) + \frac{1}{20}\bigl[(t^2 + 2t\Delta t + (\Delta t)^2)
+- (t^2 - 2t\Delta t + (\Delta t)^2)\bigr]}{2\Delta t}
+\]</div>
+<div class="arithmatex">\[
+= \frac{2\Delta t + \frac{1}{20}(4t\Delta t)}{2\Delta t}
+= \frac{2\Delta t + \frac{4t\Delta t}{20}}{2\Delta t}
+= \frac{2\Delta t\!\left(1 + \frac{t}{10}\right)}{2\Delta t}
+= 1 + \frac{t}{10}
+\]</div>
+<p>This equals the exact analytical result <span class="arithmatex">\(v(t) = 1 + t/10\)</span> for
+<strong>any</strong> <span class="arithmatex">\(\Delta t\)</span> — the <span class="arithmatex">\((\Delta t)^2\)</span> terms cancel perfectly
+for a quadratic function.</p>
+<p><strong>Acceleration comparison:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t\)</span></th>
+<th style="text-align: center;">Analytical <span class="arithmatex">\(a = 0.1\)</span></th>
+<th style="text-align: center;">Numerical <span class="arithmatex">\(a\)</span></th>
+<th style="text-align: center;">Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(9.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.000\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Again, the error is exactly zero because the second finite difference
+is exact for quadratic functions — the <span class="arithmatex">\((\Delta t)^2\)</span> terms that would
+cause error cancel completely.</p>
+<blockquote>
+<p><strong>Explanation:</strong>
+The analytical solution gives us the ground truth — the exact velocity
+and acceleration at any moment. Comparing to the numerical result
+reveals how accurate the finite difference method is for this particular
+function. The remarkable result here is that the central difference is
+perfectly exact for a quadratic (degree-2) function. This happens because
+the Taylor series error of the central difference is proportional to
+<span class="arithmatex">\((\Delta t)^2\)</span> multiplied by the third derivative of <span class="arithmatex">\(x(t)\)</span>. Since
+<span class="arithmatex">\(x(t) = t + t^2/20\)</span> is only degree 2, its third derivative is zero —
+and therefore the error is also exactly zero. For more complex (higher
+degree) functions, there will be a non-zero error, which is what
+Question 10.4 investigates.</p>
+</blockquote>
+<hr />
+<h2 id="question-104-investigate-the-effect-of-time-step-on-accuracy">Question 10.4 – Investigate the effect of time step on accuracy</h2>
+<p><strong>Question:</strong> How does the size of <span class="arithmatex">\(\Delta t\)</span> affect the accuracy of the
+numerical derivatives? What happens as <span class="arithmatex">\(\Delta t\)</span> gets larger or smaller?</p>
+<h3 id="theoretical-error-analysis">Theoretical error analysis</h3>
+<p>The <strong>central difference</strong> approximation has a truncation error given by:</p>
+<div class="arithmatex">\[
+v(t) - \frac{x(t+\Delta t) - x(t-\Delta t)}{2\Delta t}
+= -\frac{(\Delta t)^2}{6} x'''(t) + O\!\left((\Delta t)^4\right)
+\]</div>
+<p>where <span class="arithmatex">\(x'''(t)\)</span> is the third derivative of <span class="arithmatex">\(x(t)\)</span>.</p>
+<p>For <strong>our specific function</strong> <span class="arithmatex">\(x(t) = t + \frac{t^2}{20}\)</span>:</p>
+<div class="arithmatex">\[
+x'(t) = 1 + \frac{t}{10}, \quad x''(t) = \frac{1}{10}, \quad x'''(t) = 0
+\]</div>
+<p>Since <span class="arithmatex">\(x'''(t) = 0\)</span>, the truncation error is <strong>exactly zero</strong> for any <span class="arithmatex">\(\Delta t\)</span>.</p>
+<h3 id="test-with-a-more-complex-function">Test with a more complex function</h3>
+<p>To see the effect of <span class="arithmatex">\(\Delta t\)</span> on accuracy, consider a function with
+non-zero higher derivatives. Take <span class="arithmatex">\(f(t) = \sin(t)\)</span> as a test case,
+where the exact derivative is <span class="arithmatex">\(f'(t) = \cos(t)\)</span>.</p>
+<p>At <span class="arithmatex">\(t = 1.0\)</span> rad, exact: <span class="arithmatex">\(\cos(1.0) \approx 0.5403\)</span></p>
+<p>| <span class="arithmatex">\(\Delta t\)</span> | Numerical <span class="arithmatex">\(f'(1.0)\)</span> | Error <span class="arithmatex">\(= |v_{\text{num}} - v_{\text{exact}}|\)</span> |
+|:---:|:---:|:---:|
+| <span class="arithmatex">\(1.0\)</span> | <span class="arithmatex">\(\frac{\sin(2) - \sin(0)}{2} = \frac{0.9093 - 0}{2} = 0.4546\)</span> | <span class="arithmatex">\(0.0857\)</span> |
+| <span class="arithmatex">\(0.5\)</span> | <span class="arithmatex">\(\frac{\sin(1.5) - \sin(0.5)}{1.0} = \frac{0.9975 - 0.4794}{1} = 0.5181\)</span> | <span class="arithmatex">\(0.0222\)</span> |
+| <span class="arithmatex">\(0.1\)</span> | <span class="arithmatex">\(\approx 0.5398\)</span> | <span class="arithmatex">\(0.0005\)</span> |
+| <span class="arithmatex">\(0.01\)</span> | <span class="arithmatex">\(\approx 0.54030\)</span> | <span class="arithmatex">\(0.000005\)</span> |
+| <span class="arithmatex">\(0.001\)</span> | <span class="arithmatex">\(\approx 0.540302\)</span> | <span class="arithmatex">\(\approx 5\times 10^{-8}\)</span> |</p>
+<p>The error decreases as <span class="arithmatex">\(\Delta t^2\)</span> — halving <span class="arithmatex">\(\Delta t\)</span> reduces the error
+by a factor of <span class="arithmatex">\(4\)</span>.</p>
+<h3 id="effect-of-delta-t-on-our-specific-problem">Effect of <span class="arithmatex">\(\Delta t\)</span> on our specific problem</h3>
+<p>Even though our function gives exact results for the central difference,
+we can test the <strong>forward difference</strong> (which has <span class="arithmatex">\(O(\Delta t)\)</span> error)
+at <span class="arithmatex">\(t = 5.0\)</span>:</p>
+<p><strong>Exact:</strong> <span class="arithmatex">\(v(5.0) = 1 + 5/10 = 1.500\)</span> m/s</p>
+<p><strong>Forward difference at various <span class="arithmatex">\(\Delta t\)</span>:</strong></p>
+<div class="arithmatex">\[
+v_{\text{fwd}}(5.0) \approx \frac{x(5.0 + \Delta t) - x(5.0)}{\Delta t}
+\]</div>
+<p>For <span class="arithmatex">\(\Delta t = 0.1\)</span>:</p>
+<div class="arithmatex">\[
+x(5.1) = 5.1 + \frac{26.01}{20} = 6.4005
+\]</div>
+<div class="arithmatex">\[
+v \approx \frac{6.4005 - 6.2500}{0.1} = \frac{0.1505}{0.1} = 1.505
+\]</div>
+<p>Error <span class="arithmatex">\(= |1.505 - 1.500| = 0.005\)</span> m/s</p>
+<p>For <span class="arithmatex">\(\Delta t = 1.0\)</span>:</p>
+<div class="arithmatex">\[
+x(6.0) = 6.0 + \frac{36}{20} = 7.800
+\]</div>
+<div class="arithmatex">\[
+v \approx \frac{7.800 - 6.250}{1.0} = 1.550
+\]</div>
+<p>Error <span class="arithmatex">\(= |1.550 - 1.500| = 0.050\)</span> m/s</p>
+<p>For <span class="arithmatex">\(\Delta t = 0.01\)</span>:</p>
+<div class="arithmatex">\[
+x(5.01) = 5.01 + \frac{(5.01)^2}{20} = 5.01 + 1.255005 = 6.255005 + 0.2505 = 6.2655
+\]</div>
+<p>Wait — let us recalculate carefully:</p>
+<div class="arithmatex">\[
+x(5.01) = 5.01 + \frac{(5.01)^2}{20} = 5.01 + \frac{25.1001}{20} = 5.01 + 1.25501 = 6.26501
+\]</div>
+<div class="arithmatex">\[
+v \approx \frac{6.26501 - 6.25000}{0.01} = \frac{0.01501}{0.01} = 1.501
+\]</div>
+<p>Error <span class="arithmatex">\(= 0.001\)</span> m/s</p>
+<p><strong>Forward difference error table at <span class="arithmatex">\(t = 5.0\)</span>:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(\Delta t\)</span></th>
+<th style="text-align: center;">Numerical <span class="arithmatex">\(v\)</span> (forward diff.)</th>
+<th style="text-align: center;">Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.550\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.050\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0.5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.525\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.025\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0.1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.505\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.005\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0.01\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.501\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.0005\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Error scales linearly with <span class="arithmatex">\(\Delta t\)</span> — halving <span class="arithmatex">\(\Delta t\)</span> halves the error.
+This confirms the <span class="arithmatex">\(O(\Delta t)\)</span> order of the forward difference.</p>
+<h3 id="summary-comparison-of-all-three-methods">Summary: Comparison of all three methods</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Method</th>
+<th style="text-align: center;">Formula</th>
+<th style="text-align: center;">Error order</th>
+<th style="text-align: center;">Error halves when <span class="arithmatex">\(\Delta t\)</span> halves?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Forward difference</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{x_{i+1} - x_i}{\Delta t}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O(\Delta t)\)</span></td>
+<td style="text-align: center;">Yes (by factor 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Backward difference</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{x_i - x_{i-1}}{\Delta t}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O(\Delta t)\)</span></td>
+<td style="text-align: center;">Yes (by factor 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Central difference</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{x_{i+1} - x_{i-1}}{2\Delta t}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(O((\Delta t)^2)\)</span></td>
+<td style="text-align: center;">Yes (by factor 4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="practical-recommendations">Practical recommendations</h3>
+<ul>
+<li><strong>Smaller <span class="arithmatex">\(\Delta t\)</span></strong> is generally more accurate — but not always!
+  For very small <span class="arithmatex">\(\Delta t\)</span>, floating-point rounding errors in a computer
+  can accumulate and eventually make the result worse.</li>
+<li><strong>Central difference</strong> is almost always preferred over forward or
+  backward difference for the same <span class="arithmatex">\(\Delta t\)</span>.</li>
+<li>For our quadratic function, any <span class="arithmatex">\(\Delta t\)</span> gives zero error with the
+  central difference — the method is exact.</li>
+<li>In experiments, <span class="arithmatex">\(\Delta t\)</span> is limited by the measurement frequency
+  (sampling rate) of the instruments.</li>
+</ul>
+<blockquote>
+<p><strong>Explanation:</strong>
+The time step <span class="arithmatex">\(\Delta t\)</span> controls the trade-off between accuracy and
+practicality. A smaller step means you are measuring over a shorter time
+interval, so your estimate of the instantaneous velocity is more precise —
+just like how the speedometer in a car that updates every millisecond is
+more accurate than one that updates every second. Mathematically, the
+error of the central difference shrinks as <span class="arithmatex">\((\Delta t)^2\)</span> — if you make
+the step ten times smaller, the error becomes one hundred times smaller.
+The forward difference is less efficient: making the step ten times smaller
+only reduces its error by ten times. In our problem the function is
+quadratic (degree 2), so the central difference is perfectly exact for
+any step size. For real experimental data, which is noisy and may contain
+higher-degree behaviour, choosing the right <span class="arithmatex">\(\Delta t\)</span> requires balancing
+truncation error (gets worse for large <span class="arithmatex">\(\Delta t\)</span>) against measurement
+noise amplification (gets worse for very small <span class="arithmatex">\(\Delta t\)</span>).</p>
+</blockquote>
+<hr />
+<h2 id="possible-questions-and-answers">Possible Questions and Answers</h2>
+<p><strong>Q1: What is the difference between truncation error and round-off error
+in numerical differentiation?</strong></p>
+<p>A: <strong>Truncation error</strong> is the mathematical error introduced by approximating
+a derivative with a finite difference — it comes from ignoring higher-order
+terms in the Taylor series expansion. For the central difference it is
+<span class="arithmatex">\(O((\Delta t)^2)\)</span>: it decreases as <span class="arithmatex">\(\Delta t\)</span> shrinks. <strong>Round-off error</strong>
+comes from the limited precision of floating-point arithmetic in computers —
+when <span class="arithmatex">\(\Delta t\)</span> is very small, <span class="arithmatex">\(x_{i+1}\)</span> and <span class="arithmatex">\(x_{i-1}\)</span> become nearly equal
+and their difference loses significant digits. This error grows as <span class="arithmatex">\(\Delta t\)</span>
+shrinks. The optimal <span class="arithmatex">\(\Delta t\)</span> balances both: small enough to reduce
+truncation error, but not so small that round-off error dominates. In
+practice, for double-precision arithmetic (<span class="arithmatex">\(\sim 16\)</span> significant digits),
+the optimal <span class="arithmatex">\(\Delta t\)</span> for central differences is around <span class="arithmatex">\(10^{-5}\)</span> to <span class="arithmatex">\(10^{-6}\)</span>.</p>
+<hr />
+<p><strong>Q2: Why does the central difference give zero error for a quadratic
+function, regardless of <span class="arithmatex">\(\Delta t\)</span>?</strong></p>
+<p>A: The Taylor expansion of the central difference error involves the third
+derivative of the function multiplied by <span class="arithmatex">\((\Delta t)^2 / 6\)</span>. For a quadratic
+function <span class="arithmatex">\(x(t) = at^2 + bt + c\)</span>, the third derivative <span class="arithmatex">\(x'''(t) = 0\)</span>
+identically — a degree-2 polynomial has zero third and higher derivatives.
+Therefore the error term is exactly <span class="arithmatex">\(0 \cdot (\Delta t)^2 / 6 = 0\)</span> for any
+<span class="arithmatex">\(\Delta t\)</span>. More formally: the central difference formula is exact for all
+polynomials of degree <span class="arithmatex">\(\leq 2\)</span> because it reproduces them perfectly.</p>
+<hr />
+<p><strong>Q3: How would you apply the finite difference method to real experimental
+data that contains measurement noise?</strong></p>
+<p>A: Real data contains noise — random fluctuations in measured positions due
+to instrument imprecision. Finite differences amplify noise because they
+divide small differences by small time steps. Common strategies include:
+(1) <strong>Smoothing</strong> the data first (e.g. moving average, Savitzky-Golay filter)
+before differentiating; (2) <strong>Fitting</strong> a polynomial or smooth curve to the
+data and differentiating the fit analytically; (3) <strong>Choosing a larger <span class="arithmatex">\(\Delta t\)</span></strong>
+to average over more data points, reducing noise at the cost of some temporal
+resolution; (4) <strong>Regularization</strong> methods that find the smoothest derivative
+consistent with the data. The choice depends on the noise level and the
+physical smoothness expected in the signal.</p>
+<hr />
+<p><strong>Q4: What is the physical meaning of the second finite difference
+<span class="arithmatex">\(\frac{x_{i+1} - 2x_i + x_{i-1}}{(\Delta t)^2}\)</span>?</strong></p>
+<p>A: It measures the <strong>curvature</strong> of the position-time graph — how much the
+position deviates from moving in a straight line. If the position increases
+at a perfectly constant rate (<span class="arithmatex">\(x_i\)</span> lies on a straight line), then
+<span class="arithmatex">\(x_{i+1} - 2x_i + x_{i-1} = 0\)</span> exactly, meaning zero acceleration.
+If the position is curving upward (accelerating), the numerator is positive.
+If curving downward (decelerating), it is negative. The formula computes
+the "excess" of the next position over what a constant-velocity prediction
+would give: a constant-velocity prediction from <span class="arithmatex">\(x_{i-1}\)</span> would give
+<span class="arithmatex">\(x_i + (x_i - x_{i-1}) = 2x_i - x_{i-1}\)</span>, so the excess is
+<span class="arithmatex">\(x_{i+1} - (2x_i - x_{i-1}) = x_{i+1} - 2x_i + x_{i-1}\)</span>.</p>
+<hr />
+<p><strong>Q5: For the function <span class="arithmatex">\(x(t) = t + \frac{t^2}{20}\)</span>, the analytical
+acceleration is constant. How could you verify this experimentally
+(i.e. using only the numerical data, without knowing the formula)?</strong></p>
+<p>A: Compute the numerical acceleration at many time points using
+<span class="arithmatex">\(a(t_i) \approx \frac{x_{i+1} - 2x_i + x_{i-1}}{(\Delta t)^2}\)</span> across
+the entire interval <span class="arithmatex">\(t \in [0, 10]\)</span>. If the motion has constant acceleration,
+all these values should be the same (within numerical noise). You could:
+(1) plot <span class="arithmatex">\(a(t_i)\)</span> vs <span class="arithmatex">\(t_i\)</span> and check that it is a horizontal flat line;
+(2) compute the mean and standard deviation of all <span class="arithmatex">\(a(t_i)\)</span> values — a
+small standard deviation confirms constant acceleration;
+(3) check that the velocity <span class="arithmatex">\(v(t_i)\)</span> increases linearly with time
+(a straight line on a <span class="arithmatex">\(v\)</span>-<span class="arithmatex">\(t\)</span> graph also confirms constant acceleration,
+since <span class="arithmatex">\(v = v_0 + at\)</span> is linear in <span class="arithmatex">\(t\)</span>).</p>
 
 
 

@@ -25,7 +25,7 @@
     
     
       
-        <title>Task 06 - Physics Problems</title>
+        <title>Problem 6 – Cycloid: Trajectory of a Point on a Rolling Circle - Physics Problems</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#problem-6-cycloid-trajectory-of-a-point-on-a-rolling-circle" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 06
+              Problem 6 – Cycloid: Trajectory of a Point on a Rolling Circle
             
           </span>
         </div>
@@ -2149,6 +2154,166 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-61-determine-the-velocity-vector-vecvt-and-acceleration-vecat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 6.1 – Determine the velocity vector \(\vec{v}(t)\) and acceleration \(\vec{a}(t)\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 6.1 – Determine the velocity vector \(\vec{v}(t)\) and acceleration \(\vec{a}(t)\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#velocity-vector-vecvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocity vector \(\vec{v}(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceleration-vector-vecat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceleration vector \(\vec{a}(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-62-calculate-vecvt-and-find-when-the-point-stops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 6.2 – Calculate \(|\vec{v}(t)|\) and find when the point stops
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 6.2 – Calculate \(|\vec{v}(t)|\) and find when the point stops">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-of-velocity-vecvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magnitude of velocity \(|\vec{v}(t)|\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-does-the-point-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When does the point stop?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-63-maximum-values-of-vecv-and-veca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 6.3 – Maximum values of \(|\vec{v}|\) and \(|\vec{a}|\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 6.3 – Maximum values of \(|\vec{v}|\) and \(|\vec{a}|\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maximum-speed-vecv_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum speed \(|\vec{v}|_{\max}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-acceleration-veca_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum acceleration \(|\vec{a}|_{\max}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-64-html-animation-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 6.4 – HTML Animation Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-65-compare-the-cycloid-with-circular-motion-in-the-frame-attached-to-the-circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 6.5 – Compare the cycloid with circular motion in the frame attached to the circle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-questions-and-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible Questions and Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2165,9 +2330,408 @@
 
 
 
-  <h1>Task 06</h1>
-
-
+<h1 id="problem-6-cycloid-trajectory-of-a-point-on-a-rolling-circle">Problem 6 – Cycloid: Trajectory of a Point on a Rolling Circle</h1>
+<p>A circle of radius <span class="arithmatex">\(R\)</span> rolls without slipping along the <span class="arithmatex">\(x\)</span>-axis.
+A point on the rim traces a cycloid:</p>
+<div class="arithmatex">\[
+x(t) = R(\omega t - \sin(\omega t)), \qquad y(t) = R(1 - \cos(\omega t))
+\]</div>
+<hr />
+<h2 id="question-61-determine-the-velocity-vector-vecvt-and-acceleration-vecat">Question 6.1 – Determine the velocity vector <span class="arithmatex">\(\vec{v}(t)\)</span> and acceleration <span class="arithmatex">\(\vec{a}(t)\)</span></h2>
+<h3 id="velocity-vector-vecvt">Velocity vector <span class="arithmatex">\(\vec{v}(t)\)</span></h3>
+<p><strong>Question:</strong> Find <span class="arithmatex">\(\vec{v}(t)\)</span> by differentiating each component of the position.</p>
+<p><strong>Solution:</strong></p>
+<p>Differentiate <span class="arithmatex">\(x(t) = R(\omega t - \sin(\omega t))\)</span> with respect to <span class="arithmatex">\(t\)</span>:</p>
+<div class="arithmatex">\[
+v_x(t) = \frac{dx}{dt} = \frac{d}{dt}\bigl[R(\omega t - \sin(\omega t))\bigr]
+\]</div>
+<p>Differentiate term by term (chain rule on <span class="arithmatex">\(\sin(\omega t)\)</span>):</p>
+<div class="arithmatex">\[
+\frac{d}{dt}(\omega t) = \omega
+\]</div>
+<div class="arithmatex">\[
+\frac{d}{dt}(\sin(\omega t)) = \omega\cos(\omega t)
+\]</div>
+<div class="arithmatex">\[
+v_x(t) = R(\omega - \omega\cos(\omega t)) = R\omega(1 - \cos(\omega t))
+\]</div>
+<p>Differentiate <span class="arithmatex">\(y(t) = R(1 - \cos(\omega t))\)</span> with respect to <span class="arithmatex">\(t\)</span>:</p>
+<div class="arithmatex">\[
+v_y(t) = \frac{dy}{dt} = \frac{d}{dt}\bigl[R(1 - \cos(\omega t))\bigr]
+\]</div>
+<div class="arithmatex">\[
+\frac{d}{dt}(1) = 0
+\]</div>
+<div class="arithmatex">\[
+\frac{d}{dt}(-\cos(\omega t)) = \omega\sin(\omega t)
+\]</div>
+<div class="arithmatex">\[
+v_y(t) = R\omega\sin(\omega t)
+\]</div>
+<div class="arithmatex">\[
+\boxed{\vec{v}(t) = \bigl(R\omega(1 - \cos(\omega t)),\ R\omega\sin(\omega t)\bigr)}
+\]</div>
+<h3 id="acceleration-vector-vecat">Acceleration vector <span class="arithmatex">\(\vec{a}(t)\)</span></h3>
+<p><strong>Question:</strong> Find <span class="arithmatex">\(\vec{a}(t)\)</span> by differentiating <span class="arithmatex">\(\vec{v}(t)\)</span>.</p>
+<p><strong>Solution:</strong></p>
+<p>Differentiate <span class="arithmatex">\(v_x(t) = R\omega(1 - \cos(\omega t))\)</span>:</p>
+<div class="arithmatex">\[
+a_x(t) = \frac{dv_x}{dt} = \frac{d}{dt}\bigl[R\omega(1 - \cos(\omega t))\bigr]
+\]</div>
+<div class="arithmatex">\[
+\frac{d}{dt}(1) = 0, \qquad \frac{d}{dt}(-\cos(\omega t)) = \omega\sin(\omega t)
+\]</div>
+<div class="arithmatex">\[
+a_x(t) = R\omega \cdot \omega\sin(\omega t) = R\omega^2\sin(\omega t)
+\]</div>
+<p>Differentiate <span class="arithmatex">\(v_y(t) = R\omega\sin(\omega t)\)</span>:</p>
+<div class="arithmatex">\[
+a_y(t) = \frac{dv_y}{dt} = \frac{d}{dt}\bigl[R\omega\sin(\omega t)\bigr]
+\]</div>
+<div class="arithmatex">\[
+\frac{d}{dt}(\sin(\omega t)) = \omega\cos(\omega t)
+\]</div>
+<div class="arithmatex">\[
+a_y(t) = R\omega \cdot \omega\cos(\omega t) = R\omega^2\cos(\omega t)
+\]</div>
+<div class="arithmatex">\[
+\boxed{\vec{a}(t) = \bigl(R\omega^2\sin(\omega t),\ R\omega^2\cos(\omega t)\bigr)}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+We differentiate the position components one at a time, using the chain rule
+for <span class="arithmatex">\(\sin(\omega t)\)</span> and <span class="arithmatex">\(\cos(\omega t)\)</span> — each differentiation brings down
+a factor of <span class="arithmatex">\(\omega\)</span>. The velocity <span class="arithmatex">\(\vec{v}(t)\)</span> combines the forward rolling
+motion (the constant <span class="arithmatex">\(R\omega\)</span> part in <span class="arithmatex">\(v_x\)</span>) with the rotational motion
+(the <span class="arithmatex">\(\sin\)</span> and <span class="arithmatex">\(\cos\)</span> parts). The acceleration <span class="arithmatex">\(\vec{a}(t)\)</span> comes purely
+from the rotation — the constant rolling speed contributes zero acceleration,
+just like in Problem 4. Notice that unlike circular motion, neither component
+of <span class="arithmatex">\(\vec{v}\)</span> or <span class="arithmatex">\(\vec{a}\)</span> has a minus sign in front — the structure is
+different because the circle is rolling forward, not spinning in place.</p>
+</blockquote>
+<hr />
+<h2 id="question-62-calculate-vecvt-and-find-when-the-point-stops">Question 6.2 – Calculate <span class="arithmatex">\(|\vec{v}(t)|\)</span> and find when the point stops</h2>
+<h3 id="magnitude-of-velocity-vecvt">Magnitude of velocity <span class="arithmatex">\(|\vec{v}(t)|\)</span></h3>
+<p><strong>Question:</strong> Find the speed at every moment and identify when it equals zero.</p>
+<p><strong>Solution:</strong></p>
+<div class="arithmatex">\[
+|\vec{v}(t)| = \sqrt{v_x^2 + v_y^2}
+= \sqrt{\bigl[R\omega(1-\cos(\omega t))\bigr]^2 + \bigl[R\omega\sin(\omega t)\bigr]^2}
+\]</div>
+<p>Factor out <span class="arithmatex">\((R\omega)^2\)</span>:</p>
+<div class="arithmatex">\[
+= R\omega\sqrt{(1-\cos(\omega t))^2 + \sin^2(\omega t)}
+\]</div>
+<p>Expand <span class="arithmatex">\((1 - \cos(\omega t))^2\)</span>:</p>
+<div class="arithmatex">\[
+(1-\cos(\omega t))^2 = 1 - 2\cos(\omega t) + \cos^2(\omega t)
+\]</div>
+<p>So the expression under the root becomes:</p>
+<div class="arithmatex">\[
+1 - 2\cos(\omega t) + \cos^2(\omega t) + \sin^2(\omega t)
+\]</div>
+<p>Use <span class="arithmatex">\(\sin^2(\omega t) + \cos^2(\omega t) = 1\)</span>:</p>
+<div class="arithmatex">\[
+= 1 - 2\cos(\omega t) + 1 = 2 - 2\cos(\omega t) = 2(1 - \cos(\omega t))
+\]</div>
+<p>Now use the half-angle identity:</p>
+<div class="arithmatex">\[
+1 - \cos(\omega t) = 2\sin^2\!\left(\frac{\omega t}{2}\right)
+\]</div>
+<p>Therefore:</p>
+<div class="arithmatex">\[
+|\vec{v}(t)| = R\omega\sqrt{2 \cdot 2\sin^2\!\left(\frac{\omega t}{2}\right)}
+= R\omega\sqrt{4\sin^2\!\left(\frac{\omega t}{2}\right)}
+= R\omega \cdot 2\left|\sin\!\left(\frac{\omega t}{2}\right)\right|
+\]</div>
+<div class="arithmatex">\[
+\boxed{|\vec{v}(t)| = 2R\omega\left|\sin\!\left(\frac{\omega t}{2}\right)\right|}
+\]</div>
+<h3 id="when-does-the-point-stop">When does the point stop?</h3>
+<p>The point stops when <span class="arithmatex">\(|\vec{v}(t)| = 0\)</span>:</p>
+<div class="arithmatex">\[
+2R\omega\left|\sin\!\left(\frac{\omega t}{2}\right)\right| = 0
+\]</div>
+<div class="arithmatex">\[
+\sin\!\left(\frac{\omega t}{2}\right) = 0
+\]</div>
+<div class="arithmatex">\[
+\frac{\omega t}{2} = n\pi, \quad n = 0, 1, 2, \ldots
+\]</div>
+<div class="arithmatex">\[
+\boxed{t_n = \frac{2\pi n}{\omega}, \quad n = 0, 1, 2, \ldots}
+\]</div>
+<p>These are exactly the moments when the rolling circle has completed <span class="arithmatex">\(n\)</span> full
+revolutions — the point on the rim touches the ground again.</p>
+<p><strong>Position at stopping moments:</strong></p>
+<div class="arithmatex">\[
+x(t_n) = R(\omega \cdot \tfrac{2\pi n}{\omega} - \sin(2\pi n)) = R(2\pi n - 0) = 2\pi R n
+\]</div>
+<div class="arithmatex">\[
+y(t_n) = R(1 - \cos(2\pi n)) = R(1 - 1) = 0
+\]</div>
+<p>So the point stops at positions <span class="arithmatex">\((0,\ 0)\)</span>, <span class="arithmatex">\((2\pi R,\ 0)\)</span>, <span class="arithmatex">\((4\pi R,\ 0)\)</span>, <span class="arithmatex">\(\ldots\)</span> —
+equally spaced points on the <span class="arithmatex">\(x\)</span>-axis, separated by one full circumference <span class="arithmatex">\(2\pi R\)</span>.</p>
+<blockquote>
+<p><strong>Explanation:</strong>
+The half-angle identity <span class="arithmatex">\(1 - \cos\theta = 2\sin^2(\theta/2)\)</span> is the key algebraic
+trick here — it turns a messy expression into a clean square that can be
+square-rooted. The result <span class="arithmatex">\(|\vec{v}| = 2R\omega|\sin(\omega t / 2)|\)</span> shows
+that the speed oscillates smoothly between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(2R\omega\)</span>. The point stops
+every time it touches the ground, which makes perfect physical sense: the
+bottom of a rolling wheel has zero velocity relative to the ground (this is
+the no-slip condition). Between touches, it sweeps up into an arch and reaches
+maximum speed at the very top.</p>
+</blockquote>
+<hr />
+<h2 id="question-63-maximum-values-of-vecv-and-veca">Question 6.3 – Maximum values of <span class="arithmatex">\(|\vec{v}|\)</span> and <span class="arithmatex">\(|\vec{a}|\)</span></h2>
+<h3 id="maximum-speed-vecv_max">Maximum speed <span class="arithmatex">\(|\vec{v}|_{\max}\)</span></h3>
+<p><strong>Question:</strong> What is the highest speed the point reaches, and where does this occur?</p>
+<p><strong>Solution:</strong></p>
+<p>From the result above:</p>
+<div class="arithmatex">\[
+|\vec{v}(t)| = 2R\omega\left|\sin\!\left(\frac{\omega t}{2}\right)\right|
+\]</div>
+<p>This is maximum when <span class="arithmatex">\(\left|\sin\!\left(\dfrac{\omega t}{2}\right)\right| = 1\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\omega t}{2} = \frac{\pi}{2} + n\pi \implies \omega t = \pi + 2\pi n
+\]</div>
+<div class="arithmatex">\[
+t^* = \frac{\pi(2n+1)}{\omega}, \quad n = 0, 1, 2, \ldots
+\]</div>
+<div class="arithmatex">\[
+\boxed{|\vec{v}|_{\max} = 2R\omega}
+\]</div>
+<p><strong>Position at maximum speed:</strong></p>
+<div class="arithmatex">\[
+x(t^*) = R(\pi(2n+1) - \sin(\pi(2n+1))) = R(\pi(2n+1) - 0) = R\pi(2n+1)
+\]</div>
+<div class="arithmatex">\[
+y(t^*) = R(1 - \cos(\pi(2n+1))) = R(1 - (-1)) = 2R
+\]</div>
+<p>The point is at its <strong>maximum height</strong> <span class="arithmatex">\(y = 2R\)</span> — the very top of the arch.
+At the top, the velocity is purely horizontal:</p>
+<div class="arithmatex">\[
+\vec{v}(t^*) = \bigl(R\omega(1-(-1)),\ R\omega \cdot 0\bigr) = (2R\omega,\ 0)
+\]</div>
+<h3 id="maximum-acceleration-veca_max">Maximum acceleration <span class="arithmatex">\(|\vec{a}|_{\max}\)</span></h3>
+<p><strong>Question:</strong> What is the highest acceleration magnitude, and where does it occur?</p>
+<p><strong>Solution:</strong></p>
+<p>Calculate <span class="arithmatex">\(|\vec{a}(t)|\)</span>:</p>
+<div class="arithmatex">\[
+|\vec{a}(t)| = \sqrt{a_x^2 + a_y^2}
+= \sqrt{(R\omega^2\sin(\omega t))^2 + (R\omega^2\cos(\omega t))^2}
+\]</div>
+<div class="arithmatex">\[
+= R\omega^2\sqrt{\sin^2(\omega t) + \cos^2(\omega t)}
+\]</div>
+<div class="arithmatex">\[
+= R\omega^2\sqrt{1}
+\]</div>
+<div class="arithmatex">\[
+\boxed{|\vec{a}(t)| = R\omega^2 = \text{const}}
+\]</div>
+<p>The acceleration magnitude is <strong>constant</strong> for all <span class="arithmatex">\(t\)</span>!</p>
+<div class="arithmatex">\[
+\boxed{|\vec{a}|_{\max} = |\vec{a}|_{\min} = R\omega^2}
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+The maximum speed of <span class="arithmatex">\(2R\omega\)</span> occurs at the top of each arch (<span class="arithmatex">\(y = 2R\)</span>).
+This is intuitive: at the top of the wheel, the rotational motion and the
+forward rolling motion both point in the same direction (both are to the right
+at the top), so they add together to give double the rolling speed <span class="arithmatex">\(R\omega\)</span>.
+At the bottom (contact point), the rotational motion points backward and
+exactly cancels the forward rolling, giving zero speed.</p>
+<p>The constant acceleration magnitude <span class="arithmatex">\(R\omega^2\)</span> is a beautiful and surprising
+result. Even though the direction of <span class="arithmatex">\(\vec{a}\)</span> changes continuously, its
+length never changes. This is because the acceleration comes entirely from
+the circular rotation of the point around the moving center of the wheel —
+and circular motion always has constant centripetal acceleration magnitude
+<span class="arithmatex">\(R\omega^2\)</span> (exactly as we found in Problem 4).</p>
+</blockquote>
+<hr />
+<h2 id="question-64-html-animation-description">Question 6.4 – HTML Animation Description</h2>
+<p><strong>Question:</strong> What should the animation show?</p>
+<p><strong>The animation consists of the following elements:</strong></p>
+<p><strong>1. Rolling circle:</strong>
+- A circle of radius <span class="arithmatex">\(R\)</span> whose center moves along the line <span class="arithmatex">\(y = R\)</span> at constant speed
+- Center position at time <span class="arithmatex">\(t\)</span>: <span class="arithmatex">\(\bigl(R\omega t,\ R\bigr)\)</span>
+- The circle rotates clockwise as it rolls to the right</p>
+<p><strong>2. The point on the rim:</strong>
+- Highlighted dot on the circumference of the rolling circle
+- Its position is given by:
+$$
+\bigl(R(\omega t - \sin(\omega t)),\ R(1 - \cos(\omega t))\bigr)
+$$</p>
+<p><strong>3. The cycloid trace:</strong>
+- The path drawn by the point as the animation progresses
+- Forms a sequence of arches, each of width <span class="arithmatex">\(2\pi R\)</span> and height <span class="arithmatex">\(2R\)</span></p>
+<p><strong>4. Optional — velocity and acceleration vectors:</strong>
+- Velocity arrow at the current point:
+$$
+\vec{v}(t) = \bigl(R\omega(1-\cos(\omega t)),\ R\omega\sin(\omega t)\bigr)
+$$
+- Acceleration arrow at the current point (always pointing toward the center of the rolling circle):
+$$
+\vec{a}(t) = \bigl(R\omega^2\sin(\omega t),\ R\omega^2\cos(\omega t)\bigr)
+$$</p>
+<p><strong>Key moments visible in the animation:</strong></p>
+<p>| Moment | Event | <span class="arithmatex">\(y\)</span> | <span class="arithmatex">\(|\vec{v}|\)</span> |
+|:---|:---:|:---:|:---:|
+| Point touches ground | Cusp, stop | <span class="arithmatex">\(0\)</span> | <span class="arithmatex">\(0\)</span> |
+| Point at top of arch | Maximum speed | <span class="arithmatex">\(2R\)</span> | <span class="arithmatex">\(2R\omega\)</span> |
+| All other moments | Smooth arch | <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(2R\)</span> | <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(2R\omega\)</span> |</p>
+<blockquote>
+<p><strong>Explanation:</strong>
+The animation brings together all the mathematical results. You can literally
+watch the speed arrow shrink to zero each time the point touches the ground
+(the cusp) and grow to its maximum <span class="arithmatex">\(2R\omega\)</span> at the top of each arch.
+The acceleration arrow always points toward the center of the rolling circle —
+rotating as the circle rolls, but never changing its length. This is the
+clearest way to see that the cycloid is composed of pure rolling (forward
+translation) plus pure rotation (circular motion around the moving center).</p>
+</blockquote>
+<hr />
+<h2 id="question-65-compare-the-cycloid-with-circular-motion-in-the-frame-attached-to-the-circle">Question 6.5 – Compare the cycloid with circular motion in the frame attached to the circle</h2>
+<p><strong>Question:</strong> What does the motion look like from the perspective of an observer
+riding on the center of the rolling circle?</p>
+<p><strong>Solution:</strong></p>
+<p><strong>In the lab frame (ground):</strong></p>
+<p>Position of the point:
+$$
+\vec{r}_{\text{lab}}(t) = \bigl(R(\omega t - \sin(\omega t)),\ R(1-\cos(\omega t))\bigr)
+$$</p>
+<p>Position of the center of the rolling circle:
+$$
+\vec{r}_{\text{center}}(t) = (R\omega t,\ R)
+$$</p>
+<p><strong>In the frame attached to the circle's center:</strong></p>
+<p>The position of the point <strong>relative to the center</strong> is:</p>
+<div class="arithmatex">\[
+\vec{r}_{\text{rel}}(t) = \vec{r}_{\text{lab}}(t) - \vec{r}_{\text{center}}(t)
+\]</div>
+<div class="arithmatex">\[
+x_{\text{rel}} = R(\omega t - \sin(\omega t)) - R\omega t = -R\sin(\omega t)
+\]</div>
+<div class="arithmatex">\[
+y_{\text{rel}} = R(1 - \cos(\omega t)) - R = -R\cos(\omega t)
+\]</div>
+<div class="arithmatex">\[
+\boxed{\vec{r}_{\text{rel}}(t) = \bigl(-R\sin(\omega t),\ -R\cos(\omega t)\bigr)}
+\]</div>
+<p><strong>This is circular motion!</strong></p>
+<p>Check the magnitude:</p>
+<div class="arithmatex">\[
+|\vec{r}_{\text{rel}}| = \sqrt{R^2\sin^2(\omega t) + R^2\cos^2(\omega t)} = R = \text{const}
+\]</div>
+<p>The point moves in a <strong>circle of radius <span class="arithmatex">\(R\)</span></strong> around the center of the rolling circle,
+with angular velocity <span class="arithmatex">\(\omega\)</span>.</p>
+<p><strong>Comparison table:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: center;">Lab frame (cycloid)</th>
+<th style="text-align: center;">Circle's frame (circular)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Path shape</td>
+<td style="text-align: center;">Arched cycloid</td>
+<td style="text-align: center;">Circle of radius <span class="arithmatex">\(R\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Speed</td>
+<td style="text-align: center;"><span class="arithmatex">\(2R\omega\|\sin(\omega t/2)\|\)</span> (variable)</td>
+<td style="text-align: center;"><span class="arithmatex">\(R\omega\)</span> (constant)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Speed at ground contact</td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span> (stops!)</td>
+<td style="text-align: center;"><span class="arithmatex">\(R\omega\)</span> (never stops)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Acceleration magnitude</td>
+<td style="text-align: center;"><span class="arithmatex">\(R\omega^2\)</span> (constant)</td>
+<td style="text-align: center;"><span class="arithmatex">\(R\omega^2\)</span> (constant)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Acceleration direction</td>
+<td style="text-align: center;">Toward rolling center (rotating)</td>
+<td style="text-align: center;">Centripetal (toward center)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Explanation:</strong>
+This comparison is one of the most elegant results in kinematics. The rolling
+motion in the lab frame — which traces the complicated arch-shaped cycloid —
+is secretly just <strong>simple circular motion</strong> viewed from a moving platform.
+An ant sitting at the center of the wheel would see the rim point going around
+in a perfect circle. A person standing on the ground sees the same point
+tracing arches with stops and speed changes. Neither view is "more correct" —
+they are the same motion described in two different reference frames.
+This decomposition (translation of center + rotation around center) is a
+fundamental idea in mechanics and is used everywhere from gear design to
+planetary motion.</p>
+</blockquote>
+<hr />
+<h2 id="possible-questions-and-answers">Possible Questions and Answers</h2>
+<p><strong>Q1: What does "rolling without slipping" mean mathematically, and how does it
+appear in the cycloid equations?</strong></p>
+<p>A: Rolling without slipping means the distance the circle has rolled along the
+ground equals the arc length swept on the rim. If the circle has rotated by angle
+<span class="arithmatex">\(\theta = \omega t\)</span>, the center has moved forward by <span class="arithmatex">\(R\theta = R\omega t\)</span> along
+the <span class="arithmatex">\(x\)</span>-axis. This is why the <span class="arithmatex">\(x\)</span>-component of the center is <span class="arithmatex">\(R\omega t\)</span> and the
+<span class="arithmatex">\(x\)</span>-component of the cycloid is <span class="arithmatex">\(R\omega t - R\sin(\omega t)\)</span>: the first term is
+the forward translation and the second is the rotational offset. If the wheel
+slipped, these two would not be coupled and the formula would be different.</p>
+<hr />
+<p><strong>Q2: Why does the point on the rim come to a complete stop at the ground, but
+only instantaneously?</strong></p>
+<p>A: At the contact point the rim velocity due to rotation (<span class="arithmatex">\(-R\omega\)</span> backward)
+exactly cancels the forward rolling velocity (<span class="arithmatex">\(+R\omega\)</span>), giving zero net velocity.
+This cancellation is exact only at that single instant — immediately before and
+after, the rotational and translational velocities do not perfectly cancel and the
+speed is non-zero. Mathematically, <span class="arithmatex">\(|\vec{v}| = 2R\omega|\sin(\omega t/2)|\)</span>, which
+touches zero but does not stay there. The point does not "rest" on the ground; it
+instantaneously stops and then immediately starts moving again.</p>
+<hr />
+<p><strong>Q3: The acceleration magnitude <span class="arithmatex">\(|\vec{a}| = R\omega^2\)</span> is constant. What is the
+physical reason for this?</strong></p>
+<p>A: The acceleration of the rim point in the lab frame comes entirely from its
+circular motion around the moving center of the wheel. Translational motion at
+constant velocity (the center rolling at constant speed <span class="arithmatex">\(R\omega\)</span>) contributes
+zero acceleration. Circular motion of radius <span class="arithmatex">\(R\)</span> at angular velocity <span class="arithmatex">\(\omega\)</span>
+always produces centripetal acceleration of magnitude <span class="arithmatex">\(R\omega^2\)</span> (as derived
+in Problem 4), regardless of where the point is in its cycle. Since only the
+rotational part contributes to acceleration, and that part is always the same
+centripetal magnitude, <span class="arithmatex">\(|\vec{a}|\)</span> is constant.</p>
+<hr />
+<p><strong>Q4: What is the direction of the acceleration vector at the moment the point
+touches the ground?</strong></p>
+<p>A: At the ground contact (<span class="arithmatex">\(\omega t = 2\pi n\)</span>):</p>
+<div class="arithmatex">\[
+\vec{a}(t_n) = \bigl(R\omega^2\sin(2\pi n),\ R\omega^2\cos(2\pi n)\bigr)
+= (0,\ R\omega^2)
+\]</div>
+<p>The acceleration points <strong>straight upward</strong> (<span class="arithmatex">\(+y\)</span> direction). This makes physical
+sense: at the contact point, the center of the circle is directly above, so the
+centripetal acceleration (directed from rim point toward center) points straight up.
+Even though the point has zero velocity at this moment, it has maximum acceleration
+directed upward — it is about to be "flung" back up into the next arch.</p>
+<hr />
+<p><strong>Q5: How does the shape of the cycloid arch change if <span class="arithmatex">\(R\)</span> or <span class="arithmatex">\(\omega\)</span> changes?</strong></p>
+<p>A: The shape of each arch (its proportions) depends only on <span class="arithmatex">\(R\)</span>, not on <span class="arithmatex">\(\omega\)</span>.
+Each arch always has width <span class="arithmatex">\(2\pi R\)</span> and height <span class="arithmatex">\(2R\)</span>, giving a fixed ratio of
+height to width of <span class="arithmatex">\(1/\pi \approx 0.318\)</span>, regardless of how fast the wheel spins.
+Increasing <span class="arithmatex">\(R\)</span> scales the entire arch up proportionally. Changing <span class="arithmatex">\(\omega\)</span> only
+affects the speed at which the point traverses the same arch: a larger <span class="arithmatex">\(\omega\)</span>
+means the point moves faster and the arc is traced more quickly, but the geometric
+path is identical. The period of one arch is <span class="arithmatex">\(T = 2\pi/\omega\)</span>, which decreases
+as <span class="arithmatex">\(\omega\)</span> increases.</p>
 
 
 

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Problem 6 – Arc Length & Trapezoidal Rule</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f8f9fa;
+      color: #222;
+    }
+    h2 { color: #2c3e50; }
+    .panel {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    canvas { display: block; margin: 0 auto; }
+    label { font-weight: bold; }
+    input[type=range] { width: 300px; vertical-align: middle; }
+    .result {
+      font-size: 1.1em;
+      margin-top: 12px;
+      background: #eaf4fb;
+      padding: 10px 16px;
+      border-radius: 6px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 0.92em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      text-align: right;
+    }
+    th { background: #2c3e50; color: white; }
+    tr:nth-child(even) { background: #f2f2f2; }
+  </style>
+</head>
+<body>
+
+<h2>Problem 6 – Arc Length of y = x² and Trapezoidal Rule</h2>
+
+<!-- TRAJECTORY CANVAS -->
+<div class="panel">
+  <h3>Trajectory: x(t) = t, y(t) = t², t ∈ [0,1]</h3>
+  <canvas id="trajCanvas" width="500" height="400"></canvas>
+</div>
+
+<!-- TRAPEZOIDAL RULE CONTROL -->
+<div class="panel">
+  <h3>Trapezoidal Rule Approximation</h3>
+  <label for="nSlider">Number of divisions N = <span id="nVal">10</span></label><br><br>
+  <input type="range" id="nSlider" min="1" max="200" value="10"
+         oninput="document.getElementById('nVal').textContent=this.value; update()">
+  <div class="result" id="resultBox"></div>
+</div>
+
+<!-- CONVERGENCE TABLE -->
+<div class="panel">
+  <h3>Convergence Table</h3>
+  <table id="convTable">
+    <thead>
+      <tr>
+        <th>N</th>
+        <th>Approx. s</th>
+        <th>Error |s − s_exact|</th>
+        <th>Error / (1/N²)</th>
+      </tr>
+    </thead>
+    <tbody id="convBody"></tbody>
+  </table>
+</div>
+
+<!-- ERROR PLOT CANVAS -->
+<div class="panel">
+  <h3>Error vs N (log-log scale)</h3>
+  <canvas id="errCanvas" width="600" height="320"></canvas>
+  <p style="text-align:center; color:#555; font-size:0.9em">
+    Slope ≈ −2 on log-log scale confirms O(1/N²) convergence
+  </p>
+</div>
+
+<script>
+  // ── Exact answer ──────────────────────────────────────────────
+  const EXACT = Math.sqrt(5)/2 + Math.log(2 + Math.sqrt(5))/4;
+
+  // ── Integrand: speed |v(t)| = sqrt(1 + 4t²) ──────────────────
+  function speed(t) { return Math.sqrt(1 + 4*t*t); }
+
+  // ── Trapezoidal rule on [0,1] with N subintervals ─────────────
+  function trapezoid(N) {
+    const h = 1 / N;
+    let sum = speed(0) + speed(1);
+    for (let i = 1; i < N; i++) sum += 2 * speed(i * h);
+    return (h / 2) * sum;
+  }
+
+  // ── Draw trajectory ───────────────────────────────────────────
+  function drawTrajectory() {
+    const canvas = document.getElementById('trajCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const pad = 60;
+    ctx.clearRect(0, 0, W, H);
+
+    // coordinate transform: t∈[0,1] → x∈[0,1], y∈[0,1]
+    function px(x) { return pad + x * (W - 2*pad); }
+    function py(y) { return H - pad - y * (H - 2*pad); }
+
+    // axes
+    ctx.strokeStyle = '#aaa'; ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad, pad); ctx.lineTo(pad, H-pad);
+    ctx.lineTo(W-pad, H-pad);
+    ctx.stroke();
+
+    // axis labels
+    ctx.fillStyle = '#555'; ctx.font = '13px Arial';
+    ctx.fillText('x', W-pad+8, H-pad+4);
+    ctx.fillText('y', pad-18, pad-8);
+    for (let v of [0, 0.25, 0.5, 0.75, 1.0]) {
+      ctx.fillText(v.toFixed(2), px(v)-14, H-pad+18);
+      ctx.fillText(v.toFixed(2), pad-42, py(v)+4);
+    }
+
+    // parabola
+    ctx.strokeStyle = '#2980b9'; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    for (let i = 0; i <= 200; i++) {
+      const t = i / 200;
+      i === 0 ? ctx.moveTo(px(t), py(t*t)) : ctx.lineTo(px(t), py(t*t));
+    }
+    ctx.stroke();
+
+    // velocity arrow at t=0.5
+    const t0 = 0.5;
+    const vx = 1, vy = 2*t0;
+    const scale = 0.12;
+    ctx.strokeStyle = '#e74c3c'; ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(px(t0), py(t0*t0));
+    ctx.lineTo(px(t0 + vx*scale), py(t0*t0 + vy*scale));
+    ctx.stroke();
+    ctx.fillStyle = '#e74c3c';
+    ctx.fillText('v(0.5)', px(t0 + vx*scale)+4, py(t0*t0 + vy*scale)-4);
+
+    // start/end points
+    ctx.fillStyle = '#27ae60';
+    ctx.beginPath(); ctx.arc(px(0), py(0), 5, 0, 2*Math.PI); ctx.fill();
+    ctx.fillText('t=0', px(0)+8, py(0)-6);
+
+    ctx.fillStyle = '#8e44ad';
+    ctx.beginPath(); ctx.arc(px(1), py(1), 5, 0, 2*Math.PI); ctx.fill();
+    ctx.fillText('t=1', px(1)+6, py(1)-6);
+
+    // title
+    ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 14px Arial';
+    ctx.fillText('y = x²  (parabola, t ∈ [0,1])', pad, pad-20);
+  }
+
+  // ── Update result box ─────────────────────────────────────────
+  function update() {
+    const N = parseInt(document.getElementById('nSlider').value);
+    const approx = trapezoid(N);
+    const err = Math.abs(approx - EXACT);
+    document.getElementById('resultBox').innerHTML =
+      `<b>N = ${N}</b><br>` +
+      `Trapezoidal approximation: <b>s ≈ ${approx.toFixed(8)}</b><br>` +
+      `Exact value: s = ${EXACT.toFixed(8)}<br>` +
+      `Error: ${err.toExponential(4)}`;
+    drawErrorPlot();
+  }
+
+  // ── Build convergence table ───────────────────────────────────
+  function buildTable() {
+    const Nvals = [1, 2, 5, 10, 20, 50, 100, 200];
+    const tbody = document.getElementById('convBody');
+    tbody.innerHTML = '';
+    for (const N of Nvals) {
+      const approx = trapezoid(N);
+      const err = Math.abs(approx - EXACT);
+      const ratio = err * N * N;
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        `<td>${N}</td>` +
+        `<td>${approx.toFixed(8)}</td>` +
+        `<td>${err.toExponential(4)}</td>` +
+        `<td>${ratio.toFixed(5)}</td>`;
+      tbody.appendChild(tr);
+    }
+  }
+
+  // ── Error vs N log-log plot ───────────────────────────────────
+  function drawErrorPlot() {
+    const canvas = document.getElementById('errCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+    const pad = 60;
+    ctx.clearRect(0, 0, W, H);
+
+    const Nvals = [];
+    for (let n = 1; n <= 200; n++) Nvals.push(n);
+    const errors = Nvals.map(n => Math.abs(trapezoid(n) - EXACT));
+
+    const logN = Nvals.map(n => Math.log10(n));
+    const logE = errors.map(e => e > 0 ? Math.log10(e) : -12);
+
+    const minLN = 0, maxLN = Math.log10(200);
+    const minLE = Math.min(...logE.filter(v => isFinite(v))) - 0.3;
+    const maxLE = Math.max(...logE.filter(v => isFinite(v))) + 0.3;
+
+    function px(lx) { return pad + (lx - minLN) / (maxLN - minLN) * (W - 2*pad); }
+    function py(ly) { return H - pad - (ly - minLE) / (maxLE - minLE) * (H - 2*pad); }
+
+    // axes
+    ctx.strokeStyle = '#aaa'; ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad, pad); ctx.lineTo(pad, H-pad); ctx.lineTo(W-pad, H-pad);
+    ctx.stroke();
+
+    // axis labels
+    ctx.fillStyle = '#555'; ctx.font = '12px Arial';
+    ctx.fillText('log₁₀(N)', W/2 - 20, H-10);
+    ctx.save(); ctx.translate(16, H/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('log₁₀(error)', -40, 0); ctx.restore();
+
+    for (let lx = 0; lx <= 2.4; lx += 0.5) {
+      ctx.fillText(lx.toFixed(1), px(lx)-8, H-pad+16);
+    }
+    for (let ly = Math.ceil(minLE); ly <= Math.floor(maxLE); ly++) {
+      ctx.fillText(ly, pad-32, py(ly)+4);
+    }
+
+    // reference slope -2 line
+    ctx.strokeStyle = '#e74c3c'; ctx.lineWidth = 1.5;
+    ctx.setLineDash([6, 4]);
+    const refX1 = 0.5, refX2 = 2.2;
+    const refY1 = maxLE - 0.5;
+    const refY2 = refY1 - 2*(refX2 - refX1);
+    ctx.beginPath();
+    ctx.moveTo(px(refX1), py(refY1));
+    ctx.lineTo(px(refX2), py(refY2));
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#e74c3c';
+    ctx.fillText('slope = −2', px(refX2)+6, py(refY2)+4);
+
+    // error curve
+    ctx.strokeStyle = '#2980b9'; ctx.lineWidth = 2;
+    ctx.beginPath();
+    let started = false;
+    for (let i = 0; i < Nvals.length; i++) {
+      if (!isFinite(logE[i])) continue;
+      if (!started) { ctx.moveTo(px(logN[i]), py(logE[i])); started = true; }
+      else ctx.lineTo(px(logN[i]), py(logE[i]));
+    }
+    ctx.stroke();
+
+    // current N marker
+    const N = parseInt(document.getElementById('nSlider').value);
+    const curLogN = Math.log10(N);
+    const curLogE = Math.log10(Math.abs(trapezoid(N) - EXACT));
+    if (isFinite(curLogE)) {
+      ctx.fillStyle = '#e67e22';
+      ctx.beginPath();
+      ctx.arc(px(curLogN), py(curLogE), 6, 0, 2*Math.PI);
+      ctx.fill();
+      ctx.fillStyle = '#e67e22';
+      ctx.font = 'bold 12px Arial';
+      ctx.fillText(`N=${N}`, px(curLogN)+8, py(curLogE)-6);
+    }
+
+    ctx.fillStyle = '#2c3e50'; ctx.font = 'bold 13px Arial';
+    ctx.fillText('Error convergence (log-log)', pad, pad-18);
+  }
+
+  // ── Initialise ────────────────────────────────────────────────
+  drawTrajectory();
+  buildTable();
+  update();
+</script>
+</body>
+</html>

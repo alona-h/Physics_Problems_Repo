@@ -25,7 +25,7 @@
     
     
       
-        <title>Task 07 - Physics Problems</title>
+        <title>Problem 7 – 2D Motion with a Given Acceleration - Physics Problems</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#problem-7-2d-motion-with-a-given-acceleration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 07
+              Problem 7 – 2D Motion with a Given Acceleration
             
           </span>
         </div>
@@ -2149,6 +2154,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-71-determine-vecvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 7.1 – Determine \(\vec{v}(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-72-determine-vecrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 7.2 – Determine \(\vec{r}(t)\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-73-draw-the-trajectory-velocity-vector-and-acceleration-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 7.3 – Draw the trajectory, velocity vector, and acceleration vector
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question 7.3 – Draw the trajectory, velocity vector, and acceleration vector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shape-of-the-trajectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shape of the trajectory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectors-at-selected-moments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vectors at selected moments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-observations-about-the-trajectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key observations about the trajectory:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#possible-questions-and-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible Questions and Answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2165,9 +2263,333 @@
 
 
 
-  <h1>Task 07</h1>
-
-
+<h1 id="problem-7-2d-motion-with-a-given-acceleration">Problem 7 – 2D Motion with a Given Acceleration</h1>
+<p>Given:
+- Acceleration: <span class="arithmatex">\(\vec{a} = (2,\ -3)\)</span> (constant, in m/s²)
+- Initial velocity: <span class="arithmatex">\(\vec{v}(0) = (1,\ 0)\)</span> (in m/s)
+- Initial position: <span class="arithmatex">\(\vec{r}(0) = (0,\ 0)\)</span> (at the origin)</p>
+<hr />
+<h2 id="question-71-determine-vecvt">Question 7.1 – Determine <span class="arithmatex">\(\vec{v}(t)\)</span></h2>
+<p><strong>Question:</strong> Find the velocity vector at every time <span class="arithmatex">\(t\)</span>, given the constant
+acceleration and the initial velocity.</p>
+<p><strong>Solution:</strong></p>
+<p>Since acceleration is the derivative of velocity, velocity is the
+<strong>integral of acceleration</strong>. For a constant acceleration vector
+<span class="arithmatex">\(\vec{a} = (a_x,\ a_y)\)</span>:</p>
+<div class="arithmatex">\[
+\vec{v}(t) = \vec{v}(0) + \int_0^t \vec{a}\, dt'
+\]</div>
+<p>Integrate each component separately:</p>
+<p><strong><span class="arithmatex">\(x\)</span>-component:</strong></p>
+<div class="arithmatex">\[
+v_x(t) = v_x(0) + \int_0^t a_x\, dt' = v_x(0) + a_x \cdot t
+\]</div>
+<div class="arithmatex">\[
+v_x(t) = 1 + 2t
+\]</div>
+<p><strong><span class="arithmatex">\(y\)</span>-component:</strong></p>
+<div class="arithmatex">\[
+v_y(t) = v_y(0) + \int_0^t a_y\, dt' = v_y(0) + a_y \cdot t
+\]</div>
+<div class="arithmatex">\[
+v_y(t) = 0 + (-3)t = -3t
+\]</div>
+<div class="arithmatex">\[
+\boxed{\vec{v}(t) = (1 + 2t,\ -3t)}
+\]</div>
+<p><strong>Verification — check initial condition:</strong></p>
+<p>At <span class="arithmatex">\(t = 0\)</span>:
+$$
+\vec{v}(0) = (1 + 0,\ 0) = (1,\ 0) \checkmark
+$$</p>
+<p><strong>Verification — check derivative:</strong></p>
+<div class="arithmatex">\[
+\frac{d\vec{v}}{dt} = \frac{d}{dt}(1 + 2t,\ -3t) = (2,\ -3) = \vec{a} \checkmark
+\]</div>
+<blockquote>
+<p><strong>Explanation:</strong>
+If you know how fast something is accelerating, you can find its velocity
+by integrating (the reverse of differentiating). For a constant acceleration,
+this is straightforward: velocity just grows linearly with time. The formula
+<span class="arithmatex">\(\vec{v}(t) = \vec{v}(0) + \vec{a}\,t\)</span> is the vector version of the familiar
+<span class="arithmatex">\(v = v_0 + at\)</span> from Problem 1. We apply it independently to each component —
+the <span class="arithmatex">\(x\)</span>-direction and <span class="arithmatex">\(y\)</span>-direction are treated completely separately, just
+as in projectile motion. The <span class="arithmatex">\(x\)</span>-velocity starts at <span class="arithmatex">\(1\)</span> m/s and grows because
+<span class="arithmatex">\(a_x = +2\)</span> m/s². The <span class="arithmatex">\(y\)</span>-velocity starts at <span class="arithmatex">\(0\)</span> and becomes increasingly
+negative because <span class="arithmatex">\(a_y = -3\)</span> m/s² (like gravity pulling downward, but stronger).</p>
+</blockquote>
+<hr />
+<h2 id="question-72-determine-vecrt">Question 7.2 – Determine <span class="arithmatex">\(\vec{r}(t)\)</span></h2>
+<p><strong>Question:</strong> Find the position vector at every time <span class="arithmatex">\(t\)</span>, given the velocity
+and the initial position.</p>
+<p><strong>Solution:</strong></p>
+<p>Position is the <strong>integral of velocity</strong>:</p>
+<div class="arithmatex">\[
+\vec{r}(t) = \vec{r}(0) + \int_0^t \vec{v}(t')\, dt'
+\]</div>
+<p>Integrate each component of <span class="arithmatex">\(\vec{v}(t) = (1 + 2t,\ -3t)\)</span>:</p>
+<p><strong><span class="arithmatex">\(x\)</span>-component:</strong></p>
+<div class="arithmatex">\[
+x(t) = x(0) + \int_0^t (1 + 2t')\, dt'
+\]</div>
+<div class="arithmatex">\[
+= 0 + \left[t' + t'^2\right]_0^t
+\]</div>
+<div class="arithmatex">\[
+= t + t^2 - 0
+\]</div>
+<div class="arithmatex">\[
+x(t) = t + t^2
+\]</div>
+<p><strong><span class="arithmatex">\(y\)</span>-component:</strong></p>
+<div class="arithmatex">\[
+y(t) = y(0) + \int_0^t (-3t')\, dt'
+\]</div>
+<div class="arithmatex">\[
+= 0 + \left[-\frac{3t'^2}{2}\right]_0^t
+\]</div>
+<div class="arithmatex">\[
+= -\frac{3t^2}{2} - 0
+\]</div>
+<div class="arithmatex">\[
+y(t) = -\frac{3}{2}t^2
+\]</div>
+<div class="arithmatex">\[
+\boxed{\vec{r}(t) = \left(t + t^2,\ -\frac{3}{2}t^2\right)}
+\]</div>
+<p><strong>Verification — check initial condition:</strong></p>
+<p>At <span class="arithmatex">\(t = 0\)</span>:
+$$
+\vec{r}(0) = (0 + 0,\ 0) = (0,\ 0) \checkmark
+$$</p>
+<p><strong>Verification — check derivative:</strong></p>
+<div class="arithmatex">\[
+\frac{d\vec{r}}{dt} = \frac{d}{dt}\!\left(t + t^2,\ -\frac{3}{2}t^2\right) = (1 + 2t,\ -3t) = \vec{v}(t) \checkmark
+\]</div>
+<p><strong>Numerical table of position over time:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(t\ (\text{s})\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x = t + t^2\ (\text{m})\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(y = -\frac{3}{2}t^2\ (\text{m})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(0.5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.75\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-0.375\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-1.5\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(1.5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.75\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-3.375\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-6\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(12\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-13.5\)</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Explanation:</strong>
+Position is found by integrating velocity — again the reverse of
+differentiation. For each component we simply integrate a polynomial in <span class="arithmatex">\(t\)</span>:
+integrating <span class="arithmatex">\(1\)</span> gives <span class="arithmatex">\(t\)</span>, integrating <span class="arithmatex">\(2t\)</span> gives <span class="arithmatex">\(t^2\)</span>, integrating <span class="arithmatex">\(-3t\)</span>
+gives <span class="arithmatex">\(-\frac{3}{2}t^2\)</span>. The result is the standard kinematic formula applied
+to each direction independently:
+$<span class="arithmatex">\(x(t) = x_0 + v_{x0}t + \tfrac{1}{2}a_x t^2 = 0 + 1\cdot t + \tfrac{1}{2}\cdot 2\cdot t^2 = t + t^2\)</span>$
+$<span class="arithmatex">\(y(t) = y_0 + v_{y0}t + \tfrac{1}{2}a_y t^2 = 0 + 0\cdot t + \tfrac{1}{2}\cdot(-3)\cdot t^2 = -\tfrac{3}{2}t^2\)</span>$
+The motion in <span class="arithmatex">\(x\)</span> is a mix of constant-speed and accelerating components.
+The motion in <span class="arithmatex">\(y\)</span> is pure downward acceleration from rest — exactly like a
+free-falling object with <span class="arithmatex">\(g = 3\)</span> m/s² instead of <span class="arithmatex">\(9.81\)</span> m/s².</p>
+</blockquote>
+<hr />
+<h2 id="question-73-draw-the-trajectory-velocity-vector-and-acceleration-vector">Question 7.3 – Draw the trajectory, velocity vector, and acceleration vector</h2>
+<p><strong>Question:</strong> Describe and analyze the shape of the trajectory, and show where
+the velocity and acceleration vectors point at selected moments in time.</p>
+<h3 id="shape-of-the-trajectory">Shape of the trajectory</h3>
+<p><strong>Eliminating <span class="arithmatex">\(t\)</span> to find <span class="arithmatex">\(y\)</span> as a function of <span class="arithmatex">\(x\)</span>:</strong></p>
+<p>We have:
+$$
+x = t + t^2, \qquad y = -\frac{3}{2}t^2
+$$</p>
+<p>From the <span class="arithmatex">\(y\)</span> equation, solve for <span class="arithmatex">\(t^2\)</span>:</p>
+<div class="arithmatex">\[
+y = -\frac{3}{2}t^2 \implies t^2 = -\frac{2y}{3}
+\]</div>
+<p>From the <span class="arithmatex">\(x\)</span> equation:
+$$
+x = t + t^2 = t - \frac{2y}{3}
+$$</p>
+<p>Solve for <span class="arithmatex">\(t\)</span>:
+$$
+t = x + \frac{2y}{3}
+$$</p>
+<p>Now substitute back into <span class="arithmatex">\(t^2 = -\dfrac{2y}{3}\)</span>:</p>
+<div class="arithmatex">\[
+\left(x + \frac{2y}{3}\right)^2 = -\frac{2y}{3}
+\]</div>
+<p>Expand the left side:</p>
+<div class="arithmatex">\[
+x^2 + \frac{4xy}{3} + \frac{4y^2}{9} = -\frac{2y}{3}
+\]</div>
+<p>Rearranging (bringing all terms to one side):</p>
+<div class="arithmatex">\[
+x^2 + \frac{4xy}{3} + \frac{4y^2}{9} + \frac{2y}{3} = 0
+\]</div>
+<p>This is a <strong>parabolic curve</strong> in the <span class="arithmatex">\(xy\)</span>-plane (a quadratic relation between
+<span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>).</p>
+<h3 id="vectors-at-selected-moments">Vectors at selected moments</h3>
+<p><strong>At <span class="arithmatex">\(t = 0\)</span>:</strong></p>
+<div class="arithmatex">\[
+\vec{r}(0) = (0,\ 0)
+$$
+$$
+\vec{v}(0) = (1,\ 0) \quad \text{— points purely to the right}
+$$
+$$
+\vec{a}(0) = (2,\ -3) \quad \text{— points right and downward}
+\]</div>
+<p>Angle of <span class="arithmatex">\(\vec{v}(0)\)</span>: <span class="arithmatex">\(\theta_v = \arctan(0/1) = 0°\)</span> (horizontal)</p>
+<p>Angle of <span class="arithmatex">\(\vec{a}\)</span>: <span class="arithmatex">\(\theta_a = \arctan(-3/2) \approx -56.3°\)</span> (below horizontal)</p>
+<hr />
+<p><strong>At <span class="arithmatex">\(t = 1\)</span>:</strong></p>
+<div class="arithmatex">\[
+\vec{r}(1) = (2,\ -1.5)
+$$
+$$
+\vec{v}(1) = (3,\ -3) \quad \text{— points right and downward at } 45°
+$$
+$$
+\vec{a}(1) = (2,\ -3) \quad \text{— same as always (constant)}
+\]</div>
+<p>Speed at <span class="arithmatex">\(t = 1\)</span>:
+$$
+|\vec{v}(1)| = \sqrt{3^2 + (-3)^2} = \sqrt{9 + 9} = 3\sqrt{2} \approx 4.24\ \text{m/s}
+$$</p>
+<p>Angle of <span class="arithmatex">\(\vec{v}(1)\)</span>: <span class="arithmatex">\(\theta = \arctan(-3/3) = -45°\)</span></p>
+<hr />
+<p><strong>At <span class="arithmatex">\(t = 2\)</span>:</strong></p>
+<div class="arithmatex">\[
+\vec{r}(2) = (6,\ -6)
+$$
+$$
+\vec{v}(2) = (5,\ -6)
+$$
+$$
+\vec{a}(2) = (2,\ -3)
+\]</div>
+<p>Speed at <span class="arithmatex">\(t = 2\)</span>:
+$$
+|\vec{v}(2)| = \sqrt{25 + 36} = \sqrt{61} \approx 7.81\ \text{m/s}
+$$</p>
+<p>Angle of <span class="arithmatex">\(\vec{v}(2)\)</span>: <span class="arithmatex">\(\theta = \arctan(-6/5) \approx -50.2°\)</span></p>
+<hr />
+<p><strong>Summary table:</strong></p>
+<p>| <span class="arithmatex">\(t\)</span> | Position <span class="arithmatex">\((x, y)\)</span> | <span class="arithmatex">\(\vec{v}(t)\)</span> | <span class="arithmatex">\(|\vec{v}|\)</span> | <span class="arithmatex">\(\vec{a}(t)\)</span> |
+|:---:|:---:|:---:|:---:|:---:|
+| <span class="arithmatex">\(0\)</span> | <span class="arithmatex">\((0,\ 0)\)</span> | <span class="arithmatex">\((1,\ 0)\)</span> | <span class="arithmatex">\(1\)</span> | <span class="arithmatex">\((2,\ -3)\)</span> |
+| <span class="arithmatex">\(1\)</span> | <span class="arithmatex">\((2,\ -1.5)\)</span> | <span class="arithmatex">\((3,\ -3)\)</span> | <span class="arithmatex">\(3\sqrt{2} \approx 4.24\)</span> | <span class="arithmatex">\((2,\ -3)\)</span> |
+| <span class="arithmatex">\(2\)</span> | <span class="arithmatex">\((6,\ -6)\)</span> | <span class="arithmatex">\((5,\ -6)\)</span> | <span class="arithmatex">\(\sqrt{61} \approx 7.81\)</span> | <span class="arithmatex">\((2,\ -3)\)</span> |
+| <span class="arithmatex">\(3\)</span> | <span class="arithmatex">\((12,\ -13.5)\)</span> | <span class="arithmatex">\((7,\ -9)\)</span> | <span class="arithmatex">\(\sqrt{130} \approx 11.4\)</span> | <span class="arithmatex">\((2,\ -3)\)</span> |</p>
+<h3 id="key-observations-about-the-trajectory">Key observations about the trajectory:</h3>
+<ul>
+<li>The body starts at the origin moving <strong>purely horizontally</strong> to the right</li>
+<li>It curves <strong>downward and to the right</strong> due to the acceleration</li>
+<li>The acceleration arrow <span class="arithmatex">\((2, -3)\)</span> is the same at every point —
+  constant acceleration</li>
+<li>The velocity arrow rotates clockwise over time (the motion tilts
+  increasingly downward) and grows in magnitude</li>
+<li>The path is a <strong>parabola</strong> (quadratic relationship between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>),
+  exactly like projectile motion but with a non-vertical acceleration</li>
+</ul>
+<blockquote>
+<p><strong>Explanation:</strong>
+The trajectory is a parabola — the same type of curve as in projectile motion
+(Problem 2). This is always the case when the acceleration is constant: two
+integrations of a constant give a quadratic (degree 2) polynomial in <span class="arithmatex">\(t\)</span>,
+which traces a parabola in the plane. The velocity arrow at each point is
+tangent to the curve — it shows the direction of travel. The acceleration
+arrow always points in the same fixed direction <span class="arithmatex">\((2, -3)\)</span>, regardless of where
+the body is or how fast it is going. Notice how the velocity arrow starts
+horizontal and gradually rotates toward the direction of the acceleration —
+the body is being "pulled" in the direction of <span class="arithmatex">\(\vec{a}\)</span> more and more
+as time goes on.</p>
+</blockquote>
+<hr />
+<h2 id="possible-questions-and-answers">Possible Questions and Answers</h2>
+<p><strong>Q1: Why can we integrate each component of <span class="arithmatex">\(\vec{a}\)</span> independently to find <span class="arithmatex">\(\vec{v}\)</span>,
+and each component of <span class="arithmatex">\(\vec{v}\)</span> independently to find <span class="arithmatex">\(\vec{r}\)</span>?</strong></p>
+<p>A: Because the <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> directions are completely independent in Newtonian
+mechanics. The acceleration in the <span class="arithmatex">\(x\)</span>-direction only affects the <span class="arithmatex">\(x\)</span>-velocity
+and <span class="arithmatex">\(x\)</span>-position; it has no effect on the <span class="arithmatex">\(y\)</span>-components, and vice versa. This
+is the same principle used in projectile motion (Problem 2): horizontal and
+vertical motions are treated separately. Mathematically, a vector equation
+<span class="arithmatex">\(\frac{d\vec{v}}{dt} = \vec{a}\)</span> is just two scalar equations — one for each
+component — and they can be solved independently.</p>
+<hr />
+<p><strong>Q2: How do you verify that your answers for <span class="arithmatex">\(\vec{v}(t)\)</span> and <span class="arithmatex">\(\vec{r}(t)\)</span>
+are correct?</strong></p>
+<p>A: There are two checks for each:</p>
+<p>For <span class="arithmatex">\(\vec{v}(t)\)</span>: (1) differentiate it and confirm you get <span class="arithmatex">\(\vec{a} = (2, -3)\)</span>;
+(2) substitute <span class="arithmatex">\(t = 0\)</span> and confirm you get <span class="arithmatex">\(\vec{v}(0) = (1, 0)\)</span>.</p>
+<p>For <span class="arithmatex">\(\vec{r}(t)\)</span>: (1) differentiate it and confirm you get <span class="arithmatex">\(\vec{v}(t) = (1+2t, -3t)\)</span>;
+(2) substitute <span class="arithmatex">\(t = 0\)</span> and confirm you get <span class="arithmatex">\(\vec{r}(0) = (0, 0)\)</span>.</p>
+<p>Both checks together guarantee the solution is correct — it satisfies the
+differential equation and the initial conditions.</p>
+<hr />
+<p><strong>Q3: The trajectory looks like a parabola. How would you prove this rigorously?</strong></p>
+<p>A: A parabola is a curve described by a quadratic equation. We showed that:
+$$
+y = -\frac{3}{2}t^2 \quad \text{and} \quad x = t + t^2
+$$
+From <span class="arithmatex">\(y\)</span>: <span class="arithmatex">\(t^2 = -2y/3\)</span>, and from <span class="arithmatex">\(x\)</span>: <span class="arithmatex">\(t = x - t^2 = x + 2y/3\)</span>.
+Substituting <span class="arithmatex">\(t = x + 2y/3\)</span> into <span class="arithmatex">\(t^2 = -2y/3\)</span> gives the equation
+<span class="arithmatex">\((x + 2y/3)^2 = -2y/3\)</span>, which is a quadratic equation in <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>.
+Any curve described by a quadratic equation of this form (where the
+highest-degree terms form a perfect square) is a parabola.</p>
+<hr />
+<p><strong>Q4: At what time does the body reach its maximum <span class="arithmatex">\(x\)</span>-velocity, and does the
+<span class="arithmatex">\(x\)</span>-velocity ever stop increasing?</strong></p>
+<p>A: The <span class="arithmatex">\(x\)</span>-velocity is <span class="arithmatex">\(v_x(t) = 1 + 2t\)</span>. Since <span class="arithmatex">\(a_x = 2 &gt; 0\)</span> is constant and
+positive, <span class="arithmatex">\(v_x\)</span> increases indefinitely — it never stops growing. There is no
+maximum. The body accelerates in the <span class="arithmatex">\(x\)</span>-direction forever (in this model).
+Similarly, the <span class="arithmatex">\(y\)</span>-velocity <span class="arithmatex">\(v_y(t) = -3t\)</span> becomes more and more negative
+without bound. This is a consequence of having a constant, non-zero acceleration
+with no opposing forces (no friction, no air resistance, no spring force) in
+the model.</p>
+<hr />
+<p><strong>Q5: How does this problem differ from projectile motion (Problem 2),
+and what do they have in common?</strong></p>
+<p>A: <strong>In common:</strong> Both have constant acceleration, so both produce parabolic
+trajectories. Both use the same kinematic formulas
+<span class="arithmatex">\(\vec{v}(t) = \vec{v}(0) + \vec{a}t\)</span> and
+<span class="arithmatex">\(\vec{r}(t) = \vec{r}(0) + \vec{v}(0)t + \frac{1}{2}\vec{a}t^2\)</span>.
+Both are solved by treating <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> components independently.</p>
+<p><strong>Differences:</strong> In projectile motion the acceleration is purely vertical
+<span class="arithmatex">\((0, -g)\)</span> with zero horizontal acceleration. Here the acceleration has both
+horizontal (<span class="arithmatex">\(a_x = 2\)</span>) and vertical (<span class="arithmatex">\(a_y = -3\)</span>) components. In projectile
+motion the horizontal velocity is constant; here it grows over time. The
+parabola in projectile motion opens downward along the vertical; here it is
+tilted because the acceleration is diagonal.</p>
 
 
 
